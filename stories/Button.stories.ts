@@ -24,7 +24,7 @@ type Story = StoryObj<typeof Button>;
 export const Primary: Story = {
   args: {
 
-   children: 'Button',
+   children: 'Dowiedz się więcej',
     parameters: {
       viewport: {
         //👇 The viewports you want to use
@@ -32,6 +32,7 @@ export const Primary: Story = {
         //👇 Your own default viewport
         defaultViewport: 'iphone6',
       },
+      chromatic: { viewports: [320, 390, 480, 768, 1024, 1366, 1536, 1920 ] },
     },
   },
 };

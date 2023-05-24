@@ -23,6 +23,7 @@ const meta: Meta<typeof PageTitle> = {
       //👇 Your own default viewport
       defaultViewport: 'xs',
     },
+    chromatic: { viewports: [320, 390, 480, 768, 1024, 1366, 1536, 1920 ] },
   }
 };
 
