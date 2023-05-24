@@ -2,6 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: Axiforma;
+  src: url(../public/fonts/axiforma/Axiforma-Regular.ttf);
+  font-weight: 400;
+}
+@font-face {
+  font-family: Axiforma;
+  src: url(../public/fonts/axiforma/Axiforma-Bold.ttf);
+  font-weight: 700;
+}
+html {
+  font-family: 'Axiforma', sans-serif;
+}
+
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;

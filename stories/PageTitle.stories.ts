@@ -1,13 +1,22 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
 
-import  Button  from '../components/Button/';
+import  PageTitle  from '../components/Typography/PageTitle';
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction
-const meta: Meta<typeof Button> = {
-  title: 'Button',
-  component: Button,
+const meta: Meta<typeof PageTitle> = {
+  title: 'Typography/PageTitle',
+  component: PageTitle,
   parameters: {
+    backgrounds: {
+      default: 'Dark',
+      values: [
+        {
+          name: 'Dark',
+          value: '#323234',
+        },
+      ],
+    },
     viewport: {
       //👇 The viewports you want to use
       viewports: INITIAL_VIEWPORTS,
@@ -18,13 +27,13 @@ const meta: Meta<typeof Button> = {
 };
 
 export default meta;
-type Story = StoryObj<typeof Button>;
+type Story = StoryObj<typeof PageTitle>;
 
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
 export const Primary: Story = {
   args: {
 
-   children: 'Button',
+   children: 'Jagodne – satysfakcja i sukces mierzone w m2',
     parameters: {
       viewport: {
         //👇 The viewports you want to use
