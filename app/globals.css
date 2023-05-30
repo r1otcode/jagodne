@@ -2,41 +2,70 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: Axiforma;
-  src: url(../public/fonts/axiforma/Axiforma-Regular.ttf);
-  font-weight: 400;
-}
-@font-face {
-  font-family: Axiforma;
-  src: url(../public/fonts/axiforma/Axiforma-Bold.ttf);
-  font-weight: 700;
-}
+/*@font-face {*/
+/*  font-family: Axiforma;*/
+/*  src: url(../public/fonts/axiforma/Axiforma-Regular.ttf);*/
+/*  font-weight: 400;*/
+/*}*/
+/*@font-face {*/
+/*  font-family: Axiforma;*/
+/*  src: url(../public/fonts/axiforma/Axiforma-Bold.ttf);*/
+/*  font-weight: 700;*/
+/*}*/
 html {
   font-family: 'Axiforma', sans-serif;
+  cursor: url("../public/assets/mouseCursor.svg"), auto;
 }
-
-
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  cursor: url("../public/assets/mouseCursor.svg"), auto;
+
 }
+a:hover {
+  cursor: url("../public/assets/mouseCursor.svg"), auto;
+}
+body .backdrop-animation {
+  width:100vw;
+  height:100vh;
+  background-color: #000000;
+  position: absolute;
+  top:0;
+  left:0;
+  pointer-events: none;
+  opacity:0;
+  z-index: 10;
+  transition: opacity 0.5s ease-in-out;
+}
+body.cursor-pointer .backdrop-animation {
+  opacity:0.5;
+  transition: opacity 0.5s ease-in-out;
+}
+/*.transition-control, .transition-control:hover {*/
+/*  transition: 0.5s ease-in-out;*/
+/*}*/
+
+.cursor {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  pointer-events: none;
+}
+
+.vt {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: #505050;
+}
+
+.hl {
+  position: absolute;
+  height: 2px;
+  left: 0;
+  right: 0;
+  background-color: #505050;
+}
+
