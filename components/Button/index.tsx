@@ -2,11 +2,13 @@
 import React, {useEffect, useState} from 'react'
 import classNames from 'classnames'
 
-const buttonClasses = classNames(
-    'flex justify-center',
-    )
+
 
 const Button = (props:any) => {
+    const buttonClasses = classNames(
+        'flex justify-center w-max  text-light bg-accent rounded-[50px] px-[33px] py-[20px] hover:z-50 hover:relative transition-control',
+    props.dark ? 'bg-dark border border-[#505050]' : 'bg-accent '
+    )
     const [isShown, setIsShown] = useState(false);
 
     useEffect(() => {
@@ -21,7 +23,7 @@ const Button = (props:any) => {
         <a
             onMouseEnter={() => setIsShown(true)}
             onMouseLeave={() => setIsShown(false)}
-            className="flex justify-center w-max	 text-light bg-accent rounded-[50px] px-[33px] py-[20px] hover:z-50 hover:relative transition-control" href={props.href}>{props.children}</a>
+            className={buttonClasses} href={props.href}>{props.children}</a>
     )
 }
 export default Button;

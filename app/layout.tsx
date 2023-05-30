@@ -1,9 +1,9 @@
 
 import './globals.css'
 import localFont from '@next/font/local'
-import React, {useEffect, useRef} from "react";
-import {useMousePosition} from "@/utils/useMousePosition";
+import React from "react";
 import MouseCross from "@/components/mouseCross";
+import Footer from "@/components/layouts/Footer";
 
 const Axiforma = localFont({
   src: [
@@ -51,6 +51,7 @@ export default function RootLayout({
 
       <MouseCross/>
       {children}
+      <Footer />
       <div className="backdrop-animation"></div>
       </body>
     </html>

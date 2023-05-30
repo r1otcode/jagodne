@@ -15,9 +15,11 @@
 html {
   font-family: 'Axiforma', sans-serif;
   cursor: url("../public/assets/mouseCursor.svg"), auto;
+overflow-x: hidden;
 }
 body {
   cursor: url("../public/assets/mouseCursor.svg"), auto;
+
 
 }
 a:hover {
@@ -67,5 +69,16 @@ body.cursor-pointer .backdrop-animation {
   left: 0;
   right: 0;
   background-color: #505050;
+}
+.circle-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index:-1;
+}
+.circle-bg img {
+  margin:0 auto;
+
 }
 

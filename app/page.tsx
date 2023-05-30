@@ -10,8 +10,7 @@ export default function Home() {
       <>
           <HomepageHeader/>
 
-        <Button href="#">Dowiedz się więcej</Button>
-        <PageTitle>Jagodne – satysfakcja i sukces mierzone w m2</PageTitle>
+
           <Paragraph>Specjalizujemy się w projektowaniu i wykonawstwie nowoczesnych obiektów budowlanych dla sektora komercyjnego, przemysłowego oraz użyteczności publicznej.</Paragraph>
 
       </>
