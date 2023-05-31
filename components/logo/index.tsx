@@ -1,7 +1,7 @@
 
 import classNames from "classnames";
 
-const logoClasses = classNames(
+const logoClasses = classNames( 'fixed',
     'xs:w-[130px]',
     'sm:w-[148px]',
     'md:w-[148px]',
@@ -10,13 +10,20 @@ const logoClasses = classNames(
     '2xl:w-[186px]',
     '3xl:w-[186px]',
     '4xl:w-[186px]',
+    'xs:top-5',
+    'sm:top-5',
+    'md:top-[30px]',
+    'lg:top-[30px]',
+    'xl:top-5',
+    '2xl:top-[30px]',
+    '3xl:top-[40px]',
+    '4xl:top-[40px]',
 )
 const Logo = () => {
     return (
-        <div styles={{background: "rgba(50, 50, 52, 0.5)",
-            backdropFilter:"blur(10.4307px)" }}>
+
         <img src="/assets/logo.svg" alt="JAGODNE" className={logoClasses} />
-</div>
+
     )
 }
 export default Logo;

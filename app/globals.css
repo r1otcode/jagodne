@@ -17,19 +17,53 @@ html {
   cursor: url("../public/assets/mouseCursor.svg"), auto;
 overflow-x: hidden;
 }
-body {
-  cursor: url("../public/assets/mouseCursor.svg"), auto;
+@media (pointer: fine) {
+  body {
+    cursor: url("../public/assets/mouseCursor.svg"), auto;
 
 
+  }
+  a:hover, div:hover {
+    cursor: url("../public/assets/mouseCursor.svg"), auto;
+  }
+  .cursor {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    pointer-events: none;
+  }
+
+  .vt {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: #505050;
+  }
+
+  .hl {
+    position: absolute;
+    height: 2px;
+    left: 0;
+    right: 0;
+    background-color: #505050;
+  }
 }
-a:hover {
-  cursor: url("../public/assets/mouseCursor.svg"), auto;
+@media (pointer: coarse) {
+  .cursor {
+    display: none;
+  }
 }
+
+
 body .backdrop-animation {
   width:100vw;
   height:100vh;
   background-color: #000000;
-  position: absolute;
+  position: fixed;
   top:0;
   left:0;
   pointer-events: none;
@@ -45,31 +79,7 @@ body.cursor-pointer .backdrop-animation {
 /*  transition: 0.5s ease-in-out;*/
 /*}*/
 
-.cursor {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 100;
-  pointer-events: none;
-}
 
-.vt {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 2px;
-  background-color: #505050;
-}
-
-.hl {
-  position: absolute;
-  height: 2px;
-  left: 0;
-  right: 0;
-  background-color: #505050;
-}
 .circle-bg {
   position: absolute;
   top: 50%;
@@ -81,4 +91,18 @@ body.cursor-pointer .backdrop-animation {
   margin:0 auto;
 
 }
+ul.blue-marker li {
+  list-style-image: url("../public/assets/blue-marker.svg");
+  padding-inline-start: 10px;
+  margin-left: 30px;
+  /*padding-left: 10px;*/
 
+
+}
+ul.blue-marker li::marker {
+  padding-top:10px;
+}
+
+ul.blue-marker li p {
+  margin-top: -5px;
+}

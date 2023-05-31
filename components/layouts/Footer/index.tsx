@@ -1,7 +1,20 @@
 import React from 'react'
 import classNames from "classnames";
 
-const footerClasses = classNames( 'flex', 'justify-center', 'items-center', 'w-full', 'flex-col', 'pt-[80px]', 'pb-[40px]')
+const footerClasses = classNames( 'flex', 'justify-center', 'items-center', 'w-full', 'flex-col',
+
+    'xs:py-[80px]',
+    'sm:py-[120px]',
+    'md:py-[120px]',
+    'lg:py-[130px]',
+    'xl:py-[170px]',
+    '2xl:py-[170px]',
+    '3xl:py-[190px]',
+    '4xl:py-[190px]',
+
+
+
+    )
 const Footer = () => {
 
     return (

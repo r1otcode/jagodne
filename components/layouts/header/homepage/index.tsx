@@ -3,8 +3,10 @@ import classNames from "classnames";
 import PageTitle from "@/components/Typography/PageTitle";
 import Container from "@/components/layouts/container";
 import Button from "@/components/Button";
+import Menu from "@/components/menu";
+import LangSwitcher from "@/components/LangSwitcher";
 
-const menuHeader = classNames( 'fixed','flex', 'justify-center', 'items-center', 'w-full',
+const menuHeader = classNames( 'flex', 'justify-center', 'items-center', 'w-full',
     'xs:p-5',
     'sm:p-5',
     'md:p-[30px]',
@@ -39,12 +41,31 @@ const buttonsContainer = classNames('flex', 'gap-[10px]',
 
 
     )
+const menuButtonWrapper = classNames(  'inline-flex', 'items-center','xs:top-5',
+    'sm:top-[20px] sm:right-[20px]',
+    'md:top-[20px] md:right-[20px] ',
+    'lg:top-[30px] lg:right-[30px]',
+    'xl:top-[30px] xl:right-[30px]',
+    '2xl:top-[20px] 2xL:right-[20px]',
+    '3xl:top-[30px] 3xl:right-[30px]',
+    '4xl:top-[40px] 4xl:right-[40px]',
+    'fixed',
+    'hover:z-[50]',
+    )
 const HomepageHeader = () => {
 
     return (
         <div className='relative'>
         <div className={menuHeader}>
+
             <Logo />
+
+            <div className={menuButtonWrapper}>
+                <LangSwitcher />
+
+                <Menu/>
+            </div>
+
         </div>
 
             <div className={mainHeader}>
