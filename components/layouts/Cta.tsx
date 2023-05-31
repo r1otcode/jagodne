@@ -30,7 +30,7 @@ const Cta = () => {
             <H4Title>Świadczymy kompleksową obsługę inwestycji budowlanych w ramach 3 obszarów specjalizacji</H4Title>
 
                 <div className="xs:block sm:block md:block lg:block flex xs:text-center sm:text-center md:text-center lg:text-center text-left">
-                    <BorderedContainer >
+                    <BorderedContainer basis={true}>
                         <TextSpacerCta>
                             <H5Title>Projektowanie obiektów budowlanych</H5Title>
                             <SmallButton link={'#'}>Dowiedz się więcej</SmallButton>
@@ -39,7 +39,7 @@ const Cta = () => {
 
                     </BorderedContainer>
 
-                    <BorderedContainer hideLeftBorder={true}>
+                    <BorderedContainer hideLeftBorder={true} basis={true}>
                         <TextSpacerCta>
                             <H5Title>Wykonawstwo konstrukcji budowlanych</H5Title>
                             <SmallButton link={'#'}>Dowiedz się więcej</SmallButton>
@@ -48,7 +48,7 @@ const Cta = () => {
 
                     </BorderedContainer>
 
-                    <BorderedContainer hideLeftBorder={true}>
+                    <BorderedContainer hideLeftBorder={true} basis={true}>
                         <TextSpacerCta>
                             <H5Title>Generalny patronat projektowo-wykonawczy</H5Title>
                             <SmallButton link={'#'}>Dowiedz się więcej</SmallButton>

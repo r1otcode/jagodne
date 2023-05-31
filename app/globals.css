@@ -51,6 +51,22 @@ overflow-x: hidden;
     right: 0;
     background-color: #505050;
   }
+  body .backdrop-animation {
+    width:100vw;
+    height:100vh;
+    background-color: #000000;
+    position: fixed;
+    top:0;
+    left:0;
+    pointer-events: none;
+    opacity:0;
+    z-index: 10;
+    transition: opacity 0.5s ease-in-out;
+  }
+  body.cursor-pointer .backdrop-animation {
+    opacity:0.5;
+    transition: opacity 0.5s ease-in-out;
+  }
 }
 @media (pointer: coarse) {
   .cursor {
@@ -59,22 +75,7 @@ overflow-x: hidden;
 }
 
 
-body .backdrop-animation {
-  width:100vw;
-  height:100vh;
-  background-color: #000000;
-  position: fixed;
-  top:0;
-  left:0;
-  pointer-events: none;
-  opacity:0;
-  z-index: 10;
-  transition: opacity 0.5s ease-in-out;
-}
-body.cursor-pointer .backdrop-animation {
-  opacity:0.5;
-  transition: opacity 0.5s ease-in-out;
-}
+
 /*.transition-control, .transition-control:hover {*/
 /*  transition: 0.5s ease-in-out;*/
 /*}*/

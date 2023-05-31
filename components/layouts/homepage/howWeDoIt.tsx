@@ -52,13 +52,15 @@ const HowWeDoIt = () => {
                 </SmallerContainer>
 
                     <BorderedContainerInline right={true}>
+
                         <img
                             alt="jagodne"
                             src={"/assets/circle-small.svg"}
                             className={
-                                "border-grid border-r px-[45px] min-w-[170px], xs:hidden sm:hidden md:hidden lg:hidden"
+                                "border-grid border-r px-[45px] w-[170px] xs:hidden sm:hidden md:hidden lg:hidden"
                             }
                         />
+
                         <TextSpacer>
                             <Paragraph>
                                 Współpracujemy w formule build-design

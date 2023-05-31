@@ -4,7 +4,7 @@ import classNames from "classnames";
 
 const BorderedContainerInline = ({children, right}) => {
 
-    const borderdContainerClasses = classNames('border-grid', 'border', 'inline-flex',
+    const borderdContainerClasses = classNames('border-grid', 'border', 'flex',
         // 'xs:py-5 xs:px-[30px]',
         // 'sm:py-5 sm:px-[40px]',
         // 'md:py-[30px] md:px-[50px]',

@@ -41,7 +41,7 @@ const buttonsContainer = classNames('flex', 'gap-[10px]',
 
 
     )
-const menuButtonWrapper = classNames(  'inline-flex', 'items-center','xs:top-5',
+const menuButtonWrapper = classNames(  'inline-flex', 'items-center','xs:top-[20px] xs:right-[20px]',
     'sm:top-[20px] sm:right-[20px]',
     'md:top-[20px] md:right-[20px] ',
     'lg:top-[30px] lg:right-[30px]',
