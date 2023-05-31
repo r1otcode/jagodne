@@ -5,6 +5,7 @@ import Container from "@/components/layouts/container";
 import Button from "@/components/Button";
 import Menu from "@/components/menu";
 import LangSwitcher from "@/components/LangSwitcher";
+import ScrollDown from "@/components/ScrollDown";
 
 const menuHeader = classNames( 'flex', 'justify-center', 'items-center', 'w-full',
     'xs:p-5',
@@ -94,11 +95,13 @@ const HomepageHeader = () => {
                 </div>
                 </div>
 
+
             </Container>
                  <div className="circle-bg"><img src={'/assets/circle-blue-gradient.svg'}/></div>
 
-
+                <ScrollDown />
             </div>
+
 
         </div>
     )
