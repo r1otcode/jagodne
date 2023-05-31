@@ -52,11 +52,24 @@ const menuButtonWrapper = classNames(  'inline-flex', 'items-center','xs:top-[20
     'fixed',
     'hover:z-[50]',
     )
+const leftMenuWrapper = classNames( 'inline-flex', 'items-center','xs:top-[34px] xs:left-[20px]',
+'sm:top-[34px] sm:left-[20px]',
+    'md:top-[20px] md:left-[20px] ',
+    'lg:top-[30px] lg:left-[30px]',
+    'xl:top-[30px] xl:left-[30px]',
+    '2xl:top-[20px] 2xL:left-[20px]',
+    '3xl:top-[30px] 3xl:left-[30px]',
+    '4xl:top-[40px] 4xl:left-[40px]',
+    'fixed',
+    'hover:z-[50]', );
 const HomepageHeader = () => {
 
     return (
         <div className='relative'>
         <div className={menuHeader}>
+            <div className={leftMenuWrapper}>
+                <LangSwitcher mobile={true} />
+            </div>
 
             <Logo />
 
