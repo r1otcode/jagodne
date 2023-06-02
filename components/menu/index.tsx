@@ -13,7 +13,10 @@ const menuButtonClasses = classNames('hover:z-50  hover:relative',
     '4xl:w-[60px]'
 
     )
-const Menu = ({ children }) => {
+interface MenuProps {
+    children?: React.ReactNode
+}
+const Menu = ({ children } : MenuProps) => {
     const [isShown, setIsShown] = useState(false);
 
     useEffect(() => {

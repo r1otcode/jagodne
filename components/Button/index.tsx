@@ -7,7 +7,8 @@ import classNames from 'classnames'
 const Button = (props:any) => {
     const buttonClasses = classNames(
         'flex justify-center w-max  text-light bg-accent rounded-[50px] px-[33px] py-[20px] hover:z-50 hover:relative transition-control',
-    props.dark ? 'bg-dark border border-[#505050]' : 'bg-accent '
+    props.dark ? 'bg-dark border border-[#505050]' : 'bg-accent ',
+        props.mobileHide && 'xs:hidden sm:hidden '
     )
     const [isShown, setIsShown] = useState(false);
 

@@ -92,18 +92,26 @@ overflow-x: hidden;
   margin:0 auto;
 
 }
+ul.blue-marker li:before {
+  content: '';
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  background-image: url('../public/assets/blue-marker.svg');
+  background-size: cover;
+  background-position: center;
+  left: 0;
+  top:-5px;
+
+
+}
 ul.blue-marker li {
-  list-style-image: url("../public/assets/blue-marker.svg");
-  padding-inline-start: 10px;
-  margin-left: 30px;
+  /*list-style-image: url("../public/assets/blue-marker.svg");*/
+  /*padding-inline-start: 10px;*/
+  /*margin-left: 30px;*/
   /*padding-left: 10px;*/
+  position: relative;
+  padding-left: 35px;
 
 
-}
-ul.blue-marker li::marker {
-  padding-top:10px;
-}
-
-ul.blue-marker li p {
-  margin-top: -5px;
 }

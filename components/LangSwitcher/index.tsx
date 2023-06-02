@@ -1,7 +1,9 @@
 import React from 'react'
 import classNames from "classnames";
-
-const LangSwitcher = ({mobile}) => {
+interface LangSwitcherProps {
+    mobile?: boolean
+}
+const LangSwitcher = ({mobile}: LangSwitcherProps ) => {
     const langSwitcherClasses = classNames('mr-[40px]',
     mobile ? 'xs:block sm:block md:block hidden' : 'xs:hidden sm:hidden md:hidden'
     )

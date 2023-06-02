@@ -12,7 +12,16 @@ import H3Title from "@/components/Typography/H3Title";
 import Image from "next/image";
 
 const HowWeDoIt = () => {
-    const howWedoItClasses = classNames("");
+    const howWedoItClasses = classNames(
+        'xs:mt-[40px]',
+        'sm:mt-[110px]',
+        'md:mt-[120px]',
+        'lg:mt-[120px]',
+        'xl:mt-[120px]',
+        '2xl:mt-[120px]',
+        '3xl:mt-[120px]',
+        '4xl:mt-[120px]'
+        );
     const videoClasses = classNames(
         "border-grid",
         "border",
