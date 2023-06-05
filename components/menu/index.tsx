@@ -14,9 +14,12 @@ const menuButtonClasses = classNames('hover:z-50  hover:relative',
 
     )
 interface MenuProps {
-    children?: React.ReactNode
+    children?: React.ReactNode,
+    close?: () => void,
+    open?: () => void,
+    state?: boolean
 }
-const Menu = ({ children } : MenuProps) => {
+const Menu = ({ children, close, open, state } : MenuProps) => {
     const [isShown, setIsShown] = useState(false);
 
     useEffect(() => {
@@ -31,7 +34,7 @@ const Menu = ({ children } : MenuProps) => {
     return (
         <div onMouseEnter={() => setIsShown(true)}
              onMouseLeave={() => setIsShown(false)}
-             onClick={()=>console.log('test')} className={menuButtonClasses}><img src={'/assets/menu-button.svg'} alt="Menu Opener" className={menuButtonClasses}/> </div>
+             onClick={() => (state ? close() : open())} className={menuButtonClasses}><img src={'/assets/menu-button.svg'} alt="Menu Opener" className={menuButtonClasses}/> </div>
     )
 }
 export default Menu

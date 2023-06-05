@@ -1,9 +1,10 @@
-
+"use client"
 import './globals.css'
 import localFont from '@next/font/local'
 import React from "react";
 import MouseCross from "@/components/mouseCross";
 import Footer from "@/components/layouts/Footer";
+import {AnimatePresence} from "framer-motion";
 
 const Axiforma = localFont({
   src: [
@@ -32,10 +33,10 @@ const Axiforma = localFont({
 })
 
 
-export const metadata = {
-  title: 'Jagodne',
-  description: 'Jagodne',
-}
+// export const metadata = {
+//   title: 'Jagodne',
+//   description: 'Jagodne',
+// }
 
 export default function RootLayout({
   children,
@@ -45,6 +46,7 @@ export default function RootLayout({
 
 
   return (
+ <AnimatePresence type='wait' initial={false}>
     <html lang="en" className={`${Axiforma.variable} font-sans bg-dark`}>
 
       <body>
@@ -55,5 +57,7 @@ export default function RootLayout({
       <div className="backdrop-animation"></div>
       </body>
     </html>
+ </AnimatePresence>
+
   )
 }

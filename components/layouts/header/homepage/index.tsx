@@ -1,3 +1,4 @@
+"use client"
 import Logo from "@/components/logo";
 import classNames from "classnames";
 import PageTitle from "@/components/Typography/PageTitle";
@@ -11,6 +12,12 @@ import Paragraph from "@/components/Typography/Paragraph";
 import {Sierotki} from "sierotki"
 //@ts-ignore
 import ReactHtmlParser from 'react-html-parser';
+import {useEffect, useState} from "react";
+import MenuLayout from "@/components/MenuLayout";
+import {AnimatePresence, useMotionValue, useTransform} from "framer-motion";
+import {motion} from "framer-motion";
+import { transform } from "framer-motion"
+
 
 
 
@@ -113,10 +120,87 @@ const paragraphWrapper = classNames('border-[#505050]',
   "3xl:w-[calc(14.285%*2)] 3xl:border-l 3xl:pl-[30px]",
   "4xl:w-[calc(14.285%*2)] 4xl:border-l 4xl:pl-[30px]"
 );
+
+const dropIn = {
+  hidden: {
+    y: 200,
+    opacity: 0,
+    transition: {
+      delay:1.5,
+      duration: 0.8,
+      type: "easeOut",
+    },
+
+  },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      delay: 1.5,
+      duration: 0.8,
+      type: "easeOut",
+    },
+  },
+  exit: {
+    y: 200,
+    opacity: 0,
+    transition: {
+      delay: 1.5,
+      duration: 0.8,
+      type: "easeOut",
+    },
+
+  }
+
+};
+
+const dropInn = {
+  hidden: {
+    x: "-60vw",
+    // rotate:0,
+    transition: {
+      delay:0,
+      duration: 2,
+      type: "linear",
+    },
+
+  },
+  visible: {
+    x: Math.random() * (500 - 100) + 100,
+    // rotate: Math.random() * (360),
+    transition: {
+      delay: 0,
+      duration: 1.5,
+      type: "linear"
+    },
+  },
+  exit: {
+    x: "-60vw",
+    // rotate:0,
+    transition: {
+      delay:0,
+      duration: 1.5,
+      type: "linear",
+    },
+
+  }
+
+};
+
+
 const HomepageHeader = () => {
+  const [modalOpen, setModalOpen] = useState(false);
+
+
+
+  const close = () => setModalOpen(false);
+  const open = () => setModalOpen(true);
 
   return (
+      <>
+      <MenuLayout close={close} open={open} state={modalOpen} />
     <div className="relative">
+
       <div className={menuHeader}>
         <div className={leftMenuWrapper}>
           <LangSwitcher mobile={true} />
@@ -127,14 +211,26 @@ const HomepageHeader = () => {
         <div className={menuButtonWrapper}>
           <LangSwitcher />
 
-          <Menu />
+          <Menu close={close} open={open} state={modalOpen}/>
         </div>
       </div>
 
       <div className={mainHeader}>
         <Container>
+          <AnimatePresence
+              initial={true}
+              mode='wait'
+          >
           <div className={"relative"}>
-            <div className={headerContentWrapper}>
+
+            <motion.div
+
+                variants={dropIn}
+                initial="hidden"
+                animate="visible"
+                exit="exit"
+
+                className={headerContentWrapper}>
               <div className={mainTitleWrapper}>
                 <PageTitle >
                   Jagodne – satysfakcja<br/>i sukces mierzone <br /> w m2.
@@ -149,20 +245,43 @@ const HomepageHeader = () => {
                   </Paragraph>
 
               </div>
-            </div>
-            <div className={buttonsContainer}>
-              <Button>Dowiedz się więcej</Button>
-              <Button dark={true} mobileHide={true}>Poznajmy się</Button>
-            </div>
+            </motion.div>
+
+            <motion.div
+                variants={dropIn}
+                initial="hidden"
+                animate="visible"
+                exit="exit"
+
+                className={buttonsContainer}>
+              <Button href={'/test'}>Dowiedz się więcej</Button>
+              <Button href={'/test'} dark={true} mobileHide={true}>Poznajmy się</Button>
+            </motion.div>
           </div>
+        </AnimatePresence>
         </Container>
-        <div className="circle-bg">
-          <img src={"/assets/circle-blue-gradient.svg"} />
-        </div>
+        <AnimatePresence
+            initial={true}
+            mode='wait'
+        >
+
+
+        <motion.div
+              variants={dropInn}
+                initial="hidden"
+                animate="visible"
+                exit="exit"
+
+              className="circle-bg">
+          <img alt="circle" src={"/assets/circle-blue-gradient.svg"} />
+        </motion.div>
+        </AnimatePresence>
 
         <ScrollDown />
+
       </div>
     </div>
+      </>
   );
 };
 

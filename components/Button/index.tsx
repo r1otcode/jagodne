@@ -1,8 +1,9 @@
 "use client"
-import React, {useEffect, useState} from 'react'
+import React, {useContext, useEffect, useState} from 'react'
 import classNames from 'classnames'
-
-
+import Link from "next/link";
+import {useRouter} from "next/navigation";
+import AnimationContext from '../../context'
 
 const Button = (props:any) => {
     const buttonClasses = classNames(
@@ -11,6 +12,7 @@ const Button = (props:any) => {
         props.mobileHide && 'xs:hidden sm:hidden '
     )
     const [isShown, setIsShown] = useState(false);
+    const animation = useContext(AnimationContext);
 
     useEffect(() => {
         if (isShown) {
@@ -20,11 +22,24 @@ const Button = (props:any) => {
         }
 
     }, [isShown])
+    const router = useRouter();
+    const handleClick = (e) => {
+        e.preventDefault();
+        setAnimation('true')
+
+        setTimeout(() => {
+            router.push(props.href);
+        }, 3000);
+    }
+    useEffect(() => {
+        console.log(animation)
+    }, [animation])
+
     return (
-        <a
+        <Link
             onMouseEnter={() => setIsShown(true)}
             onMouseLeave={() => setIsShown(false)}
-            className={buttonClasses} href={props.href}>{props.children}</a>
+            className={buttonClasses} href={props.href} onClick={handleClick}>{props.children}</Link>
     )
 }
 export default Button;
