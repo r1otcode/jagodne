@@ -19,6 +19,16 @@ module.exports = {
       '4xl': {'min': '1920px'},
 
     },
+    fontSize: {
+      'xsmall': '26px',
+      'small': '30px',
+      'medium': '34px',
+      'large': '37px',
+      'extralarge': '40px',
+      '2extralarge': '42px',
+      '3extralarge': '55px',
+      "4extralarge": '65px',
+     },
     colors: {
       'accent': '#146EBE',
       'light': '#ECECEC',
