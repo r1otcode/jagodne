@@ -3,7 +3,7 @@ import classNames from "classnames";
 
 
 const memberPositionClasses = classNames(
-    'text-light font-light text-center',
+    'text-light font-light text-center text-[13px] leading-[19px]',
     'xs:text-[13px] leading-[19px]',
     'sm:text-[14px] leading-[20px]',
     'md:text-[14px] leading-[20px]',
