@@ -91,7 +91,7 @@ const Desktop = ({close, open, state }) => {
         "lg:[&>div]:h-[268px] xl:[&>div]:h-[124px] 2xl:[&>div]:h-[138px] 3xl:[&>div]:h-[174px] 4xl:[&>div]:h-[217px] " +
         "lg:w-[598px] xl:w-[840px] 2xl:w-[1060px] 3xl:w-[1194px] 4xl:w-[1492px] mx-auto "
     const layout = "lg:w-[598px] xl:w-[596px] 2xl:w-[1060px] 3xl:w-[1394px] 4xl:w-[1692px] mx-auto"
-    const mobileFooterClasses = classNames('text-light font-regular  flex place-content-between',
+    const mobileFooterClasses = classNames('text-light font-regular  flex place-content-between ',
 
         'lg:py-[45px] xl:py-[47px] 2xl:py-[66px] 3xl:py-[74px] 4xl:py-[95px]')
 
