@@ -11,7 +11,11 @@ const Mobile = ({ open, close, state }) => {
 
   const layoutClasses = classNames("bg-dark");
   const mobileFooterClasses = classNames(
-    "fixed w-[calc(100vw-40px)] bottom-0 text-light font-regular px-[20px] pb-[20px] flex place-content-between "
+    "fixed w-[100vw] bottom-0 text-light font-regular px-[20px] pb-[20px] flex place-content-between max-w-[376px]",
+    
+    
+
+
   );
   return (
     <>
@@ -49,7 +53,7 @@ const Mobile = ({ open, close, state }) => {
         </ul>
 
         <div className={mobileFooterClasses}>
-          <span>© Jagodne</span>
+          <span className={'text-[13px]'}>© Jagodne</span>
           <img src={"./assets/madeBy.svg"} alt="Made by" />
         </div>
       </div>

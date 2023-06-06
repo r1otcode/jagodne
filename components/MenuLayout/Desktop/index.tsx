@@ -75,14 +75,22 @@ const leftMenuWrapper = classNames(
     "fixed",
     "hover:z-[50]"
 );
+const menuItem = classNames(
+    "lg:text-[14px] lg:font-normal lg:leading-[22px] lg:px-[15px] lg:py-[17px]",
+    "xl:text-[14px] xl:font-normal xl:leading-[22px] xl:px-[15px] xl:py-[17px]",
+    "2xl:text-[15px] 2xl:font-normal 2xl:leading-[22px] 2xl:px-[20px] 2xl:py-[22px]",
+    "3xl:text-[17px] 3xl:font-normal 3xl:leading-[25px] 3xl:px-[25px] 3xl:py-[27px]",
+    "4xl:text-[21px] 4xl:font-normal 4xl:leading-[31px] 4xl:px-[30px] 4xl:py-[32px]",
+    )
+
 const menuHeaderClasses = classNames('fixed w-full right-0');
 const menuHolder = classNames('inline-flex  items-center justify-between w-full');
 
 const Desktop = ({close, open, state }) => {
     const menuGridClasses = "grid grid-cols-3 gap-0 " +
         "lg:[&>div]:h-[268px] xl:[&>div]:h-[124px] 2xl:[&>div]:h-[138px] 3xl:[&>div]:h-[174px] 4xl:[&>div]:h-[217px] " +
-        "lg:w-[598px] xl:w-[596px] 2xl:w-[1060px] 3xl:w-[1194px] 4xl:w-[1492px] mx-auto "
-    const layout = "lg:w-[598px] xl:w-[596px] 2xl:w-[1060px] 3xl:w-[1194px] 4xl:w-[1492px] mx-auto"
+        "lg:w-[598px] xl:w-[840px] 2xl:w-[1060px] 3xl:w-[1194px] 4xl:w-[1492px] mx-auto "
+    const layout = "lg:w-[598px] xl:w-[596px] 2xl:w-[1060px] 3xl:w-[1394px] 4xl:w-[1692px] mx-auto"
     const mobileFooterClasses = classNames('text-light font-regular  flex place-content-between',
 
         'lg:py-[45px] xl:py-[47px] 2xl:py-[66px] 3xl:py-[74px] 4xl:py-[95px]')
@@ -104,39 +112,39 @@ const Desktop = ({close, open, state }) => {
 
            <div className={menuGridClasses}>
                 <div className={'col-span-1 bg-dark border-grid border menu-bg border-b-0' }>
-                    <Link href={'/'}><h3 className={'text-light px-[30px] py-[32px] font-light text-[21px]'}>Strona główna</h3></Link>
+                    <Link href={'/'}><h3 className={'text-light px-[30px] py-[32px] font-light text-[21px]' + menuItem}>Strona główna</h3></Link>
                 </div>
 
                <div className={'col-span-1 bg-dark border-grid border border-l-0 border-b-0'}>
-                <Link href={'/projektowanie'}><h3 className={'text-light px-[30px] py-[32px] font-light text-[21px]'}>Projektowanie</h3></Link>
+                <Link href={'/projektowanie'}><h3 className={'text-light px-[30px] py-[32px] font-light text-[21px]' + menuItem}>Projektowanie</h3></Link>
                </div>
 
                <div className={'col-span-1 bg-dark border-grid border border-l-0'}>
-                <Link href={'/wykonawstwo'}> <h3 className={'text-light px-[30px] py-[32px] font-light text-[21px]'}>Wykonawstwo</h3></Link>
+                <Link href={'/wykonawstwo'}> <h3 className={'text-light px-[30px] py-[32px] font-light text-[21px]' + menuItem}>Wykonawstwo</h3></Link>
                </div>
 
                <div className={'col-span-1 bg-dark border-grid border border-b-0'}>
-                  <Link href={'/generalny-patronat-projektowo-wykonawczy'}> <h3 className={'text-light px-[30px] py-[32px] font-light text-[21px]'}>Generalny patronat projektowo-wykonawczy</h3></Link>
+                  <Link href={'/generalny-patronat-projektowo-wykonawczy'}> <h3 className={'text-light px-[30px] py-[32px] font-light text-[21px]'+ menuItem}>Generalny patronat projektowo-wykonawczy</h3></Link>
                </div>
 
                <div className={'col-span-1 bg-dark border-grid border border-l-0 border-b-0'}>
-                  <Link href={'/obiekty-systemowe'}> <h3 className={'text-light px-[30px] py-[32px] font-light text-[21px]'}>Obiekty systemowe</h3></Link>
+                  <Link href={'/obiekty-systemowe'}> <h3 className={'text-light px-[30px] py-[32px] font-light text-[21px]' + menuItem}>Obiekty systemowe</h3></Link>
                </div>
 
                <div className={'col-span-1 bg-dark border-grid border border-l-0 border-b-0 border-t-0'}>
-                   <Link href={'/konfigurator-obiektww-systemowych'}><h3 className={'text-light px-[30px] py-[32px] font-light text-[21px]'}>Konfigurator obiektów systemowych</h3></Link>
+                   <Link href={'/konfigurator-obiektww-systemowych'}><h3 className={'text-light px-[30px] py-[32px] font-light text-[21px]' + menuItem}>Konfigurator obiektów systemowych</h3></Link>
                </div>
 
                <div className={'col-span-1 bg-dark border-grid border '}>
-                <Link href={'Aktualnosci'}> <h3 className={'text-light px-[30px] py-[32px] font-light text-[21px]'}>Aktualności</h3></Link>
+                <Link href={'Aktualnosci'}> <h3 className={'text-light px-[30px] py-[32px] font-light text-[21px]' + menuItem}>Aktualności</h3></Link>
                </div>
 
                <div className={'col-span-1 bg-dark border-grid border border-l-0'}>
-                  <Link href={'/zespol'}><h3 className={'text-light px-[30px] py-[32px] font-light text-[21px]'}>Zespół</h3></Link>
+                  <Link href={'/zespol'}><h3 className={'text-light px-[30px] py-[32px] font-light text-[21px]' + menuItem}>Zespół</h3></Link>
                </div>
 
                <div className={'col-span-1 bg-dark border-grid border border-l-0'}>
-                   <Link href={'/kontakt'}><h3 className={'text-light px-[30px] py-[32px] font-light text-[21px]'}>Kontakt</h3></Link>
+                   <Link href={'/kontakt'}><h3 className={'text-light px-[30px] py-[32px] font-light text-[21px]' + menuItem}>Kontakt</h3></Link>
                </div>
 
            </div>
