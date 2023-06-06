@@ -2,6 +2,7 @@ import Mobile from "./Mobile";
 import Desktop from "@/components/MenuLayout/Desktop";
 import {AnimatePresence, motion} from "framer-motion";
 import classNames from "classnames";
+import useWindowSize from "@/hooks/useWindowSize";
 
 
 interface MenuLayoutProps {
@@ -40,8 +41,9 @@ const dropIn = {
     }
 
 };
-const layoutClasses = classNames('fixed w-[100vw] h-[100vh] z-[100] top-0 left-0 bg-dark')
+const layoutClasses = classNames('fixed w-[100vw] h-[100vh] z-[99] top-0 left-0 bg-dark')
 function Layout({close, open, state}: MenuLayoutProps)  {
+    const size = useWindowSize();
 
 return (
             <motion.div
@@ -50,12 +52,12 @@ return (
                 animate="visible"
                 exit="exit"
                 className={layoutClasses}
+                id={'menu-layout'}
             >
-                <div onClick={close}>ssssssssss</div>
-                <Desktop />
+                {/*<div onClick={close}>ssssssssss</div>*/}
+                {size.width > 767 ? <Desktop close={close} open={open} state={state} /> : <Mobile  open={open} state={state}/>}
 
 
-                <Mobile />
             </motion.div>
         )
 

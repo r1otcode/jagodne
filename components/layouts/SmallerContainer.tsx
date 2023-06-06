@@ -1,7 +1,7 @@
 import classNames from "classnames";
 
 
-const SmallerContainer = ({children}) => {
+const SmallerContainer = ({children, right}) => {
     const smallerContainerClasses = classNames(
         'xs:w-full',
         'sm:w-full',
@@ -11,6 +11,7 @@ const SmallerContainer = ({children}) => {
         '2xl:w-[42.8%]',
         '3xl:w-[42.8%]',
         '4xl:w-[42.8%]',
+        right && 'xl:ml-[57.2%] 2xl:ml-[57.2%] 3xl:ml-[57.2%] 4xl:ml-[57.2%]'
 
         );
     return (

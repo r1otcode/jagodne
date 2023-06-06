@@ -12,11 +12,12 @@ import Paragraph from "@/components/Typography/Paragraph";
 import {Sierotki} from "sierotki"
 //@ts-ignore
 import ReactHtmlParser from 'react-html-parser';
-import {useEffect, useState} from "react";
+import { useState} from "react";
 import MenuLayout from "@/components/MenuLayout";
-import {AnimatePresence, useMotionValue, useTransform} from "framer-motion";
+import {AnimatePresence} from "framer-motion";
 import {motion} from "framer-motion";
-import { transform } from "framer-motion"
+
+import useStore from "@/context";
 
 
 
@@ -156,7 +157,7 @@ const dropIn = {
 
 const dropInn = {
   hidden: {
-    x: "-60vw",
+    x: "0vw",
     // rotate:0,
     transition: {
       delay:0,
@@ -166,7 +167,7 @@ const dropInn = {
 
   },
   visible: {
-    x: Math.random() * (500 - 100) + 100,
+    x: `${Math.random() * (60 - 30) + 30}vw`,
     // rotate: Math.random() * (360),
     transition: {
       delay: 0,
@@ -175,7 +176,7 @@ const dropInn = {
     },
   },
   exit: {
-    x: "-60vw",
+    x: "0vw",
     // rotate:0,
     transition: {
       delay:0,
@@ -190,6 +191,8 @@ const dropInn = {
 
 const HomepageHeader = () => {
   const [modalOpen, setModalOpen] = useState(false);
+  // @ts-ignore
+  const loading = useStore(store => store.loading)
 
 
 
@@ -216,13 +219,17 @@ const HomepageHeader = () => {
       </div>
 
       <div className={mainHeader}>
+
         <Container>
+          <div className={"relative"}>
           <AnimatePresence
               initial={true}
               mode='wait'
+              onExitComplete={() => useStore.setState({loading: false})}
           >
-          <div className={"relative"}>
+            {!loading && (
 
+          <>
             <motion.div
 
                 variants={dropIn}
@@ -231,6 +238,7 @@ const HomepageHeader = () => {
                 exit="exit"
 
                 className={headerContentWrapper}>
+
               <div className={mainTitleWrapper}>
                 <PageTitle >
                   Jagodne – satysfakcja<br/>i sukces mierzone <br /> w m2.
@@ -257,14 +265,16 @@ const HomepageHeader = () => {
               <Button href={'/test'}>Dowiedz się więcej</Button>
               <Button href={'/test'} dark={true} mobileHide={true}>Poznajmy się</Button>
             </motion.div>
-          </div>
+          </>
+                )}
         </AnimatePresence>
+          </div>
         </Container>
         <AnimatePresence
             initial={true}
             mode='wait'
         >
-
+          {!loading && (
 
         <motion.div
               variants={dropInn}
@@ -275,6 +285,7 @@ const HomepageHeader = () => {
               className="circle-bg">
           <img alt="circle" src={"/assets/circle-blue-gradient.svg"} />
         </motion.div>
+              )}
         </AnimatePresence>
 
         <ScrollDown />

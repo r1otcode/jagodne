@@ -115,3 +115,23 @@ ul.blue-marker li {
 
 
 }
+#section-1 {
+  scroll-margin-top: 100px;
+}
+.relative {
+  overflow-x: hidden;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;
+
+}
+.relative::-webkit-scrollbar {
+  display: none;
+}
+#menu-layout {   display: flex;
+  justify-content: center;
+  align-items: center;}
+.menu-bg:hover {
+  background-color: #505050;
+  transition: all 0.5s ease-out;
+  /*//background-blend-mode: screen;*/
+}

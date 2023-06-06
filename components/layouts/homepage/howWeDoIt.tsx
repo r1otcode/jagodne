@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useRef} from "react";
 import classNames from "classnames";
 import H2Title from "@/components/Typography/H2Title";
 import Container from "@/components/layouts/container";
@@ -9,7 +9,8 @@ import BiggerContainer from "@/components/layouts/BiggerContainer";
 import TextSpacer from "@/components/layouts/TextSpacer";
 import BorderedContainerInline from "@/components/layouts/BorderedContainerInline";
 import H3Title from "@/components/Typography/H3Title";
-import Image from "next/image";
+import { motion } from "framer-motion"
+import { useInView } from "react-intersection-observer";
 
 const HowWeDoIt = () => {
     const howWedoItClasses = classNames(
@@ -36,17 +37,43 @@ const HowWeDoIt = () => {
         "4xl:mt-[160px] 4xl:h-[700px]"
     );
 
+
+
+    const [ref, inView] = useInView({
+        threshold: 1,
+        triggerOnce: false
+    });
+    const variants = {
+        visible: { opacity: 1, scale: 1 },
+        hidden: { opacity: 0, scale: 0.65 }
+    };
+    // useEffect(() => {
+    //     console.log(scrollYProgress)
+    // }, [scrollYProgress])
     return (
-        <div className={howWedoItClasses}>
+        <div className={howWedoItClasses} id={'section-1'}>
             <Container>
-                <div className="text-center">
+                <div className="text-center" >
                     <H2Title>Jak to robimy</H2Title>
                 </div>
-                <video width="100%" className={videoClasses}>
-                    <source src="/assets/example.mp4" type="video/mp4" />
+                <motion.div
+                    animate={inView ? "visible" : "hidden"}
+                    variants={variants}
+                    exit="hidden"
+                    transition={{ duration: 1 }}
+
+                    ref={ref}
+
+
+                >
+                <video width="100%" className={videoClasses} autoPlay muted >
+                    <source src="/assets/timelapse-1080_resized.mp4" type="video/mp4" />
                 </video>
+                </motion.div>
+
                 <div className={'flex flex-col'}>
                 <SmallerContainer>
+                    {/*// @ts-ignore*/}
                     <BorderedContainer>
                         <TextSpacer>
                             <Paragraph>
@@ -82,6 +109,7 @@ const HowWeDoIt = () => {
                     </BorderedContainerInline>
 
                 <SmallerContainer>
+                    {/*// @ts-ignore*/}
                     <BorderedContainer>
                         <img src={'/images/1.png'} alt={'photo'} className={'' +
                             'w-full xs:h-[250px] sm:h-[250px] md:h-[400px] lg:h-[400px] xl:h-[300px] 2xl:h-[400px] 3xl:h-[450px] 4xl:h-[560px]'}/>
@@ -99,7 +127,8 @@ const HowWeDoIt = () => {
 
 
                     <BiggerContainer right={true}>
-                        <BorderedContainer >
+                        {/*// @ts-ignore*/}
+                        <BorderedContainer>
                             <img src={'/images/2.png'} alt={'photo'} className={'w-full xs:h-[250px] sm:h-[250px] md:h-[400px] lg:h-[400px] xl:h-[300px] 2xl:h-[400px] 3xl:h-[450px] 4xl:h-[560px]'}/>
                             <TextSpacer>
                                 <H3Title>Zapewniamy innowacyjny <br/>

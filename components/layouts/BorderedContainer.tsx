@@ -1,7 +1,7 @@
 import React from "react";
 import classNames from "classnames";
 
-
+//@ts-ignore
 const BorderedContainer = ({children, right, hideLeftBorder, basis}) => {
     const smallerContainerClasses = classNames(
 
