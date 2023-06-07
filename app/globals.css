@@ -135,3 +135,12 @@ ul.blue-marker li {
   transition: all 0.5s ease-out;
   /*//background-blend-mode: screen;*/
 }
+@media only screen and (min-width:1920px) {
+  .team_member:last-child {
+    margin-right: 180px;
+  }
+  .team_member:nth-last-child(3) {
+    margin-left: 180px;
+  }
+}
+

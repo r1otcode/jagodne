@@ -69,7 +69,7 @@ const TeamFlex = () => {
         <h3 className={headingClasses}>Poznaj zespół</h3>
         <div className={teamClasses}>
         {teamMembers.map((member: Member) => (
-          <div className={singleClasses} key={member.name}>
+          <div className={singleClasses  +  ' team_member'} key={member.name}>
             <MemberImage src={member.img} alt="1"/>
             <MemberTitle children={member.name} />
             <MemberPosition children={member.position} />

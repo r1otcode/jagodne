@@ -1,12 +1,9 @@
 "use client";
 
 import ZespolHeader from "@/components/layouts/header/zespol";
-import Content from "@/components/layouts/projektowanie/Content";
-import CtaNormal from "@/components/layouts/CtaNormal";
-import MemberImage from "@/components/layouts/team/teamMember/memberImage";
-import MemberTitle from "@/components/layouts/team/teamMember/memberTitle";
-import MemberPosition from "@/components/layouts/team/teamMember/memberPosition";
+import Content from "@/components/layouts/zespol/content";
 import TeamFlex from "@/components/layouts/team/teamFlex";
+import CtaZespol from "@/components/layouts/CtaZespol";
 
 
 
@@ -18,7 +15,7 @@ export default function Home() {
 
             <Content />
             <TeamFlex />
-            <CtaNormal />
+            <CtaZespol />
            
           </>
     );

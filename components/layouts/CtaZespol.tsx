@@ -7,7 +7,7 @@ import H4TitleNoMG from "@/components/Typography/H4TitleNoMG";
 import Button from "@/components/Button";
 import ContactSpacer from './ContactSpacer';
 
-const CtaNormal = () => {
+const CtaZespol = () => {
     const ctaClasses = classNames('mx-auto',
         'xs:py-[80px] xs:w-[174px]',
         'sm:py-[80px] sm:w-[174px]',
@@ -30,7 +30,7 @@ const CtaNormal = () => {
 
                 <H4TitleNoMG>Zapraszamy do kontaktu</H4TitleNoMG>
                 <ContactSpacer>
-                <Paragraph>Biuro Obsługi Klienta pracuje od poniedziałku do piątku, w godzinach 8.00-16.00.</Paragraph>
+                <Paragraph>Masz pytania lub nie udało Ci się znaleźć w konfiguratorze odpowiedniego rozwiązania?</Paragraph>
                 </ContactSpacer>
                 <Button href={'/kontakt'} center={true}>Skontaktuj się z nami</Button>
 
@@ -41,4 +41,4 @@ const CtaNormal = () => {
 
     )
 }
-export default CtaNormal
+export default CtaZespol
