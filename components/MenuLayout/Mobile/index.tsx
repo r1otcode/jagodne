@@ -2,7 +2,12 @@ import React from "react";
 import Link from "next/link";
 import classNames from "classnames";
 
-const Mobile = ({ open, close, state }) => {
+interface MobileLayoutInterface {
+  open: () => void;
+  close: () => void;
+  state: boolean;
+}
+const Mobile = ({ open, close, state }: MobileLayoutInterface) => {
   const Menu = classNames("px-[20px]");
   const menuItem = classNames(
     "text-light font-regular text-[15px]",
@@ -11,11 +16,7 @@ const Mobile = ({ open, close, state }) => {
 
   const layoutClasses = classNames("bg-dark");
   const mobileFooterClasses = classNames(
-    "fixed w-[100vw] bottom-0 text-light font-regular px-[20px] pb-[20px] flex place-content-between max-w-[376px]",
-    
-    
-
-
+    "fixed w-[100vw] bottom-0 text-light font-regular px-[20px] pb-[20px] flex place-content-between max-w-[376px]"
   );
   return (
     <>
@@ -36,7 +37,9 @@ const Mobile = ({ open, close, state }) => {
             <Link href={"/obiekty-systemowe"}>Obiekty systemowe</Link>
           </li>
           <li className={menuItem}>
-            <Link href={"/konfigurator-obiektow-systemowych"}>Konfigurator obiektów systemowych</Link>
+            <Link href={"/konfigurator-obiektow-systemowych"}>
+              Konfigurator obiektów systemowych
+            </Link>
           </li>
           <li className={menuItem}>
             <Link href={"/aktualnosci"}>Aktualności</Link>
@@ -53,7 +56,7 @@ const Mobile = ({ open, close, state }) => {
         </ul>
 
         <div className={mobileFooterClasses}>
-          <span className={'text-[13px]'}>© Jagodne</span>
+          <span className={"text-[13px]"}>© Jagodne</span>
           <img src={"./assets/madeBy.svg"} alt="Made by" />
         </div>
       </div>
