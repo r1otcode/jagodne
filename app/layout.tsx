@@ -4,7 +4,7 @@ import localFont from '@next/font/local'
 import React from "react";
 import MouseCross from "@/components/mouseCross";
 import Footer from "@/components/layouts/Footer";
-import {AnimatePresence} from "framer-motion";
+
 
 
 const Axiforma = localFont({
@@ -47,7 +47,7 @@ export default function RootLayout({
 
 
   return (
- <AnimatePresence type='wait' initial={false}>
+
     <html lang="en" className={`${Axiforma.variable} font-sans bg-dark`}>
     <head>
       <link rel="icon" type="image/x-icon" href="/assets/favicon.svg" />
@@ -63,7 +63,7 @@ export default function RootLayout({
       <div className="backdrop-animation"></div>
       </body>
     </html>
- </AnimatePresence>
+
 
   )
 }
