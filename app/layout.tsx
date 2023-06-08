@@ -5,7 +5,7 @@ import React from "react";
 import MouseCross from "@/components/mouseCross";
 import Footer from "@/components/layouts/Footer";
 import {AnimatePresence} from "framer-motion";
-import Head from "next/head";
+
 
 const Axiforma = localFont({
   src: [
@@ -51,6 +51,7 @@ export default function RootLayout({
     <html lang="en" className={`${Axiforma.variable} font-sans bg-dark`}>
     <head>
       <link rel="icon" type="image/x-icon" href="/assets/favicon.svg" />
+      <title>Jagodne</title>
 
     </head>
 
