@@ -1,7 +1,11 @@
 import classNames from "classnames";
 
-
-const CloseMenu = ({ close, open, state }) => {
+interface CloseMenuInterface  {
+    close: () => void;
+    open: () => void;
+    state: boolean;
+}
+const CloseMenu = ({ close, open, state }: CloseMenuInterface) => {
     const menuButtonClasses = classNames(
         "hover:z-50  hover:relative",
         "xs:w-[50px]",
