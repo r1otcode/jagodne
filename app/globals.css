@@ -74,7 +74,10 @@ overflow-x: hidden;
   }
 }
 
-
+.abc {
+  list-style: lower-alpha;
+  padding-left: 15px;
+}
 
 /*.transition-control, .transition-control:hover {*/
 /*  transition: 0.5s ease-in-out;*/
@@ -83,7 +86,7 @@ overflow-x: hidden;
 
 .circle-bg {
   position: absolute;
-  top: 33%;
+
   /*left: 50%;*/
   /*transform: translateY(-50%);*/
   z-index:-1;
@@ -141,6 +144,11 @@ ul.blue-marker li {
   }
   .team_member:nth-last-child(3) {
     margin-left: 180px;
+  }
+}
+@media only screen and (min-width:768px) {
+  .gridItemTech:last-child:nth-child(3n - 2) {
+    grid-column-end: 3;
   }
 }
 

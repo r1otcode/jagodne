@@ -1,5 +1,5 @@
 import classNames from "classnames";
-
+import React, {ReactNode} from "react";
 
 const h3TitleClasses = classNames(
     'text-light font-light',
@@ -15,7 +15,7 @@ const h3TitleClasses = classNames(
 
 
 )
-const H4TitleNoMG = ({children}) => {
+const H4TitleNoMG: React.FC<{children:string | ReactNode}> = ({children}) => {
     return (
         <h3 className={h3TitleClasses}>{children}</h3>
     )

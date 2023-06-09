@@ -1,7 +1,10 @@
 import classNames from "classnames";
 
-
-const SmallerContainer = ({children, right}) => {
+interface SmallerContainerInterface {
+    children: React.ReactNode;
+    right?: boolean;
+}
+const SmallerContainer = ({children, right} : SmallerContainerInterface) => {
     const smallerContainerClasses = classNames(
         'xs:w-full',
         'sm:w-full',

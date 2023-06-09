@@ -3,11 +3,12 @@ import classNames from "classnames";
 
 type ContainerProps = {
     children: React.ReactNode
+    center?: boolean
 
 }
 
 
-const Container = ({ children} : ContainerProps ) => {
+const Container = ({ children, center} : ContainerProps ) => {
     const containerClasses = classNames('mx-auto',
 
         'xs:max-w-[320px]',
@@ -17,7 +18,9 @@ const Container = ({ children} : ContainerProps ) => {
         'xl:max-w-[796px]',
         '2xl:max-w-[1062px]',
         '3xl:max-w-[1194px]',
-        '4xl:max-w-[1494px]')
+        '4xl:max-w-[1494px]',
+        center && 'flex justify-center items-center h-[100vh]'
+    )
     return (
         <div className={containerClasses}>
             {children}

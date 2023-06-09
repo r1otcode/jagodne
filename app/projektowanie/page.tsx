@@ -1,25 +1,19 @@
-"use client";
 
-import ProjektowanieHeader from "@/components/layouts/header/projektowanie";
 import Content from "@/components/layouts/projektowanie/Content";
 import CtaNormal from "@/components/layouts/CtaNormal";
-import MemberImage from "@/components/layouts/team/teamMember/memberImage";
-import MemberTitle from "@/components/layouts/team/teamMember/memberTitle";
-import MemberPosition from "@/components/layouts/team/teamMember/memberPosition";
-import TeamFlex from "@/components/layouts/team/teamFlex";
-
-
+import DefaultHeader from "@/components/layouts/header/DefaultHeader";
 
 
 export default function Home() {
-    return (
-        <>
-            <ProjektowanieHeader />
+  return (
+    <>
+        <DefaultHeader title={'Projektowanie'} description={'Nie boimy się odważnych i złożonych projektów zorientowanych na maksymalizację zwrotu z inwestycji. Budujemy dziś z myślą o potrzebach jutra.'}>
+            Twój pomysł na<br/> inwestycję w skali
+            <span className={"text-accent"}> big picture</span>
+        </DefaultHeader>
 
-            <Content />
-
-            <CtaNormal />
-           <TeamFlex />
-          </>
-    );
+      <Content />
+      <CtaNormal />
+    </>
+  );
 }

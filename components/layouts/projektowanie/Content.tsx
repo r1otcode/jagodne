@@ -1,165 +1,173 @@
-import React, {useEffect, useRef} from "react";
+import React from "react";
 import classNames from "classnames";
-import H2Title from "@/components/Typography/H2Title";
 import Container from "@/components/layouts/container";
 import BorderedContainer from "@/components/layouts/BorderedContainer";
 import Paragraph from "@/components/Typography/Paragraph";
 import SmallerContainer from "@/components/layouts/SmallerContainer";
 import BiggerContainer from "@/components/layouts/BiggerContainer";
 import TextSpacer from "@/components/layouts/TextSpacer";
-import BorderedContainerInline from "@/components/layouts/BorderedContainerInline";
 import H3Title from "@/components/Typography/H3Title";
-import { motion } from "framer-motion"
-import { useInView } from "react-intersection-observer";
 
 const Content = () => {
-    const howWedoItClasses = classNames(
-        'xs:mt-[40px]',
-        'sm:mt-[110px]',
-        'md:mt-[120px]',
-        'lg:mt-[120px]',
-        'xl:mt-[120px]',
-        '2xl:mt-[120px]',
-        '3xl:mt-[120px]',
-        '4xl:mt-[120px]'
-    );
-    const videoClasses = classNames(
-        "border-grid",
-        "border",
-        "object-cover",
-        "xs:mt-[120px] xs:h-[240px]",
-        "sm:mt-[120px] sm:h-[260px]",
-        "md:mt-[120px] md:h-[350px]",
-        "lg:mt-[120px] lg:h-[350px]",
-        "xl:mt-[120px] xl:h-[420px]",
-        "2xl:mt-[140px] 2xl:h-[490px]",
-        "3xl:mt-[140px] 3xl:h-[600px]",
-        "4xl:mt-[160px] 4xl:h-[700px]"
-    );
+  const howWedoItClasses = classNames(
+    "xs:mt-[40px]",
+    "sm:mt-[110px]",
+    "md:mt-[120px]",
+    "lg:mt-[120px]",
+    "xl:mt-[120px]",
+    "2xl:mt-[120px]",
+    "3xl:mt-[120px]",
+    "4xl:mt-[120px]"
+  );
 
+  return (
+    <div className={howWedoItClasses} id={"section-1"}>
+      <Container>
+        <div className={"flex flex-col"}>
+          <SmallerContainer right={true}>
+            {/*// @ts-ignore*/}
+            <BorderedContainer>
+              <img
+                src={"/images/projektowanie_1.png"}
+                alt={"photo"}
+                className={
+                  "w-full xs:h-[250px] sm:h-[250px] md:h-[400px] lg:h-[400px] xl:h-[300px] 2xl:h-[400px] 3xl:h-[450px] 4xl:h-[560px]"
+                }
+              />
+              <TextSpacer>
+                <H3Title>
+                  <span className={"text-accent"}>Więcej</span> niż projekt
+                </H3Title>
+                <Paragraph>
+                  Przed rozpoczęciem procesu projektowego staramy się uzyskać
+                  jak najwięcej strategicznych informacji ze strony inwestora i
+                  urzędu, tworząc parametry brzegowe zamierzenia budowlanego, na
+                  podstawie których dokonujemy szczegółowej analizy w ujęciu
+                  zarówno formalno-prawnym, techniczno-technologicznym, jak i
+                  ekonomiczno-finansowym, oceniającej potencjał i ryzyka w
+                  obrębie planowanej inwestycji.
+                  <br /> <br />
+                  Szereg autorskich działań przygotowawczych wypracowanych
+                  praktyką pozwala nam precyzyjnie szacować koszty i skutecznie
+                  wypełniać terminy.
+                </Paragraph>
+              </TextSpacer>
+            </BorderedContainer>
+          </SmallerContainer>
 
+          <BiggerContainer right={false}>
+            {/*// @ts-ignore*/}
+            <BorderedContainer>
+              <img
+                src={"/images/projektowanie_2.png"}
+                alt={"photo"}
+                className={
+                  "w-full xs:h-[250px] sm:h-[250px] md:h-[400px] lg:h-[400px] xl:h-[300px] 2xl:h-[400px] 3xl:h-[450px] 4xl:h-[560px]"
+                }
+              />
+              <TextSpacer>
+                <H3Title>
+                  <span className={"text-accent"}>Wsparcie</span> na etapie
+                  briefu
+                </H3Title>
+                <Paragraph>
+                  Doradzamy w optymalizacji parametrów pierwszo- i
+                  drugorzędowych zamierzeń budowlanych, proponując dedykowane,
+                  poparte doświadczeniem rozwiązania dla przedsięwzięć we
+                  wczesnej fazie koncepcyjnej. Tworzymy wspólne ramy
+                  kształtowania obiektu, zabezpieczając inwestycję przed
+                  ryzykiem utraty kontroli nad budżetem. Niezależnie od skali i
+                  struktury planowanego zamierzenia, nadrzędnie bierzemy pod
+                  uwagę jego aspekt biznesowy i rekomendujemy rozwiązania z
+                  potencjałem na jak największą zyskowność dla inwestora.
+                </Paragraph>
+              </TextSpacer>
+            </BorderedContainer>
+          </BiggerContainer>
 
-    const [ref, inView] = useInView({
-        threshold: 1,
-        triggerOnce: false
-    });
-    const variants = {
-        visible: { opacity: 1, scale: 1 },
-        hidden: { opacity: 0, scale: 0.65 }
-    };
-    // useEffect(() => {
-    //     console.log(scrollYProgress)
-    // }, [scrollYProgress])
-    return (
-        <div className={howWedoItClasses} id={'section-1'}>
-            <Container>
-                <div className={'flex flex-col'}>
+          <SmallerContainer right={true}>
+            {/*// @ts-ignore*/}
+            <BorderedContainer>
+              <img
+                src={"/images/projektowanie_3.png"}
+                alt={"photo"}
+                className={
+                  "" +
+                  "w-full xs:h-[250px] sm:h-[250px] md:h-[400px] lg:h-[400px] xl:h-[300px] 2xl:h-[400px] 3xl:h-[450px] 4xl:h-[560px]"
+                }
+              />
+              <TextSpacer>
+                <H3Title>
+                  Szeroka<span className={"text-accent"}> perspektywa</span>
+                </H3Title>
+                <Paragraph>
+                  W podejmowanych przedsięwzięciach uwzględniamy możliwe
+                  kierunki modernizacji bądź rozbudowy na potrzeby przyszłych
+                  inwestycji. Każdą współpracę poprzedzamy rozpoznaniem i
+                  zaznajomieniem się z charakterystyką nieruchomości, na której
+                  ma powstać obiekt. Zwrot z inwestycji klienta jest dla nas
+                  równie ważny, jak jakość dostarczanych przez nas usług.{" "}
+                </Paragraph>
+              </TextSpacer>
+            </BorderedContainer>
+          </SmallerContainer>
 
-                    <SmallerContainer right={true}>
-                        {/*// @ts-ignore*/}
-                        <BorderedContainer >
-                            <img src={'/images/1.png'} alt={'photo'} className={'' +
-                                'w-full xs:h-[250px] sm:h-[250px] md:h-[400px] lg:h-[400px] xl:h-[300px] 2xl:h-[400px] 3xl:h-[450px] 4xl:h-[560px]'}/>
-                            <TextSpacer>
-                                <H3Title>Budownictwo kubaturowe w standardzie
-                                    <span className={'text-accent'}> premium</span></H3Title>
-                                <Paragraph>
-                                    Podejmujemy się zamierzeń budowlanych wymagających autorskiego podejścia, w tym pionierskich rozwiązań technicznych i technologicznych. <br/> <br/>
+          <BiggerContainer right={false}>
+            {/*// @ts-ignore*/}
+            <BorderedContainer>
+              <img
+                src={"/images/projektowanie_4.png"}
+                alt={"photo"}
+                className={
+                  "w-full xs:h-[250px] sm:h-[250px] md:h-[400px] lg:h-[400px] xl:h-[300px] 2xl:h-[400px] 3xl:h-[450px] 4xl:h-[560px]"
+                }
+              />
+              <TextSpacer>
+                <H3Title>
+                  Kosztorysowanie{" "}
+                  <span className={"text-accent"}> w czasie rzeczywistym</span>
+                </H3Title>
+                <Paragraph>
+                  Zapewniamy elastyczny model współpracy, pozostawiając bufor na
+                  nieprzewidziane, ale konieczne modyfikacje w trakcie
+                  realizacji inwestycji. Kosztorys tworzony w trybie bieżącym
+                  pozwala nam kształtować, modyfikować i śledzić wydatkowanie
+                  środków przeznaczonych na przedsięwzięcie i pomaga efektywniej
+                  zarządzać poszczególnymi fazami prac.
+                </Paragraph>
+              </TextSpacer>
+            </BorderedContainer>
+          </BiggerContainer>
 
-                                    Realizujemy zadania deweloperskie w modelu build-to-suit, doradzając w doborze optymalnych parametrów, mających kluczowy wpływ na ukształtowanie i zharmonizowanie zarówno formy, funkcji, jak i rentowności w perspektywie obecnych nakładów inwestycyjnych oraz przyszłych kosztów eksploatacyjnych.
-                                </Paragraph>
-                            </TextSpacer>
-                        </BorderedContainer>
-                    </SmallerContainer>
-
-
-                    <BiggerContainer right={false}>
-                        {/*// @ts-ignore*/}
-                        <BorderedContainer>
-                            <img src={'/images/2.png'} alt={'photo'} className={'w-full xs:h-[250px] sm:h-[250px] md:h-[400px] lg:h-[400px] xl:h-[300px] 2xl:h-[400px] 3xl:h-[450px] 4xl:h-[560px]'}/>
-                            <TextSpacer>
-                                <H3Title>Zapewniamy innowacyjny <br/>
-                                    <span className={'text-accent'}> know-how</span>, dedykowany na każdy scenariusz
-                                </H3Title>
-                                <ul className={'blue-marker'}>
-                                    <li className={'xs:pb-[22px] sm:pb-[22px] md:pb-[22px] lg:pb-[22px] xl:pb-[22px] 2xl:pb-[22px] 3xl:pb-[32px] 4xl:pb-[32px]'}><Paragraph>Inwestorom dysponującym gruntem, lecz nieposiadającym ustrukturyzowanego pomysłu na przeznaczenie i komercjalizację inwestycji</Paragraph></li>
-                                    <li className={'xs:pb-[22px] sm:pb-[22px] md:pb-[22px] lg:pb-[22px] xl:pb-[22px] 2xl:pb-[22px] 3xl:pb-[32px] 4xl:pb-[32px]'}><Paragraph>Inwestorom posiadającym zaprojektowaną inwestycję</Paragraph></li>
-                                    <li className={'xs:pb-[22px] sm:pb-[22px] md:pb-[22px] lg:pb-[22px] xl:pb-[22px] 2xl:pb-[22px] 3xl:pb-[32px] 4xl:pb-[32px]'}><Paragraph>Inwestorom posiadającym nieruchomości wymagające modernizacji bądź rozbudowy</Paragraph></li>
-                                    <li className={'xs:pb-[22px] sm:pb-[22px] md:pb-[22px] lg:pb-[22px] xl:pb-[22px] 2xl:pb-[22px] 3xl:pb-[32px] 4xl:pb-[32px]'}><Paragraph>Inwestorom potrzebującym doradztwa przedzakupowego w obszarze identyfikacji potencjalnych zalet i wad nieruchomości</Paragraph></li>
-
-
-                                </ul>
-                            </TextSpacer>
-
-                        </BorderedContainer>
-                    </BiggerContainer>
-
-                    <SmallerContainer right={true}>
-                        {/*// @ts-ignore*/}
-                        <BorderedContainer >
-                            <img src={'/images/1.png'} alt={'photo'} className={'' +
-                                'w-full xs:h-[250px] sm:h-[250px] md:h-[400px] lg:h-[400px] xl:h-[300px] 2xl:h-[400px] 3xl:h-[450px] 4xl:h-[560px]'}/>
-                            <TextSpacer>
-                                <H3Title>Budownictwo kubaturowe w standardzie
-                                    <span className={'text-accent'}> premium</span></H3Title>
-                                <Paragraph>
-                                    Podejmujemy się zamierzeń budowlanych wymagających autorskiego podejścia, w tym pionierskich rozwiązań technicznych i technologicznych. <br/> <br/>
-
-                                    Realizujemy zadania deweloperskie w modelu build-to-suit, doradzając w doborze optymalnych parametrów, mających kluczowy wpływ na ukształtowanie i zharmonizowanie zarówno formy, funkcji, jak i rentowności w perspektywie obecnych nakładów inwestycyjnych oraz przyszłych kosztów eksploatacyjnych.
-                                </Paragraph>
-                            </TextSpacer>
-                        </BorderedContainer>
-                    </SmallerContainer>
-
-                    <BiggerContainer right={false}>
-                        {/*// @ts-ignore*/}
-                        <BorderedContainer>
-                            <img src={'/images/2.png'} alt={'photo'} className={'w-full xs:h-[250px] sm:h-[250px] md:h-[400px] lg:h-[400px] xl:h-[300px] 2xl:h-[400px] 3xl:h-[450px] 4xl:h-[560px]'}/>
-                            <TextSpacer>
-                                <H3Title>Zapewniamy innowacyjny <br/>
-                                    <span className={'text-accent'}> know-how</span>, dedykowany na każdy scenariusz
-                                </H3Title>
-                                <ul className={'blue-marker'}>
-                                    <li className={'xs:pb-[22px] sm:pb-[22px] md:pb-[22px] lg:pb-[22px] xl:pb-[22px] 2xl:pb-[22px] 3xl:pb-[32px] 4xl:pb-[32px]'}><Paragraph>Inwestorom dysponującym gruntem, lecz nieposiadającym ustrukturyzowanego pomysłu na przeznaczenie i komercjalizację inwestycji</Paragraph></li>
-                                    <li className={'xs:pb-[22px] sm:pb-[22px] md:pb-[22px] lg:pb-[22px] xl:pb-[22px] 2xl:pb-[22px] 3xl:pb-[32px] 4xl:pb-[32px]'}><Paragraph>Inwestorom posiadającym zaprojektowaną inwestycję</Paragraph></li>
-                                    <li className={'xs:pb-[22px] sm:pb-[22px] md:pb-[22px] lg:pb-[22px] xl:pb-[22px] 2xl:pb-[22px] 3xl:pb-[32px] 4xl:pb-[32px]'}><Paragraph>Inwestorom posiadającym nieruchomości wymagające modernizacji bądź rozbudowy</Paragraph></li>
-                                    <li className={'xs:pb-[22px] sm:pb-[22px] md:pb-[22px] lg:pb-[22px] xl:pb-[22px] 2xl:pb-[22px] 3xl:pb-[32px] 4xl:pb-[32px]'}><Paragraph>Inwestorom potrzebującym doradztwa przedzakupowego w obszarze identyfikacji potencjalnych zalet i wad nieruchomości</Paragraph></li>
-
-
-                                </ul>
-                            </TextSpacer>
-
-                        </BorderedContainer>
-                    </BiggerContainer>
-
-
-
-                    <SmallerContainer right={true}>
-                        {/*// @ts-ignore*/}
-                        <BorderedContainer >
-                            <img src={'/images/1.png'} alt={'photo'} className={'' +
-                                'w-full xs:h-[250px] sm:h-[250px] md:h-[400px] lg:h-[400px] xl:h-[300px] 2xl:h-[400px] 3xl:h-[450px] 4xl:h-[560px]'}/>
-                            <TextSpacer>
-                                <H3Title>Budownictwo kubaturowe w standardzie
-                                    <span className={'text-accent'}> premium</span></H3Title>
-                                <Paragraph>
-                                    Podejmujemy się zamierzeń budowlanych wymagających autorskiego podejścia, w tym pionierskich rozwiązań technicznych i technologicznych. <br/> <br/>
-
-                                    Realizujemy zadania deweloperskie w modelu build-to-suit, doradzając w doborze optymalnych parametrów, mających kluczowy wpływ na ukształtowanie i zharmonizowanie zarówno formy, funkcji, jak i rentowności w perspektywie obecnych nakładów inwestycyjnych oraz przyszłych kosztów eksploatacyjnych.
-                                </Paragraph>
-                            </TextSpacer>
-                        </BorderedContainer>
-                    </SmallerContainer>
-
-
-
-
-
-                </div>
-
-
-            </Container>
+          <SmallerContainer right={true}>
+            {/*// @ts-ignore*/}
+            <BorderedContainer>
+              <img
+                src={"/images/1.png"}
+                alt={"photo"}
+                className={
+                  "" +
+                  "w-full xs:h-[250px] sm:h-[250px] md:h-[400px] lg:h-[400px] xl:h-[300px] 2xl:h-[400px] 3xl:h-[450px] 4xl:h-[560px]"
+                }
+              />
+              <TextSpacer>
+                <H3Title>
+                  <span className={"text-accent"}>Odpowiedzialność</span> za
+                  proces koncepcyjny, projektowy i wykonawczy
+                </H3Title>
+                <Paragraph>
+                  Dysponujemy własną pracownią, w ramach której opracowujemy
+                  dokumentacje oraz wprowadzamy ich modyfikacje i optymalizacje.
+                  Zapewniamy wsparcie na każdym etapie procesu budowlanego,
+                  w tym również w formie nadzoru autorskiego oraz w roli
+                  inwestora zastępczego.{" "}
+                </Paragraph>
+              </TextSpacer>
+            </BorderedContainer>
+          </SmallerContainer>
         </div>
-    );
+      </Container>
+    </div>
+  );
 };
 export default Content;

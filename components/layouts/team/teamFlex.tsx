@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import useSWR from "swr";
 import MemberImage from "./teamMember/memberImage";
@@ -32,7 +33,7 @@ const singleClasses = classNames(
   "4xl:w-[25%] 4xl:last:w-[25%] 4xl:last:max-w[25%]"
 );
 const headingClasses = classNames(
-  "font-light text-light text-center ",
+  "font-extralight text-light text-center ",
   "xs:text-xsmall xs:my-[120px]",
   "sm:text-small sm:my-[120px]",
   "md:text-medium md:my-[120px]",

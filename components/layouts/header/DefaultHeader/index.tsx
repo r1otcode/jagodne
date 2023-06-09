@@ -3,23 +3,17 @@ import Logo from "@/components/logo";
 import classNames from "classnames";
 import PageTitle from "@/components/Typography/PageTitle";
 import Container from "@/components/layouts/container";
-import Button from "@/components/Button";
 import Menu from "@/components/menu";
 import LangSwitcher from "@/components/LangSwitcher";
 import ScrollDown from "@/components/ScrollDown";
 import Paragraph from "@/components/Typography/Paragraph";
-//@ts-ignore
-import { Sierotki } from "sierotki";
-//@ts-ignore
-import ReactHtmlParser from "react-html-parser";
-import { useState } from "react";
+import { ReactNode, useState } from "react";
 import MenuLayout from "@/components/MenuLayout";
 import { AnimatePresence } from "framer-motion";
 import { motion } from "framer-motion";
-
 import useStore from "@/context";
-import HeaderTitle from "@/components/Typography/HeaderTitle";
 import MobileHeaderTitle from "@/components/Typography/HeaderTitleMobile";
+import HeaderTitle from "@/components/Typography/HeaderTitle";
 
 const menuHeader = classNames(
   "flex",
@@ -37,7 +31,7 @@ const menuHeader = classNames(
 );
 const mainHeader = classNames(
   "w-full",
-  "h-[100vh]",
+  "h-[100vh]"
 
   // "xs:pt-[160px]",
   // "sm:pt-[227px]",
@@ -104,7 +98,7 @@ const mainTitleWrapper = classNames(
   "xs:w-full",
   "sm:w-full",
   "md:w-full",
-  "lg:w-full  lg:border-l lg:pl-[30px]",
+  "lg:w-full",
   "xl:w-[calc(14.285%*5)] xl:border-l xl:pl-[30px]",
   "2xl:w-[calc(14.285%*5)] 2xl:border-l 2xl:pl-[20px]",
   "3xl:w-[calc(14.285%*5)] 3xl:border-l 3xl:pl-[30px]",
@@ -115,7 +109,7 @@ const paragraphWrapper = classNames(
   "xs:w-full xs:mt-[30px]",
   "sm:w-full sm:mt-[40px]",
   "md:w-full md:mt-[40px]",
-  "lg:w-full lg:mt-[50px] lg:border-l lg:pl-[30px]",
+  "lg:w-full lg:mt-[50px]",
   "xl:w-[calc(14.285%*2)] xl:border-l xl:pl-[30px]",
   "2xl:w-[calc(14.285%*2)] 2xl:border-l 2xl:pl-[20px]",
   "3xl:w-[calc(14.285%*2)] 3xl:border-l 3xl:pl-[30px]",
@@ -182,7 +176,11 @@ const dropInn = {
   },
 };
 
-const ZespolHeader = () => {
+const DefaultHeader: React.FC<{
+  title: string;
+  description: string | ReactNode;
+  children: string | ReactNode;
+}> = ({ title, description, children }) => {
   const [modalOpen, setModalOpen] = useState(false);
   // @ts-ignore
   const loading = useStore((store) => store.loading);
@@ -226,38 +224,32 @@ const ZespolHeader = () => {
                       className={headerContentWrapper}
                     >
                       <div className={mainTitleWrapper}>
-                        <MobileHeaderTitle>Zespół</MobileHeaderTitle>
-                        <PageTitle>
-                          Wszystkie kompetencje pod jednym dachem
-                        </PageTitle>
+                        <MobileHeaderTitle>{title}</MobileHeaderTitle>
+                        <PageTitle maxW={false}>{children}</PageTitle>
                       </div>
                       <div className={paragraphWrapper}>
-                        <HeaderTitle>Zespół</HeaderTitle>
-                        <Paragraph>
-                          Patrzymy tam, gdzie patrzy biznes. Planujemy na dziś i
-                          jutro. Przekształcamy wizje w zysk, który stoi na
-                          solidnych fundamentach.
-                        </Paragraph>
+                        <HeaderTitle>{title}</HeaderTitle>
+                        <Paragraph>{description}</Paragraph>
                       </div>
                     </motion.div>
                   </>
                 )}
               </AnimatePresence>
             </div>
+            <AnimatePresence initial={true} mode="wait">
+              {!loading && (
+                <motion.div
+                  variants={dropInn}
+                  initial="hidden"
+                  animate="visible"
+                  exit="exit"
+                  className="circle-bg"
+                >
+                  <img alt="circle" src={"/assets/circle-blue-gradient.svg"} />
+                </motion.div>
+              )}
+            </AnimatePresence>
           </Container>
-          <AnimatePresence initial={true} mode="wait">
-            {!loading && (
-              <motion.div
-                variants={dropInn}
-                initial="hidden"
-                animate="visible"
-                exit="exit"
-                className="circle-bg"
-              >
-                <img alt="circle" src={"/assets/circle-blue-gradient.svg"} />
-              </motion.div>
-            )}
-          </AnimatePresence>
 
           <ScrollDown />
         </div>
@@ -266,4 +258,4 @@ const ZespolHeader = () => {
   );
 };
 
-export default ZespolHeader
+export default DefaultHeader;

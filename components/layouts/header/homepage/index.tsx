@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Logo from "@/components/logo";
 import classNames from "classnames";
 import PageTitle from "@/components/Typography/PageTitle";
@@ -9,24 +9,21 @@ import LangSwitcher from "@/components/LangSwitcher";
 import ScrollDown from "@/components/ScrollDown";
 import Paragraph from "@/components/Typography/Paragraph";
 //@ts-ignore
-import {Sierotki} from "sierotki"
+import { Sierotki } from "sierotki";
 //@ts-ignore
-import ReactHtmlParser from 'react-html-parser';
-import { useState} from "react";
+import ReactHtmlParser from "react-html-parser";
+import { useState } from "react";
 import MenuLayout from "@/components/MenuLayout";
-import {AnimatePresence} from "framer-motion";
-import {motion} from "framer-motion";
+import { AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 import useStore from "@/context";
-
-
-
 
 const menuHeader = classNames(
   "flex",
   "justify-center",
   "items-center",
-  "w-full",
+  "w-full"
   // "xs:p-5",
   // "sm:p-5",
   // "md:p-[30px]",
@@ -39,15 +36,15 @@ const menuHeader = classNames(
 const mainHeader = classNames(
   "w-full",
   "h-[100vh]",
+  // "xs:pt-[160px]",
+  // "sm:pt-[227px]",
+  // "md:pt-[225px]",
+  // "lg:pt-[324px]",
+  // "xl:pt-[187px]",
+  // "2xl:pt-[221px]",
+  // "3xl:pt-[270px]",
+  // "4xl:pt-[341px]",
 
-  "xs:pt-[160px]",
-  "sm:pt-[227px]",
-  "md:pt-[225px]",
-  "lg:pt-[324px]",
-  "xl:pt-[187px]",
-  "2xl:pt-[221px]",
-  "3xl:pt-[270px]",
-  "4xl:pt-[341px]"
 );
 
 const buttonsContainer = classNames(
@@ -111,7 +108,8 @@ const mainTitleWrapper = classNames(
   "3xl:w-[calc(14.285%*5)] 3xl:border-l 3xl:pl-[30px]",
   "4xl:w-[calc(14.285%*5)] 4xl:border-l 4xl:pl-[30px]"
 );
-const paragraphWrapper = classNames('border-[#505050]',
+const paragraphWrapper = classNames(
+  "border-[#505050]",
   "xs:w-full xs:mt-[30px]",
   "sm:w-full sm:mt-[40px]",
   "md:w-full md:mt-[40px]",
@@ -127,11 +125,10 @@ const dropIn = {
     y: 200,
     opacity: 0,
     transition: {
-      delay:1.5,
+      delay: 1.5,
       duration: 0.8,
       type: "easeOut",
     },
-
   },
   visible: {
     y: 0,
@@ -150,9 +147,7 @@ const dropIn = {
       duration: 0.8,
       type: "easeOut",
     },
-
-  }
-
+  },
 };
 
 const dropInn = {
@@ -160,11 +155,10 @@ const dropInn = {
     x: "0vw",
     // rotate:0,
     transition: {
-      delay:0,
+      delay: 0,
       duration: 2,
       type: "linear",
     },
-
   },
   visible: {
     x: `${Math.random() * (60 - 30) + 30}vw`,
@@ -172,127 +166,117 @@ const dropInn = {
     transition: {
       delay: 0,
       duration: 1.5,
-      type: "linear"
+      type: "linear",
     },
   },
   exit: {
     x: "0vw",
     // rotate:0,
     transition: {
-      delay:0,
+      delay: 0,
       duration: 1.5,
       type: "linear",
     },
-
-  }
-
+  },
 };
-
 
 const HomepageHeader = () => {
   const [modalOpen, setModalOpen] = useState(false);
   // @ts-ignore
-  const loading = useStore(store => store.loading)
-
-
+  const loading = useStore((store) => store.loading);
 
   const close = () => setModalOpen(false);
   const open = () => setModalOpen(true);
 
   return (
-      <>
+    <>
       <MenuLayout close={close} open={open} state={modalOpen} />
-    <div className="relative">
-
-      <div className={menuHeader}>
-        <div className={leftMenuWrapper}>
-          <LangSwitcher mobile={true} />
-        </div>
-
-        <Logo />
-
-        <div className={menuButtonWrapper}>
-          <LangSwitcher />
-
-          <Menu close={close} open={open} state={modalOpen}/>
-        </div>
-      </div>
-
-      <div className={mainHeader}>
-
-        <Container>
-          <div className={"relative"}>
-          <AnimatePresence
-              initial={true}
-              mode='wait'
-              onExitComplete={() => useStore.setState({loading: false})}
-          >
-            {!loading && (
-
-          <>
-            <motion.div
-
-                variants={dropIn}
-                initial="hidden"
-                animate="visible"
-                exit="exit"
-
-                className={headerContentWrapper}>
-
-              <div className={mainTitleWrapper}>
-                <PageTitle >
-                  Jagodne – satysfakcja<br/>i sukces mierzone <br /> w m2.
-                </PageTitle>
-              </div>
-              <div className={paragraphWrapper}>
-
-                  <Paragraph>
-                    Specjalizujemy się w projektowaniu i wykonawstwie
-                    nowoczesnych obiektów budowlanych dla sektora komercyjnego,
-                    przemysłowego oraz użyteczności publicznej.
-                  </Paragraph>
-
-              </div>
-            </motion.div>
-
-            <motion.div
-                variants={dropIn}
-                initial="hidden"
-                animate="visible"
-                exit="exit"
-
-                className={buttonsContainer}>
-              <Button href={'/test'}>Dowiedz się więcej</Button>
-              <Button href={'/test'} dark={true} mobileHide={true}>Poznajmy się</Button>
-            </motion.div>
-          </>
-                )}
-        </AnimatePresence>
+      <div className="relative">
+        <div className={menuHeader}>
+          <div className={leftMenuWrapper}>
+            <LangSwitcher mobile={true} />
           </div>
-        </Container>
-        <AnimatePresence
-            initial={true}
-            mode='wait'
-        >
-          {!loading && (
 
-        <motion.div
-              variants={dropInn}
-                initial="hidden"
-                animate="visible"
-                exit="exit"
+          <Logo />
 
-              className="circle-bg">
-          <img alt="circle" src={"/assets/circle-blue-gradient.svg"} />
-        </motion.div>
+          <div className={menuButtonWrapper}>
+            <LangSwitcher />
+
+            <Menu close={close} open={open} state={modalOpen} />
+          </div>
+        </div>
+
+        <div className={mainHeader}>
+          <Container center={true}>
+            <div className={"relative"}>
+              <AnimatePresence
+                initial={true}
+                mode="wait"
+                onExitComplete={() => useStore.setState({ loading: false })}
+              >
+                {!loading && (
+                  <>
+                    <motion.div
+                      variants={dropIn}
+                      initial="hidden"
+                      animate="visible"
+                      exit="exit"
+                      className={headerContentWrapper}
+                    >
+                      <div className={mainTitleWrapper}>
+                        <PageTitle>
+                          Jagodne – satysfakcja
+                          i sukces mierzone  w m2.
+                        </PageTitle>
+                      </div>
+                      <div className={paragraphWrapper}>
+                        <Paragraph>
+                          Specjalizujemy się w projektowaniu i wykonawstwie
+                          nowoczesnych obiektów budowlanych dla sektora
+                          komercyjnego, przemysłowego oraz użyteczności
+                          publicznej.
+                        </Paragraph>
+                      </div>
+                    </motion.div>
+
+                    <motion.div
+                      variants={dropIn}
+                      initial="hidden"
+                      animate="visible"
+                      exit="exit"
+                      className={buttonsContainer}
+                    >
+                      <Button href={"/test"}>Dowiedz się więcej</Button>
+                      <Button href={"/test"} dark={true} mobileHide={true}>
+                        Poznajmy się
+                      </Button>
+                    </motion.div>
+                  </>
+                )}
+              </AnimatePresence>
+
+            </div>
+            <AnimatePresence initial={true} mode="wait">
+              {!loading && (
+                  <motion.div
+                      variants={dropInn}
+                      initial="hidden"
+                      animate="visible"
+                      exit="exit"
+                      className="circle-bg"
+                  >
+                    <img alt="circle" src={"/assets/circle-blue-gradient.svg"} />
+                  </motion.div>
               )}
-        </AnimatePresence>
+            </AnimatePresence>
+          </Container>
 
-        <ScrollDown />
 
+
+          <ScrollDown />
+        </div>
       </div>
-    </div>
-      </>
+    </>
   );
 };
 

@@ -30,9 +30,9 @@ const CtaZespol = () => {
 
                 <H4TitleNoMG>Zapraszamy do kontaktu</H4TitleNoMG>
                 <ContactSpacer>
-                <Paragraph>Masz pytania lub nie udało Ci się znaleźć w konfiguratorze odpowiedniego rozwiązania?</Paragraph>
+                <Paragraph>Biuro Obsługi Klienta pracuje od poniedziałku do piątku, w godzinach 8.00-16.00.</Paragraph>
                 </ContactSpacer>
-                <Button href={'/kontakt'} center={true}>Skontaktuj się z nami</Button>
+                <Button href={'/kontakt'} center={true}>Poznajmy się</Button>
 
 
 

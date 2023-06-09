@@ -1,4 +1,5 @@
-import React, {useEffect, useRef} from "react";
+"use client";
+import React from "react";
 import classNames from "classnames";
 import H2Title from "@/components/Typography/H2Title";
 import Container from "@/components/layouts/container";
@@ -47,9 +48,6 @@ const HowWeDoIt = () => {
         visible: { opacity: 1, scale: 1 },
         hidden: { opacity: 0, scale: 0.65 }
     };
-    // useEffect(() => {
-    //     console.log(scrollYProgress)
-    // }, [scrollYProgress])
     return (
         <div className={howWedoItClasses} id={'section-1'}>
             <Container>
@@ -72,8 +70,8 @@ const HowWeDoIt = () => {
                 </motion.div>
 
                 <div className={'flex flex-col'}>
-                <SmallerContainer>
-                    {/*// @ts-ignore*/}
+                <SmallerContainer right={false}>
+
                     <BorderedContainer>
                         <TextSpacer>
                             <Paragraph>
@@ -109,7 +107,7 @@ const HowWeDoIt = () => {
                     </BorderedContainerInline>
 
                 <SmallerContainer>
-                    {/*// @ts-ignore*/}
+
                     <BorderedContainer>
                         <img src={'/images/1.png'} alt={'photo'} className={'' +
                             'w-full xs:h-[250px] sm:h-[250px] md:h-[400px] lg:h-[400px] xl:h-[300px] 2xl:h-[400px] 3xl:h-[450px] 4xl:h-[560px]'}/>

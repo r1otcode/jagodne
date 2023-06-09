@@ -12,7 +12,7 @@ const titleClasses = classNames('text-light', 'font-normal', 'subpixel-antialias
 
 
 )
-const Paragraph = ({ children }: { children: ReactNode }) => {
+const Paragraph:React.FC<{children:string | ReactNode}> = ({ children }) => {
     return (
         <p className={titleClasses}>{children}</p>
     )
