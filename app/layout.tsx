@@ -55,7 +55,7 @@ export default function RootLayout({
 
     </head>
 
-      <body>
+      <body className={'antialiased'}>
 
       <MouseCross/>
       {children}
