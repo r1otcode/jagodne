@@ -46,7 +46,7 @@ const Content = () => {
   return (
     <div className={howWedoItClasses} id={"section-1"}>
       <Container>
-        <div className={"grid xs:grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-2 2xL:grid-cols-2 3xl:grid-cols-2 4xl:grid-cols-2  text-center text-light"}>
+        <div className={"grid xs:grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-2 2xlL:grid-cols-2 3xl:grid-cols-2 4xl:grid-cols-2  text-center text-light"}>
           <BorderedContainer>
             <TextSpacer>
               <h3 className={titleClasses}>Chcesz porozmawiać – zadzwoń</h3>

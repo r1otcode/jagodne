@@ -1,3 +1,4 @@
+'use client'
 import Content from "@/components/layouts/polityka-prywatności/Content";
 import CtaNormal from "@/components/layouts/CtaNormal";
 import DefaultHeader from "@/components/layouts/header/DefaultHeader";
@@ -28,10 +29,11 @@ export default function Home() {
                     >
 
                         <Content />
+                        <CtaNormal />
                     </motion.div>
                 )}
             </AnimatePresence>
-            <CtaNormal />
+
         </>
     );
 }

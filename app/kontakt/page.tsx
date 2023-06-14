@@ -1,3 +1,4 @@
+'use client'
 import Content from "@/components/layouts/contact/Content";
 import DefaultHeader from "@/components/layouts/header/DefaultHeader";
 import CtaContact from "@/components/layouts/CtaContact";
@@ -28,10 +29,11 @@ export default function Home() {
                     >
 
                         <Content />
+                        <CtaContact />
                     </motion.div>
                 )}
             </AnimatePresence>
-            <CtaContact />
+
         </>
     );
 }
