@@ -82,7 +82,7 @@ body {
 }
 @media (pointer: coarse) {
   .h-\[100vh\] {
-    height: calc(100vh - 60px )!important;
+    height: calc(100vh - 80px )!important;
 
   }
   .cursor {
