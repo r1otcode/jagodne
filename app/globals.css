@@ -138,18 +138,18 @@ ul.blue-marker li {
   scroll-margin-top: 100px;
 }
 
-@media screen and (max-width:768px) {
-  .relative {
-    overflow-x: hidden;
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;
+/*@media screen and (max-width:768px) {*/
+/*  .relative {*/
+/*    overflow-x: hidden;*/
+/*    -ms-overflow-style: none;  !* IE and Edge *!*/
+/*    scrollbar-width: none;*/
 
-  }
-  .relative::-webkit-scrollbar {
-    display: none;
-  }
+/*  }*/
+/*  .relative::-webkit-scrollbar {*/
+/*    display: none;*/
+/*  }*/
 
-}
+/*}*/
 
 #menu-layout {   display: flex;
   justify-content: center;
