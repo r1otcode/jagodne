@@ -17,6 +17,13 @@ html {
   cursor: url("../public/assets/mouseCursor.svg"), auto;
 overflow-x: hidden;
 }
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+ 
+  overflow-x: hidden;
+  /*cursor: url("../public/assets/mouseCursor.svg"), auto;*/
+}
 @media (pointer: fine) {
   body {
     cursor: url("../public/assets/mouseCursor.svg"), auto;
