@@ -143,7 +143,7 @@ const Desktop = ({ close, open, state }: DesktopLayoutInterface) => {
               "col-span-1 bg-dark border-grid border border-l-0 border-b-0 border-t-0"
             }
           >
-            <Link href={"/konfigurator-obiektww-systemowych"}>
+            <Link href={"/konfigurator-obiektow-systemowych"}>
               <h3
                 className={
                   "text-light px-[30px] py-[32px] font-light text-[21px]" +
@@ -156,7 +156,7 @@ const Desktop = ({ close, open, state }: DesktopLayoutInterface) => {
           </div>
 
           <div className={"col-span-1 bg-dark border-grid border "}>
-            <Link href={"Aktualnosci"}>
+            <Link href={"/aktualnosci"}>
               {" "}
               <h3
                 className={

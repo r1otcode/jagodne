@@ -244,3 +244,7 @@ button.yarl__button {
     left:71px
   }
 }
+img.react-photo-album--photo {
+  height: 207px!important;
+  object-fit: fill;
+}
