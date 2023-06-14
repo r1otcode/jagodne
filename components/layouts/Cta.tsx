@@ -33,7 +33,7 @@ const Cta = () => {
                     <BorderedContainer basis={true}>
                         <TextSpacerCta>
                             <H5Title>Projektowanie obiektów budowlanych</H5Title>
-                            <SmallButton link={'#'}>Dowiedz się więcej</SmallButton>
+                            <SmallButton link={'/projektowanie'}>Dowiedz się więcej</SmallButton>
 
                         </TextSpacerCta>
 
@@ -42,7 +42,7 @@ const Cta = () => {
                     <BorderedContainer hideLeftBorder={true} basis={true}>
                         <TextSpacerCta>
                             <H5Title>Wykonawstwo konstrukcji budowlanych</H5Title>
-                            <SmallButton link={'#'}>Dowiedz się więcej</SmallButton>
+                            <SmallButton link={'/wykonawstwo'}>Dowiedz się więcej</SmallButton>
 
                         </TextSpacerCta>
 
@@ -51,7 +51,7 @@ const Cta = () => {
                     <BorderedContainer hideLeftBorder={true} basis={true}>
                         <TextSpacerCta>
                             <H5Title>Generalny patronat projektowo-wykonawczy</H5Title>
-                            <SmallButton link={'#'}>Dowiedz się więcej</SmallButton>
+                            <SmallButton link={'/generalny-patronat-projektowo-wykonawczy'}>Dowiedz się więcej</SmallButton>
 
                         </TextSpacerCta>
 

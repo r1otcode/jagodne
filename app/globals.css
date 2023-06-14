@@ -23,8 +23,8 @@ overflow-x: hidden;
 
 
   }
-  a:hover, div:hover {
-    cursor: url("../public/assets/mouseCursor.svg"), auto;
+  a:hover, div:hover, button:hover, img:hover {
+    cursor: url("../public/assets/mouseCursor.svg"), auto!important;
   }
   .cursor {
     position: fixed;
@@ -121,6 +121,7 @@ ul.blue-marker li {
 #section-1 {
   scroll-margin-top: 100px;
 }
+
 @media screen and (max-width:768px) {
   .relative {
     overflow-x: hidden;
