@@ -64,7 +64,7 @@ const HowWeDoIt = () => {
 
 
                 >
-                <video width="100%" className={videoClasses} autoPlay muted >
+                <video width="100%" className={videoClasses} autoPlay muted loop>
                     <source src="/assets/timelapse-1080_resized.mp4" type="video/mp4" />
                 </video>
                 </motion.div>
