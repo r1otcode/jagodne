@@ -12,7 +12,7 @@
 /*  src: url(../public/fonts/axiforma/Axiforma-Bold.ttf);*/
 /*  font-weight: 700;*/
 /*}*/
-html {
+html { 
   font-family: 'Axiforma', sans-serif;
   cursor: url("../public/assets/mouseCursor.svg"), auto;
 overflow-x: hidden;
