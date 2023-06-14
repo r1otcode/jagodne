@@ -55,7 +55,7 @@ export const mConfigurator = {
         pracownicySocial: { label: configuratorLabels['pracownicySocial'], value:"10" },
     },
     objectDescription:
-        "Sprawdź nasze propozycje kolorystyczne elewacji budynku o wymiarze S. Wybierz kolorystykę najbardziej pasującą do potrzeb twojej firmy i zobacz efekt na wizualizacjach poniżej.",
+        "Sprawdź nasze propozycje kolorystyczne elewacji budynku o wymiarze M. Wybierz kolorystykę najbardziej pasującą do potrzeb twojej firmy i zobacz efekt na wizualizacjach poniżej.",
     images: [
         {
             source: "/assets/configurator/s/1.png",
@@ -85,7 +85,7 @@ export const lConfigurator = {
         pracownicySocial: { label: configuratorLabels['pracownicySocial'], value:"10" },
     },
     objectDescription:
-        "Sprawdź nasze propozycje kolorystyczne elewacji budynku o wymiarze S. Wybierz kolorystykę najbardziej pasującą do potrzeb twojej firmy i zobacz efekt na wizualizacjach poniżej.",
+        "Sprawdź nasze propozycje kolorystyczne elewacji budynku o wymiarze L. Wybierz kolorystykę najbardziej pasującą do potrzeb twojej firmy i zobacz efekt na wizualizacjach poniżej.",
     images: [
         {
             source: "/assets/configurator/s/1.png",

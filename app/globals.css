@@ -156,12 +156,13 @@ button.yarl__button {
 }
 
 input {
-  background-color:transparent
+  background-color:transparent;
+  padding:18px 20px!important;
 }
 input:focus {
   outline: none;
 }
- label {
+ label, .form_info {
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
@@ -176,6 +177,20 @@ button.yarl__button {
 }
 .yarl__toolbar {
   padding: 0!important;
+}
+.form_btn {
+  padding: 17px 23px;
+  width: 97px;
+  height: 45px;
+  background: #146EBE;
+  border-radius: 30px;
+  color:#ECECEC;
+  font-size: 15px;
+  line-height: 1;
+  margin-top:50px;
+}
+.form_separator {
+  margin-top: 51px;
 }
  @media screen and (max-width: 479px) {
    .yarl__toolbar {

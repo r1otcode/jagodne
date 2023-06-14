@@ -14,20 +14,20 @@ import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 
 const photosData = [
-    { src: "/images/projektowanie_1.png", width: 800, height: 600 },
-    { src: "/images/projektowanie_2.png", width: 800, height: 600 },
-    { src: "/images/projektowanie_3.png", width: 800, height: 600 },
-    { src: "/images/projektowanie_4.png", width: 800, height: 600 },
-    { src: "/images/projektowanie_5.png", width: 800, height: 600 },
-    { src: "/images/projektowanie_5.png", width: 800, height: 600 },
+    { src: "/images/wizualizacja_1.png", width: 800, height: 600 },
+    { src: "/images/wizualizacja_2.png", width: 800, height: 600 },
+    { src: "/images/wizualizacja_3.png", width: 800, height: 600 },
+    { src: "/images/wizualizacja_4.png", width: 800, height: 600 },
+    { src: "/images/wizualizacja_5.png", width: 800, height: 600 },
+    { src: "/images/wizualizacja_5.png", width: 800, height: 600 },
 ];
 const photosData2 = [
-    { src: "/images/projektowanie_5.png", width: 800, height: 600 },
-    { src: "/images/projektowanie_1.png", width: 800, height: 600 },
-    { src: "/images/projektowanie_2.png", width: 800, height: 600 },
-    { src: "/images/projektowanie_3.png", width: 800, height: 600 },
-    { src: "/images/projektowanie_4.png", width: 800, height: 600 },
-    { src: "/images/projektowanie_5.png", width: 800, height: 600 },
+    { src: "/images/wizualizacja_5.png", width: 800, height: 600 },
+    { src: "/images/wizualizacja_1.png", width: 800, height: 600 },
+    { src: "/images/wizualizacja_2.png", width: 800, height: 600 },
+    { src: "/images/wizualizacja_3.png", width: 800, height: 600 },
+    { src: "/images/wizualizacja_4.png", width: 800, height: 600 },
+    { src: "/images/wizualizacja_5.png", width: 800, height: 600 },
 
 ];
 
@@ -66,77 +66,91 @@ const ContactFrom = () => {
         e.preventDefault();
 
         let errors = {
-            name: formState.name === '' ? 'Name is required' : null,
-            email: (!formState.email.includes('@') || formState.email === '') ? 'Valid email is required' : null,
-            phone: formState.phone === '' ? 'Phone is required' : null,
-            radio: formState.radio === '' ? 'Please select one option' : null
+            name: formState.name === '' ? 'To pole jest obowiązkowe' : null,
+            email: (!formState.email.includes('@') || formState.email === '') ? 'Email jest polem obowiązkowym' : null,
+            phone: formState.phone === '' ? 'To pole jest obowiązkowe' : null,
+            radio: formState.radio !== 'option1' ? 'Proszę zaznaczyć zgodę' : null
+
         };
 
         setFormErrors(errors);
     };
 
     return (
-        <form className="flex flex-col" onSubmit={handleSubmit}>
-            <input
-                type="text"
-                name="name"
-                placeholder="Imię i nazwisko / Nazwa firmy"
-                className="border border-grid border-gray-300 p-2  bg-transparent	font-normal text-[14px] leading-[22px] text-[#9C9C9C]"
-                value={formState.name}
-                onChange={handleChange}
-            />
-            {formErrors.name && <p className="text-red-500 text-xs">{formErrors.name}</p>}
-
-            <input
-                type="email"
-                name="email"
-                placeholder="Adres e-mail"
-                className="border border-b-0 border-t-0 border-grid p-2 font-normal text-[14px] leading-[22px] text-[#9C9C9C]"
-                value={formState.email}
-                onChange={handleChange}
-            />
-            {formErrors.email && <p className="text-red-500 text-xs">{formErrors.email}</p>}
-
-            <input
-                type="tel"
-                name="phone"
-                placeholder="Nr telefonu"
-                className="border border-grid p-2 font-normal text-[14px] leading-[22px] text-[#9C9C9C]"
-                value={formState.phone}
-                onChange={handleChange}
-            />
-            {formErrors.phone && <p className="text-red-500 text-xs">{formErrors.phone}</p>}
-
-            <div className="flex items-center mb-2">
-                <input
-                    type="radio"
-                    name="radio"
-                    value="option1"
-                    className="mr-2"
-                    onChange={handleChange}
-                />
-                <label>Wyrażam zgodę, aby moje dane osobowe w zakresie obejmującym: imię, nazwisko, numer telefonu i adres e-mail, były przetwarzane przez JAGODNE Sp. z o.o. z siedzibą w Siedlcach przy ulicy Brzeskiej 65 (dalej zwana Jagodne) we własnych celach marketingowych, co obejmuje m.in. prezentowania usług w tym przygotowania odpowiedniej oferty.</label>
+        <div className="flex xs:flex-col sm:flex-col md:flex-col lg:flex-col flex-row">
+            <div className="xs:w-full sm:w-full  md:w-full lg:w-full w-3/10 xs:mt-[40px] xs:mb-[50px] sm:mt-[40px] sm:mb-[50px] md:mt-[40px] md:mb-[50px] lg:mt-[40px] lg:mb-[50px] ">
+<Paragraph>
+    Jesteś zainteresowany powyższą konfiguracją lub chciałbyś zapytać nas o jej szczegóły? Skontaktuj się z nami.
+</Paragraph>
             </div>
+            <div className="xs:w-full sm:w-full  md:w-full lg:w-full w-7/10 xl:pl-[40px] 2xl:pl-[40px] 3xl:pl-[40px] 4xl:pl-[40px]">
+                <form className="flex flex-col" onSubmit={handleSubmit}>
+                    <input
+                        type="text"
+                        name="name"
+                        placeholder="Imię i nazwisko / Nazwa firmy"
+                        className="border border-grid border-gray-300 p-2  bg-transparent	font-normal text-[14px] leading-[22px] text-[#9C9C9C]"
+                        value={formState.name}
+                        onChange={handleChange}
+                    />
+                    {formErrors.name && <p className="text-light text-[12px] py-[5px]">{formErrors.name}</p>}
 
-            <div className="flex items-center mb-2">
-                <input
-                    type="radio"
-                    name="radio"
-                    value="option2"
-                    className="mr-2"
-                    onChange={handleChange}
-                />
-                <label>Wyrażam zgodę na otrzymywanie od Jagodne informacji handlowo-marketingowych w postaci wiadomości elektronicznych. (opcjonalnie)</label>
+                    <input
+                        type="email"
+                        name="email"
+                        placeholder="Adres e-mail"
+                        className="border border-b-0 border-t-0 border-grid p-2 font-normal text-[14px] leading-[22px] text-[#9C9C9C]"
+                        value={formState.email}
+                        onChange={handleChange}
+                    />
+                    {formErrors.email && <p className="text-light text-[12px] py-[5px]">{formErrors.email}</p>}
+
+                    <input
+                        type="tel"
+                        name="phone"
+                        placeholder="Nr telefonu"
+                        className="border border-grid p-2 font-normal text-[14px] leading-[22px] text-[#9C9C9C]"
+                        value={formState.phone}
+                        onChange={handleChange}
+                    />
+                    {formErrors.phone && <p className="text-light text-[12px] py-[5px]">{formErrors.phone}</p>}
+
+                    <div className="flex items-center mb-2 form_separator">
+                        <input
+                            type="radio"
+                            name="radio"
+                            value="option1"
+                            className="mr-2"
+                            onChange={handleChange}
+                        />
+                        <label>Wyrażam zgodę, aby moje dane osobowe w zakresie obejmującym: imię, nazwisko, numer telefonu i adres e-mail, były przetwarzane przez JAGODNE Sp. z o.o. z siedzibą w Siedlcach przy ulicy Brzeskiej 65 (dalej zwana Jagodne) we własnych celach marketingowych, co obejmuje m.in. prezentowania usług w tym przygotowania odpowiedniej oferty.</label>
+                    </div>
+                    {formErrors.radio && <p className="text-light text-[12px] py-[5px]">{formErrors.radio}</p>}
+
+
+                    <div className="flex items-center mb-2">
+                        <input
+                            type="radio"
+                            name="radio"
+                            value="option2"
+                            className="mr-2"
+                            onChange={handleChange}
+                        />
+                        <label>Wyrażam zgodę na otrzymywanie od Jagodne informacji handlowo-marketingowych w postaci wiadomości elektronicznych. (opcjonalnie)</label>
+                    </div>
+                    <p className={'form_info'}>Administratorem Państwa danych osobowych jest Jagodne Sp. z o.o. z siedzibą w Siedlcach przy ulicy Brzeskiej 65. Informujemy, że podanie danych osobowych zawartych w formularzu jest dobrowolne, ale niezbędne do udzielenia odpowiedzi na zapytanie, a także, że przysługują Państwu prawa dostępu do Państwa danych osobowych, ich zmiany (w tym aktualizacji), a także pozostałe prawa opisane w Polityce prywatności. Dane osobowe podane przez Państwo będą przetwarzane w celu udzielenia odpowiedzi na zapytanie, a jeśli udzielili Państwo określonych zgód – również na podstawie ww. zgody i w celu w jej treści określonym. Zachęcamy do zapoznania się z pozostałymi informacjami dostępnymi w Polityce Prywatności, w tym dot. okresów przechowywania danych i kategorii odbiorców danych.</p>
+
+                    <button
+                        type="submit"
+                        className="form_btn"
+                    >
+                        Prześlij
+                    </button>
+                </form>
             </div>
-            {formErrors.radio && <p className="text-red-500 text-xs">{formErrors.radio}</p>}
+        </div>
 
-            <button
-                type="submit"
-                className="bg-blue-500 text-white py-2 px-4 rounded mt-2"
-            >
-                Submit
-            </button>
-        </form>
+
     );
 }
 
@@ -171,9 +185,9 @@ const Gallery = ({photos}) => {
         />
     <Lightbox
         render={{
-            iconPrev: () => <img className={''} src={'/assets/arrow_left.svg'} />,
-            iconNext: () => <img src={'/assets/arrow_right.svg'} />,
-            iconClose: () => <img className={'lg_close_icon'} src={'/assets/close_icon.svg'} />,
+            iconPrev: () => <img alt={''} className={''} src={'/assets/arrow_left.svg'} />,
+            iconNext: () => <img  alt={''} src={'/assets/arrow_right.svg'} />,
+            iconClose: () => <img alt={''} className={'lg_close_icon'} src={'/assets/close_icon.svg'} />,
         }}
         styles={{ container: { backgroundColor: "rgba(50, 50, 52, 0.9)" } }}
         open={index >= 0}
@@ -186,7 +200,7 @@ const Gallery = ({photos}) => {
 
 }
 
-const GalleryWrapper = () => {
+const GalleryWrapper = ({photoSetFirst, photoSetSecond}) => {
 
         const [count, setCount] = useState(1);
 
@@ -201,27 +215,60 @@ const GalleryWrapper = () => {
                 setCount(prevCount => prevCount - 1);
             }
         }
+        const navButtonsClasses = classNames('inline-flex items-center justify-center',
+            'xs:mt-[60px]',
+            'sm:mt-[60px]',
+            'md:mt-[60px]',
+            'lg:mt-[60px]',
+            'xl:mt-[60px]',
+            '2xl:mt-[60px]',
+            '3xl:mt-[60px]',
+            '4xl:mt-[80px]',
+
+            )
+    const countClasses = classNames('text-light font-normal text-ellipsis w-[80px]',
+        'xs:text-[20px] xs:mx-[30px]',
+        'sm:text-[20px] sm:mx-[30px]',
+        'md:text-[30px] md:mx-[30px]',
+        'lg:text-[30px] lg:mx-[30px]',
+        'xl:text-[30px] xl:mx-[30px]',
+        '2xl:text-[30px] 2xl:mx-[30px]',
+        '3xl:text-[30px] 3xl:mx-[30px]',
+        '4xl:text-[40px] 4xl:mx-[40px]',
+        )
         return (
             <>
                 <div className={'text-center'}>
-            <div className={'inline-flex items-center '}>
+            <div className={navButtonsClasses}>
 
 
                 <button onClick={decrement}><img src={'/assets/arrow_outline_left.svg'}/></button>
-                <h1>Count: {count} / 2</h1>
+                <span className={countClasses} >{count}/2</span>
                 <button onClick={increment}><img src={'/assets/arrow_outline_right.svg'}/></button>
             </div>
                 </div>
-                {count === 1 && <Gallery photos={photosData}/>}
-                {count === 2 && <Gallery photos={photosData2}/>}
+                {count === 1 && <Gallery photos={photoSetFirst}/>}
+                {count === 2 && <Gallery photos={photoSetSecond}/>}
 
             </>
         )
 }
 
 export default function Home() {
+    const [selectedButton, setSelectedButton] = useState('S');
 
-
+    const buttonsWrapperClasses = classNames('grid grid-cols-3',
+    'xs:mt-[60px] xs:mb-[100px] xs:gap-[10px]',
+    'sm:mt-[60px] sm:mb-[100px] sm:gap-[10px]',
+    'md:mt-[60px] md:mb-[100px] md:gap-[10px]',
+    'lg:mt-[60px] lg:mb-[100px] lg:gap-[10px]',
+    'xl:mt-[100px] xl:mb-[140px]    xl:gap-[20px]',
+    '2xl:mt-[100px] 2xl:mb-[140px] 2xl:gap-[40px]',
+    '3xl:mt-[100px] 3xl:mb-[140px] 3xl:gap-[40px]',
+    '4xl:mt-[100px] 4xl:mb-[140px]  4xl:gap-[40px]',
+)
+const activeButtonClasses = classNames('bg-accent rounded-[50px] text-light font-extrabold text-center py-[17px] text-[22px] leading-[1]')
+const inactiveButtonClasses = classNames('bg-transparent rounded-[50px] text-grid border-grid border  font-extrabold text-center py-[17px] text-[22px] leading-[1] hover:bg-accent hover:text-light')
 
 
     return (
@@ -251,24 +298,49 @@ export default function Home() {
         </Container>
 
           <Container>
-              <div className={"grid grid-cols-3"}>
-                <div className={'bg-accent rounded-[50px] text-light font-extrabold text-center py-[17px] text-[22px] leading-[1]'}>S</div>
-                  <div className={'bg-accent rounded-[50px] text-light font-extrabold text-center py-[17px] text-[22px] leading-[1]'}>M</div>
-                  <div className={'bg-accent rounded-[50px] text-light font-extrabold text-center py-[17px] text-[22px] leading-[1]'}>L</div>
+              <div className={buttonsWrapperClasses}>
+                <button  onClick={() => setSelectedButton('S')} className={selectedButton === 'S' ? activeButtonClasses : inactiveButtonClasses}>S</button>
+                  <button  onClick={() => setSelectedButton('M')} className={selectedButton === 'M' ? activeButtonClasses : inactiveButtonClasses}>M</button>
+                  <button  onClick={() => setSelectedButton('L')} className={selectedButton === 'L' ? activeButtonClasses : inactiveButtonClasses}>L</button>
 
               </div>
           </Container>
-        <Configurator
-          title={sConfigurator.title}
-          objectInformations={sConfigurator.objectInformations}
-          images={sConfigurator.images}
-          objectDescription={sConfigurator.objectDescription}
-        />
+
+          {selectedButton === 'S' && <Configurator
+              title={sConfigurator.title}
+              objectInformations={sConfigurator.objectInformations}
+              images={sConfigurator.images}
+              objectDescription={sConfigurator.objectDescription}
+          />}
+          {selectedButton === 'M' && <Configurator
+              title={mConfigurator.title}
+              objectInformations={mConfigurator.objectInformations}
+              images={mConfigurator.images}
+              objectDescription={mConfigurator.objectDescription}
+          />}
+          {selectedButton === 'L' && <Configurator
+              title={lConfigurator.title}
+              objectInformations={lConfigurator.objectInformations}
+              images={lConfigurator.images}
+              objectDescription={lConfigurator.objectDescription}
+          />}
+
+
       </div>
         <Container>
-<GalleryWrapper />
+            {selectedButton === 'S' && <GalleryWrapper photoSetFirst={photosData} photoSetSecond={photosData2} />}
+            {selectedButton === 'M' && <GalleryWrapper photoSetFirst={photosData2} photoSetSecond={photosData} />}
+            {selectedButton === 'L' && <GalleryWrapper photoSetFirst={photosData} photoSetSecond={photosData2} />}
+
         </Container>
+
+<Container>
+    <div className={'text-center'}>
+    <H4TitleNoMG>Wyślij zapytanie</H4TitleNoMG>
+    <TextSpacer />
+    </div>
 <ContactFrom />
+    </Container>
 
     </>
   );
