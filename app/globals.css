@@ -85,6 +85,9 @@ body {
     height: calc(100vh - 80px )!important;
 
   }
+  div#menu-layout {
+    height:100vh!important;
+  }
   .cursor {
     display: none;
   }
@@ -137,7 +140,12 @@ ul.blue-marker li {
 #section-1 {
   scroll-margin-top: 100px;
 }
-
+.mobile_menu_holder {
+  top: 20px;
+  position: absolute;
+  width: calc(100vw - 40px);
+  margin: 0 20px;
+}
 /*@media screen and (max-width:768px) {*/
 /*  .relative {*/
 /*    overflow-x: hidden;*/

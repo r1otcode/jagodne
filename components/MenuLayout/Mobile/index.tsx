@@ -1,6 +1,8 @@
-import React from "react";
+import React, {useEffect} from "react";
 import Link from "next/link";
 import classNames from "classnames";
+import LangSwitcher from "@/components/LangSwitcher";
+import CloseMenu from "@/components/MenuLayout/closeMenu";
 
 interface MobileLayoutInterface {
   open: () => void;
@@ -18,12 +20,22 @@ const Mobile = ({ open, close, state }: MobileLayoutInterface) => {
   const mobileFooterClasses = classNames(
     "fixed w-[100vw] bottom-0 text-light font-regular px-[20px] pb-[20px] flex place-content-between max-w-[376px]"
   );
+  const menuHolder = classNames(
+      "inline-flex  items-center justify-between w-full mobile_menu_holder"
+  );
+  useEffect(() => {
+    console.log(open, close, state)
+  },[open, close, state])
   return (
     <>
       <div className={layoutClasses}>
+        <div className={menuHolder}>
+          <LangSwitcher mobile={true}/>
+          <CloseMenu close={close} open={open} state={state} />
+        </div>
         <ul className={Menu}>
           <li className={menuItem}>
-            <Link href={"/test"}>Projektowanie</Link>
+            <Link href={"/projektowanie"}>Projektowanie</Link>
           </li>
           <li className={menuItem}>
             <Link href={"/wykonawstwo"}>Wykonawstwo</Link>

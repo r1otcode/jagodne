@@ -54,8 +54,8 @@ return (
                 className={layoutClasses}
                 id={'menu-layout'}
             >
-                {/*<div onClick={close}>ssssssssss</div>*/}
-                {size.width > 767 ? <Desktop close={close} open={open} state={state} /> : <Mobile  open={open} state={state}/>}
+
+                {size.width > 767 ? <Desktop close={close} open={open} state={state} /> : <Mobile  open={open} close={close} state={state}/>}
 
 
             </motion.div>
@@ -76,7 +76,7 @@ const MenuLayout = ({close, open, state}: MenuLayoutProps) => {
             // animation before entering component is rendered
             mode='wait'
             // Fires when all exiting nodes have completed animating out
-            onExitComplete={() => console.log('sss')}
+
 
         >
             {state && <Layout close={close} open={open} state={state} />}
