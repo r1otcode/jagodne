@@ -30,11 +30,12 @@ export default function Home() {
 
                 >
       <HowWeDoIt />
+                    <Cta />
                     </motion.div>
             )}
         </AnimatePresence>
 
-      <Cta />
+
     </>
   );
 }
