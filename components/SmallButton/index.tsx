@@ -6,9 +6,17 @@ import Link from "next/link";
 const smallButtonClasses = classNames(
   "text-light leading-[11px] text-[15px]  font-medium py-[17px] px-[23px] bg-accent rounded-[33px] hover:z-50 hover:relative transition-control inline-block"
 );
-const SmallButton: React.FC<{children: string, link:string}> = ({ children, link }) => {
+const SmallButton: React.FC<{ children: string; link: string, color?:string }> = ({
+  children,
+  link,
+    color
+}) => {
   const [isShown, setIsShown] = useState(false);
+  const smallButtonClasses = classNames(
 
+    " leading-[11px] text-[15px]  font-medium py-[17px] px-[23px] bg-accent rounded-[33px] hover:z-50 hover:relative transition-control inline-block",
+  color === "light" ? "bg-light text-dark" : "bg-accent text-light"
+  );
   useEffect(() => {
     if (isShown) {
       document.body.classList.add("cursor-pointer");
@@ -27,4 +35,4 @@ const SmallButton: React.FC<{children: string, link:string}> = ({ children, link
     </Link>
   );
 };
-export default SmallButton
+export default SmallButton;

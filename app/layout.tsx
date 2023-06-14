@@ -4,6 +4,8 @@ import localFont from '@next/font/local'
 import React from "react";
 import MouseCross from "@/components/mouseCross";
 import Footer from "@/components/layouts/Footer";
+import useStore from "@/context";
+import {AnimatePresence, motion} from "framer-motion";
 
 
 
@@ -44,6 +46,8 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  // @ts-ignore
+  const loading = useStore((store) => store.loading);
 
 
   return (
@@ -58,7 +62,9 @@ export default function RootLayout({
       <body className={'antialiased'}>
 
       <MouseCross/>
+
       {children}
+
       <Footer />
       <div className="backdrop-animation"></div>
       </body>

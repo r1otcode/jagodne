@@ -33,7 +33,7 @@ const Button = (props: any) => {
 
     setTimeout(() => {
       router.push(props.href);
-    }, 2400);
+    }, 2340);
   };
   useEffect(() => {
     console.log(bears);
