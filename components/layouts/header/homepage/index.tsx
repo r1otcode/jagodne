@@ -212,7 +212,7 @@ const HomepageHeader = () => {
               <AnimatePresence
                 initial={true}
                 mode="wait"
-                onExitComplete={() => useStore.setState({ loading: false })}
+
               >
                 {!loading && (
                   <>
@@ -246,8 +246,8 @@ const HomepageHeader = () => {
                       exit="exit"
                       className={buttonsContainer}
                     >
-                      <Button href={"/test"}>Dowiedz się więcej</Button>
-                      <Button href={"/test"} dark={true} mobileHide={true}>
+                      <Button href={"/projektowanie"}>Dowiedz się więcej</Button>
+                      <Button href={"/zespol"} dark={true} mobileHide={true}>
                         Poznajmy się
                       </Button>
                     </motion.div>

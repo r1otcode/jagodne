@@ -212,7 +212,8 @@ const DefaultHeader: React.FC<{
               <AnimatePresence
                 initial={true}
                 mode="wait"
-                onExitComplete={() => useStore.setState({ loading: false })}
+
+
               >
                 {!loading && (
                   <>
