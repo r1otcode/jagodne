@@ -21,7 +21,7 @@ const Mobile = ({ open, close, state }: MobileLayoutInterface) => {
     "fixed w-[100vw] bottom-0 text-light font-regular px-[20px] pb-[20px] flex place-content-between max-w-[376px]"
   );
   const menuHolder = classNames(
-      "inline-flex  items-center justify-between w-full mobile_menu_holder"
+      "inline-flex  items-center justify-between max-w-[376px] mobile_menu_holder"
   );
   useEffect(() => {
     console.log(open, close, state)
