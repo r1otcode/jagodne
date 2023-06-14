@@ -197,7 +197,7 @@ const Content = () => {
                     Systemowych:
                   </Paragraph>
                   <br />
-                  <SmallButton link={"/konfigurator"}>
+                  <SmallButton link={"/konfigurator-obiektow-systemowych"}>
                     Otwórz konfigurator
                   </SmallButton>
                 </TextSpacer>
