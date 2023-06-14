@@ -12,11 +12,11 @@
 /*  src: url(../public/fonts/axiforma/Axiforma-Bold.ttf);*/
 /*  font-weight: 700;*/
 /*}*/
-.h-\[100vh\] {
-  height: 100vh;
-  min-height: 100vh;
-  min-height: -webkit-fill-available;
-}
+/*.h-\[100vh\] {*/
+/*  height: 100vh;*/
+/*  min-height: 100vh;*/
+/*  min-height: -webkit-fill-available;*/
+/*}*/
 html {
   font-family: 'Axiforma', sans-serif;
   cursor: url("../public/assets/mouseCursor.svg"), auto;
@@ -81,6 +81,10 @@ body {
   }
 }
 @media (pointer: coarse) {
+  .h-\[100vh\] {
+    height: calc(100vh - 60px )!important;
+
+  }
   .cursor {
     display: none;
   }
