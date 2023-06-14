@@ -22,6 +22,9 @@ img, video {
   mix-blend-mode: screen;
 
 }
+.nomix {
+  mix-blend-mode: normal;
+}
 html {
   font-family: 'Axiforma', sans-serif;
   cursor: url("../public/assets/mouseCursor.svg"), auto;

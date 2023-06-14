@@ -91,7 +91,7 @@ const HowWeDoIt = () => {
                             alt="jagodne"
                             src={"/assets/circle-small.svg"}
                             className={
-                                "border-grid border-r px-[45px] w-[170px] xs:hidden sm:hidden md:hidden lg:hidden"
+                                " nomix border-grid border-r px-[45px] w-[170px] xs:hidden sm:hidden md:hidden lg:hidden"
                             }
                         />
 
