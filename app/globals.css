@@ -12,6 +12,11 @@
 /*  src: url(../public/fonts/axiforma/Axiforma-Bold.ttf);*/
 /*  font-weight: 700;*/
 /*}*/
+.h-\[100vh\] {
+  height: 100vh;
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+}
 html {
   font-family: 'Axiforma', sans-serif;
   cursor: url("../public/assets/mouseCursor.svg"), auto;
@@ -20,7 +25,7 @@ overflow-x: hidden;
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
- 
+
   overflow-x: hidden;
   /*cursor: url("../public/assets/mouseCursor.svg"), auto;*/
 }
