@@ -57,13 +57,13 @@ body {
     position: absolute;
     top: 0;
     bottom: 0;
-    width: 2px;
+    width: 1px;
     background-color: #505050;
   }
 
   .hl {
     position: absolute;
-    height: 2px;
+    height: 1px;
     left: 0;
     right: 0;
     background-color: #505050;
