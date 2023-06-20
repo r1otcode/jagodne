@@ -305,3 +305,38 @@ img.react-photo-album--photo {
   transition: all 0.5s ease-out;
   opacity:1;
 }
+
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+.jakisdiv {
+  animation-duration: 100s;
+  animation-name: rotate;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.spin {
+  transition: transform 1s ease-in-out;
+}
+.spin:hover {
+  transform: rotate(45deg);
+}
+div#menu-layout {
+  height: calc(100vh + 120px);
+}
+sub, sup {
+  font-size: 60%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}

@@ -1,6 +1,6 @@
 import classNames from "classnames";
 import React, {ReactNode} from "react";
-const titleClasses = classNames('text-light', 'font-thin', 'subpixel-antialiased',
+const titleClasses = classNames('text-light', 'font-normal', 'subpixel-antialiased',
     'xs:text-[14px] xs:leading-[20px]',
     'sm:text-[14px] sm:leading-[20px]',
     'md:text-[15px] md:leading-[21px]',

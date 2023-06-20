@@ -1,8 +1,9 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import classNames from "classnames";
 import Link from "next/link";
 import LangSwitcher from "@/components/LangSwitcher";
 import CloseMenu from "@/components/MenuLayout/closeMenu";
+import useStore from "@/context";
 
 const menuButtonWrapper = classNames(
   "inline-flex",
@@ -46,6 +47,19 @@ const Desktop = ({ close, open, state }: DesktopLayoutInterface) => {
 
     "lg:py-[45px] xl:py-[47px] 2xl:py-[66px] 3xl:py-[74px] 4xl:py-[95px]"
   );
+  const [isShown, setIsShown] = useState(false);
+
+  // @ts-ignore
+  const bears = useStore(store => store.loading)
+  // @ts-ignore
+  const setAnimation = useStore(state => state.setLoading)
+  useEffect(() => {
+    if (isShown) {
+      document.body.classList.add("cursor-pointer");
+    } else {
+      document.body.classList.remove("cursor-pointer");
+    }
+  }, [isShown]);
 
   return (
     <>
@@ -58,12 +72,10 @@ const Desktop = ({ close, open, state }: DesktopLayoutInterface) => {
 
       <div>
         <div className={menuGridClasses}>
-          <div
-            className={
-              "col-span-1 bg-dark border-grid border menu-bg border-b-0"
-            }
-          >
-            <Link href={"/"}>
+          <Link onMouseEnter={() => setIsShown(true)}
+                onMouseLeave={() => setIsShown(false)} href={"/"} className={'hover:z-[50] hover:relative col-span-1 bg-dark border-grid border menu-bg border-b-0'}>
+          <div>
+
               <h3
                 className={
                   "text-light px-[30px] py-[32px] font-light text-[21px]" +
@@ -72,15 +84,17 @@ const Desktop = ({ close, open, state }: DesktopLayoutInterface) => {
               >
                 Strona główna
               </h3>
-            </Link>
-          </div>
 
+
+          </div>
+          </Link>
+          <Link href={"/projektowanie"} className={
+            "col-span-1 bg-dark border-grid border border-l-0 border-b-0"
+          }>
           <div
-            className={
-              "col-span-1 bg-dark border-grid border border-l-0 border-b-0"
-            }
+
           >
-            <Link href={"/projektowanie"}>
+
               <h3
                 className={
                   "text-light px-[30px] py-[32px] font-light text-[21px]" +
@@ -89,12 +103,13 @@ const Desktop = ({ close, open, state }: DesktopLayoutInterface) => {
               >
                 Projektowanie
               </h3>
-            </Link>
-          </div>
 
-          <div className={"col-span-1 bg-dark border-grid border border-l-0"}>
-            <Link href={"/wykonawstwo"}>
-              {" "}
+          </div>
+          </Link>
+
+
+            <Link href={"/wykonawstwo"} className={"col-span-1 bg-dark border-grid border border-l-0"}>
+              <div >
               <h3
                 className={
                   "text-light px-[30px] py-[32px] font-light text-[21px]" +
@@ -103,12 +118,12 @@ const Desktop = ({ close, open, state }: DesktopLayoutInterface) => {
               >
                 Wykonawstwo
               </h3>
-            </Link>
-          </div>
 
-          <div className={"col-span-1 bg-dark border-grid border border-b-0"}>
-            <Link href={"/generalny-patronat-projektowo-wykonawczy"}>
-              {" "}
+          </div> </Link>
+
+
+            <Link href={"/generalny-patronat-projektowo-wykonawczy"} className={"col-span-1 bg-dark border-grid border border-b-0"}>
+              <div >
               <h3
                 className={
                   "text-light px-[30px] py-[32px] font-light text-[21px]" +
@@ -117,16 +132,16 @@ const Desktop = ({ close, open, state }: DesktopLayoutInterface) => {
               >
                 Generalny patronat projektowo-wykonawczy
               </h3>
-            </Link>
-          </div>
 
-          <div
-            className={
+          </div></Link>
+
+
+            <Link href={"/obiekty-systemowe"} className={
               "col-span-1 bg-dark border-grid border border-l-0 border-b-0"
-            }
-          >
-            <Link href={"/obiekty-systemowe"}>
-              {" "}
+            }>
+               <div
+
+              >
               <h3
                 className={
                   "text-light px-[30px] py-[32px] font-light text-[21px]" +
@@ -135,15 +150,15 @@ const Desktop = ({ close, open, state }: DesktopLayoutInterface) => {
               >
                 Obiekty systemowe
               </h3>
-            </Link>
-          </div>
 
-          <div
-            className={
+          </div> </Link>
+
+
+            <Link href={"/konfigurator-obiektow-systemowych"} className={
               "col-span-1 bg-dark border-grid border border-l-0 border-b-0 border-t-0"
-            }
-          >
-            <Link href={"/konfigurator-obiektow-systemowych"}>
+            }>   <div
+
+            >
               <h3
                 className={
                   "text-light px-[30px] py-[32px] font-light text-[21px]" +
@@ -152,12 +167,12 @@ const Desktop = ({ close, open, state }: DesktopLayoutInterface) => {
               >
                 Konfigurator obiektów systemowych
               </h3>
-            </Link>
-          </div>
 
-          <div className={"col-span-1 bg-dark border-grid border "}>
-            <Link href={"/aktualnosci"}>
-              {" "}
+          </div> </Link>
+
+
+            <Link href={"/aktualnosci"} className={"col-span-1 bg-dark border-grid border "}>
+              <div >
               <h3
                 className={
                   "text-light px-[30px] py-[32px] font-light text-[21px]" +
@@ -166,11 +181,12 @@ const Desktop = ({ close, open, state }: DesktopLayoutInterface) => {
               >
                 Aktualności
               </h3>
-            </Link>
-          </div>
 
-          <div className={"col-span-1 bg-dark border-grid border border-l-0"}>
-            <Link href={"/zespol"}>
+          </div> </Link>
+
+
+            <Link href={"/zespol"} className={"col-span-1 bg-dark border-grid border border-l-0"}>
+              <div >
               <h3
                 className={
                   "text-light px-[30px] py-[32px] font-light text-[21px]" +
@@ -179,11 +195,12 @@ const Desktop = ({ close, open, state }: DesktopLayoutInterface) => {
               >
                 Zespół
               </h3>
-            </Link>
-          </div>
 
-          <div className={"col-span-1 bg-dark border-grid border border-l-0"}>
-            <Link href={"/kontakt"}>
+          </div> </Link>
+
+
+            <Link href={"/kontakt"} className={"col-span-1 bg-dark border-grid border border-l-0"}>
+              <div >
               <h3
                 className={
                   "text-light px-[30px] py-[32px] font-light text-[21px]" +
@@ -192,8 +209,8 @@ const Desktop = ({ close, open, state }: DesktopLayoutInterface) => {
               >
                 Kontakt
               </h3>
-            </Link>
-          </div>
+
+          </div>   </Link>
         </div>
 
         <div className={mobileFooterClasses}>

@@ -6,9 +6,10 @@ import SmallButton from "@/components/SmallButton";
 import BorderedContainer from "@/components/layouts/BorderedContainer";
 import H5Title from "@/components/Typography/H5Titile";
 import TextSpacerCta from "@/components/layouts/TextSpacerCta";
+import {AnimatePresence, motion} from "framer-motion";
 
 const Cta = () => {
-    const ctaClasses = classNames('mx-auto',
+    const ctaClasses = classNames('mx-auto', 'nomix',
         'xs:py-[80px] xs:w-[174px]',
         'sm:py-[80px] sm:w-[174px]',
         'md:py-[120px] md:w-[210px]',
@@ -21,7 +22,10 @@ const Cta = () => {
         );
 
     return (
-        <div className={'text-center'}>
+        <AnimatePresence>
+        <motion.div initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{ delay: 1, duration: 0.8 }}  className={'text-center'}>
 
 
             <img src={'/assets/shape.svg'} className={ctaClasses} />
@@ -60,7 +64,8 @@ const Cta = () => {
                 </div>
 
             </Container>
-            </div>
+            </motion.div>
+        </AnimatePresence>
 
     )
 }

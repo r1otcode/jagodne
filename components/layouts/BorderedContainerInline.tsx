@@ -1,6 +1,7 @@
 import React from "react";
 import classNames from "classnames";
-
+import {AnimatePresence} from "framer-motion";
+import {motion} from "framer-motion";
 
 const BorderedContainerInline = ({children, right}) => {
 
@@ -22,15 +23,19 @@ const BorderedContainerInline = ({children, right}) => {
         '3xl:w-[57.2%]',
         '4xl:w-[57.2%]',
 
-    right && 'xl:ml-[42.8%] 2xl:ml-[42.8%] 3xl:ml-[42.8%] 4xl:ml-[42.8%]'
+    right && 'xl:ml-[42.86%] 2xl:ml-[42.86%] 3xl:ml-[42.86%] 4xl:ml-[42.86%]'
 
         );
     return (
-        <div className={borderdContainerClasses}>
+        <AnimatePresence>
+        <motion.div initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{ delay: 0.2, duration: 0.8 }} className={borderdContainerClasses}>
 
             {children}
 
-        </div>
+        </motion.div>
+        </AnimatePresence>
     );
 
 }

@@ -12,7 +12,11 @@ import {AnimatePresence, motion} from "framer-motion";
 const Axiforma = localFont({
   src: [
     {
-      path: '../public/fonts/Kastelov-Axiforma-300Book.woff',
+      path: '../public/fonts/axiforma/Axiforma-Thin.ttf',
+      weight: '100'
+    },
+    {
+      path: '../public/fonts/axiforma/Axiforma-Light.ttf',
       weight: '300'
     },
     {
@@ -24,7 +28,11 @@ const Axiforma = localFont({
       weight: '500'
     },
     {
-      path: '../public/fonts/Kastelov-Axiforma-800ExtraBold.woff',
+      path: '../public/fonts/axiforma/Axiforma-Bold.ttf',
+      weight: '700'
+    },
+    {
+      path: '../public/fonts/axiforma/Axiforma-ExtraBold.ttf',
       weight: '800'
     },
     {

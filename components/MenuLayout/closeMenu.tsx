@@ -7,7 +7,7 @@ interface CloseMenuInterface  {
 }
 const CloseMenu = ({ close, open, state }: CloseMenuInterface) => {
     const menuButtonClasses = classNames(
-        "hover:z-50  hover:relative",
+        "hover:z-50  hover:relative", 'spin',
         "xs:w-[50px]",
         "sm:w-[50px]",
         "md:w-[50px]",

@@ -103,10 +103,10 @@ const mainTitleWrapper = classNames(
   "sm:w-full",
   "md:w-full",
   "lg:w-full",
-  "xl:w-[calc(14.285%*5)] xl:border-l xl:pl-[30px]",
-  "2xl:w-[calc(14.285%*5)] 2xl:border-l 2xl:pl-[20px]",
-  "3xl:w-[calc(14.285%*5)] 3xl:border-l 3xl:pl-[30px]",
-  "4xl:w-[calc(14.285%*5)] 4xl:border-l 4xl:pl-[30px]"
+  "xl:w-[calc(14.285%*5)] xl:border-l xl:pl-[20px]",
+  "2xl:w-[calc(14.285%*5)] 2xl:border-l 2xl:pl-[30px]",
+  "3xl:w-[calc(14.285%*5)] 3xl:border-l 3xl:pl-[40px]",
+  "4xl:w-[calc(14.285%*5)] 4xl:border-l 4xl:pl-[50px]"
 );
 const paragraphWrapper = classNames(
   "border-[#505050]",
@@ -114,10 +114,10 @@ const paragraphWrapper = classNames(
   "sm:w-full sm:mt-[40px]",
   "md:w-full md:mt-[40px]",
   "lg:w-full lg:mt-[50px]",
-  "xl:w-[calc(14.285%*2)] xl:border-l xl:pl-[30px]",
-  "2xl:w-[calc(14.285%*2)] 2xl:border-l 2xl:pl-[20px]",
-  "3xl:w-[calc(14.285%*2)] 3xl:border-l 3xl:pl-[30px]",
-  "4xl:w-[calc(14.285%*2)] 4xl:border-l 4xl:pl-[30px]"
+    "xl:w-[calc(14.285%*2)] xl:border-l xl:pl-[20px]",
+    "2xl:w-[calc(14.285%*2)] 2xl:border-l 2xl:pl-[30px]",
+    "3xl:w-[calc(14.285%*2)] 3xl:border-l 3xl:pl-[40px]",
+    "4xl:w-[calc(14.285%*2)] 4xl:border-l 4xl:pl-[50px]"
 );
 
 const dropIn = {
@@ -161,7 +161,7 @@ const dropInn = {
     },
   },
   visible: {
-    x: `${Math.random() * (60 - 30) + 30}vw`,
+    x: `0`,
     // rotate: Math.random() * (360),
     transition: {
       delay: 0,
@@ -225,8 +225,8 @@ const HomepageHeader = () => {
                     >
                       <div className={mainTitleWrapper}>
                         <PageTitle>
-                          Jagodne – satysfakcja
-                          i sukces mierzone  w m2.
+                          Jagodne – satysfakcja <br/>
+                          i sukces mierzone<br/> w m<sup>2</sup>.
                         </PageTitle>
                       </div>
                       <div className={paragraphWrapper}>
@@ -265,7 +265,7 @@ const HomepageHeader = () => {
                       exit="exit"
                       className="circle-bg"
                   >
-                    <img alt="circle" src={"/assets/circle-blue-gradient.svg"} />
+                    <img alt="circle homepage_circle" src={"/assets/circle-blue-gradient.svg"} />
                   </motion.div>
               )}
             </AnimatePresence>

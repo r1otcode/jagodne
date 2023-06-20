@@ -46,7 +46,7 @@ const HowWeDoIt = () => {
     });
     const variants = {
         visible: { opacity: 1, scale: 1 },
-        hidden: { opacity: 0, scale: 0.65 }
+        hidden: { opacity: 1, scale: 0.65 }
     };
     return (
         <div className={howWedoItClasses} id={'section-1'}>
@@ -125,7 +125,7 @@ const HowWeDoIt = () => {
 
 
                     <BiggerContainer right={true}>
-                        {/*// @ts-ignore*/}
+
                         <BorderedContainer>
                             <img src={'/images/2.png'} alt={'photo'} className={'w-full xs:h-[250px] sm:h-[250px] md:h-[400px] lg:h-[400px] xl:h-[300px] 2xl:h-[400px] 3xl:h-[450px] 4xl:h-[560px]'}/>
                             <TextSpacer>

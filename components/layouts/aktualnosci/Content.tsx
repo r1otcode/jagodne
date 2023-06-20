@@ -174,8 +174,8 @@ const featuredPostContent = classNames('bg-accent xs:w-full sm:w-full  md:w-full
                 return (
                    <a className={'single_post_item'} href={'#'}>
                        <div className={'single_post_item_img'}>
-                           <img className={'go_button'} src={'/assets/button_post.svg'} alt={'go_Button'} />
-                            <img className={'thumb'} src={post.img} alt={post.alt} />
+                           <img className={'go_button nomix'} src={'/assets/button_post.svg'} alt={'go_Button'} />
+                            <img className={'thumb '} src={post.img} alt={post.alt} />
                        </div>
 
                        <div className={dateClasses}>{post.date}</div>

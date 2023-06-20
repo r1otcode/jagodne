@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import classNames from "classnames";
-
+import { motion, AnimatePresence } from "framer-motion";
 
 interface MenuProps {
   children?: React.ReactNode;
@@ -39,11 +39,27 @@ const Menu = ({ children, close, open, state }: MenuProps) => {
       onClick={() => (state ? close() : open())}
       className={menuButtonClasses}
     >
-      <img
-        src={"/assets/menu-button.svg"}
+      <AnimatePresence   mode="wait">
+      {!isShown && <motion.img
+          src={"/assets/menu-button.svg"}
+          alt="Menu Opener"
+          className={menuButtonClasses}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1 }}
+      />}
+
+    {isShown &&  <motion.img
+        src={"/assets/menu_open_hover.svg"}
         alt="Menu Opener"
         className={menuButtonClasses}
-      />{" "}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1 }}
+
+    />}
+      </AnimatePresence>
+
     </div>
   );
 };

@@ -41,7 +41,7 @@ const dropIn = {
     }
 
 };
-const layoutClasses = classNames('fixed w-[100vw] h-[100vh] z-[99] top-0 left-0 bg-dark')
+const layoutClasses = classNames('fixed w-[100vw] h-[100vh] z-[9] top-0 left-0 bg-dark')
 function Layout({close, open, state}: MenuLayoutProps)  {
     const size = useWindowSize();
 

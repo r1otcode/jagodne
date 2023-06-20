@@ -8,7 +8,7 @@ import Button from "@/components/Button";
 import ContactSpacer from './ContactSpacer';
 
 const CtaNormal = () => {
-    const ctaClasses = classNames('mx-auto',
+    const ctaClasses = classNames('mx-auto', 'nomix',
         'xs:py-[80px] xs:w-[174px]',
         'sm:py-[80px] sm:w-[174px]',
         'md:py-[120px] md:w-[210px]',
