@@ -40,24 +40,15 @@ const Menu = ({ children, close, open, state }: MenuProps) => {
       className={menuButtonClasses}
     >
       <AnimatePresence   mode="wait">
-      {!isShown && <motion.img
-          src={"/assets/menu-button.svg"}
-          alt="Menu Opener"
-          className={menuButtonClasses}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1 }}
-      />}
+        <svg id="svg" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none">
+          <rect width="50" height="50" rx="25" fill="#146EBE"/>
+          <path className="long-line" d="M27.5 28.5H32.5" stroke="#ECECEC" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round"/>
+          <path className="short-line" d="M17.5 21.5H32.5" stroke="#ECECEC" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round"/>
+        </svg>
 
-    {isShown &&  <motion.img
-        src={"/assets/menu_open_hover.svg"}
-        alt="Menu Opener"
-        className={menuButtonClasses}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1 }}
 
-    />}
       </AnimatePresence>
 
     </div>

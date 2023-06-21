@@ -22,8 +22,20 @@ img, video {
   mix-blend-mode: screen;
 
 }
+/*div {*/
+/*  z-index: 2;*/
+/*}*/
 .nomix {
   mix-blend-mode: normal;
+}
+video {
+  z-index: 2;
+
+}
+.video-wrapper {
+  z-index:2;
+  mix-blend-mode: screen;
+
 }
 html {
   font-family: 'Axiforma', sans-serif;
@@ -169,12 +181,9 @@ ul.blue-marker li {
 
 #menu-layout {   display: flex;
   justify-content: center;
-  align-items: center;}
-.menu-bg:hover {
-  background-color: #505050;
-  transition: all 0.5s ease-out;
-  /*//background-blend-mode: screen;*/
+  align-items: center;
 }
+
 @media only screen and (min-width:1920px) {
   .team_member:last-child {
     margin-right: 180px;
@@ -339,4 +348,57 @@ sub, sup {
 }
 sup {
   top: -0.5em;
+}
+@keyframes slideDown {
+  0% { transform: translateY(-10px); opacity: 1; }
+  80% { transform: translateY(10px); opacity: 0; }
+  81% { opacity: 0; }
+  82% { transform: translateY(11px); opacity: 0; }
+  100% { opacity: 0; }
+}
+
+#arrow {
+  animation: slideDown 2s infinite;
+}
+@media screen and (min-width: 1366px) {
+  #svg {
+    width:60px;
+    height:60px;
+  }
+}
+
+
+.long-line, .short-line {
+  transition: all 0.5s ease;
+}
+
+#svg:hover .long-line {
+  d: path("M17.5 28.5H32.5");
+}
+
+#svg:hover .short-line {
+  d: path("M27.5 21.5H32.5");
+
+
+}
+.z-max {
+  z-index: 99;
+}
+.active {
+  background: url("../public/images/img_test.png");
+  background-blend-mode: SCREEN;
+  background-size: cover;
+}
+.homepage:hover {
+  background: url("../public/images/img_test.png");
+  background-blend-mode: SCREEN;
+  background-size: cover;
+  transition: all 0.5s ease;
+}
+
+.projektowanie:hover, .wykonawstwo:hover, .generalny:hover, .obiekty:hover, .konfigurator:hover, .aktualnosci:hover, .zespol:hover, .kontakt:hover {
+  background: url("../public/images/img_test.png");
+  background-blend-mode: SCREEN;
+  background-size: cover;
+  transition: all 0.5s ease;
 }

@@ -2,7 +2,7 @@ import classNames from "classnames";
 import {AnimatePresence, motion} from "framer-motion";
 
 const BiggerContainer = ({children, right}) => {
-    const smallerContainerClasses = classNames(
+    const smallerContainerClasses = classNames('z-10',
         'xs:w-full',
         'sm:w-full',
         'md:w-full',

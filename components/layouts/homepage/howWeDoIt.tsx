@@ -25,9 +25,20 @@ const HowWeDoIt = () => {
         '4xl:mt-[120px]'
         );
     const videoClasses = classNames(
-        "border-grid",
-        "border",
+
         "object-cover",
+        " xs:h-[240px]",
+        " sm:h-[260px]",
+        " md:h-[350px]",
+        " lg:h-[350px]",
+        " xl:h-[420px]",
+        " 2xl:h-[490px]",
+        " 3xl:h-[600px]",
+        " 4xl:h-[700px]"
+    );
+    const videoWrapperClasses = classNames(
+
+        "border border-grid",
         "xs:mt-[120px] xs:h-[240px]",
         "sm:mt-[120px] sm:h-[260px]",
         "md:mt-[120px] md:h-[350px]",
@@ -42,11 +53,11 @@ const HowWeDoIt = () => {
 
     const [ref, inView] = useInView({
         threshold: 1,
-        triggerOnce: false
+        triggerOnce: true
     });
     const variants = {
         visible: { opacity: 1, scale: 1 },
-        hidden: { opacity: 1, scale: 0.65 }
+        hidden: { opacity: 1, scale: 1.2 }
     };
     return (
         <div className={howWedoItClasses} id={'section-1'}>
@@ -54,12 +65,13 @@ const HowWeDoIt = () => {
                 <div className="text-center" >
                     <H2Title>Jak to robimy</H2Title>
                 </div>
+                <div className={videoWrapperClasses}>
                 <motion.div
                     animate={inView ? "visible" : "hidden"}
                     variants={variants}
                     exit="hidden"
                     transition={{ duration: 1 }}
-
+                    className={'video-wrapper'}
                     ref={ref}
 
 
@@ -68,6 +80,7 @@ const HowWeDoIt = () => {
                     <source src="/assets/timelapse-1080_resized.mp4" type="video/mp4" />
                 </video>
                 </motion.div>
+                </div>
 
                 <div className={'flex flex-col'}>
                 <SmallerContainer right={false}>

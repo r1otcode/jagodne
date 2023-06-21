@@ -18,7 +18,7 @@ const dropIn = {
         opacity: 0,
         transition: {
             duration: 1,
-            type: "spring",
+            type: "reverse",
         },
 
     },
@@ -31,17 +31,18 @@ const dropIn = {
         },
     },
     exit: {
+
         y: "100vh",
         opacity: 0,
         transition: {
             duration: 1,
-            type: "spring",
+            type: "reverse",
         },
 
     }
 
 };
-const layoutClasses = classNames('fixed w-[100vw] h-[100vh] z-[9] top-0 left-0 bg-dark')
+const layoutClasses = classNames('fixed w-[100vw] h-[100vh] z-max top-0 left-0 bg-dark')
 function Layout({close, open, state}: MenuLayoutProps)  {
     const size = useWindowSize();
 
