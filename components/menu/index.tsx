@@ -12,7 +12,7 @@ interface MenuProps {
 const Menu = ({ children, close, open, state }: MenuProps) => {
   const [isShown, setIsShown] = useState(false);
   const menuButtonClasses = classNames(
-      "hover:z-50  hover:relative",
+      "hover:z-[50]  hover:relative",
       "xs:w-[50px]",
       "sm:w-[50px]",
       "md:w-[50px]",

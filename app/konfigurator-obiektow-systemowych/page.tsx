@@ -75,6 +75,14 @@ const ContactFrom = () => {
 
         setFormErrors(errors);
     };
+    const [isShown, setIsShown] = useState(false);
+    useEffect(() => {
+        if (isShown) {
+            document.body.classList.add("cursor-pointer");
+        } else {
+            document.body.classList.remove("cursor-pointer");
+        }
+    }, [isShown]);
 
     return (
         <div className="flex xs:flex-col sm:flex-col md:flex-col lg:flex-col flex-row">
@@ -142,7 +150,9 @@ const ContactFrom = () => {
 
                     <button
                         type="submit"
-                        className="form_btn"
+
+                        onMouseEnter={() => setIsShown(true)}
+                        onMouseLeave={() => setIsShown(false)} className={'hover:z-[50] form_btn font-medium'}
                     >
                         Prześlij
                     </button>
@@ -236,15 +246,25 @@ const GalleryWrapper = ({photoSetFirst, photoSetSecond}) => {
         '3xl:text-[30px] 3xl:mx-[30px]',
         '4xl:text-[40px] 4xl:mx-[40px]',
         )
+    const [isShown, setIsShown] = useState(false);
+    useEffect(() => {
+        if (isShown) {
+            document.body.classList.add("cursor-pointer");
+        } else {
+            document.body.classList.remove("cursor-pointer");
+        }
+    }, [isShown]);
         return (
             <>
                 <div className={'text-center'}>
             <div className={navButtonsClasses}>
 
 
-                <button onClick={decrement}><img src={'/assets/arrow_outline_left.svg'}/></button>
+                <button onMouseEnter={() => setIsShown(true)}
+                        onMouseLeave={() => setIsShown(false)} className={'hover:z-[50]'} onClick={decrement}><img src={'/assets/arrow_outline_left.svg'}/></button>
                 <span className={countClasses} >{count}/2</span>
-                <button onClick={increment}><img src={'/assets/arrow_outline_right.svg'}/></button>
+                <button onMouseEnter={() => setIsShown(true)}
+                        onMouseLeave={() => setIsShown(false)} className={'hover:z-[50]'} onClick={increment}><img src={'/assets/arrow_outline_right.svg'}/></button>
             </div>
                 </div>
                 {count === 1 && <Gallery photos={photoSetFirst}/>}
@@ -267,9 +287,16 @@ export default function Home() {
     '3xl:mt-[100px] 3xl:mb-[140px] 3xl:gap-[40px]',
     '4xl:mt-[100px] 4xl:mb-[140px]  4xl:gap-[40px]',
 )
-const activeButtonClasses = classNames('bg-accent rounded-[50px] text-light font-extrabold text-center py-[17px] text-[22px] leading-[1]')
-const inactiveButtonClasses = classNames('bg-transparent rounded-[50px] text-grid border-grid border  font-extrabold text-center py-[17px] text-[22px] leading-[1] hover:bg-accent hover:text-light')
-
+const activeButtonClasses = classNames('hover:z-[50] bg-accent rounded-[50px] text-light font-extrabold text-center py-[17px] text-[22px] leading-[1]')
+const inactiveButtonClasses = classNames('hover:z-[50] bg-transparent rounded-[50px] text-grid border-grid border  font-extrabold text-center py-[17px] text-[22px] leading-[1] hover:bg-accent hover:text-light')
+    const [isShown, setIsShown] = useState(false);
+    useEffect(() => {
+        if (isShown) {
+            document.body.classList.add("cursor-pointer");
+        } else {
+            document.body.classList.remove("cursor-pointer");
+        }
+    }, [isShown]);
 
     return (
     <>
@@ -299,9 +326,12 @@ const inactiveButtonClasses = classNames('bg-transparent rounded-[50px] text-gri
 
           <Container>
               <div className={buttonsWrapperClasses}>
-                <button  onClick={() => setSelectedButton('S')} className={selectedButton === 'S' ? activeButtonClasses : inactiveButtonClasses}>S</button>
-                  <button  onClick={() => setSelectedButton('M')} className={selectedButton === 'M' ? activeButtonClasses : inactiveButtonClasses}>M</button>
-                  <button  onClick={() => setSelectedButton('L')} className={selectedButton === 'L' ? activeButtonClasses : inactiveButtonClasses}>L</button>
+                <button  onMouseEnter={() => setIsShown(true)}
+                         onMouseLeave={() => setIsShown(false)}  onClick={() => setSelectedButton('S')} className={selectedButton === 'S' ? activeButtonClasses : inactiveButtonClasses}>S</button>
+                  <button   onMouseEnter={() => setIsShown(true)}
+                            onMouseLeave={() => setIsShown(false)} onClick={() => setSelectedButton('M')} className={selectedButton === 'M' ? activeButtonClasses : inactiveButtonClasses}>M</button>
+                  <button  onMouseEnter={() => setIsShown(true)}
+                           onMouseLeave={() => setIsShown(false)}  onClick={() => setSelectedButton('L')} className={selectedButton === 'L' ? activeButtonClasses : inactiveButtonClasses}>L</button>
 
               </div>
           </Container>
