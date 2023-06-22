@@ -2,7 +2,7 @@ import React from "react";
 import classNames from "classnames";
 import Container from "@/components/layouts/container";
 import BorderedContainer from "@/components/layouts/BorderedContainer";
-import Paragraph from "@/components/Typography/Paragraph";
+import Paragraph from "@/components/Typography/Paragraph_light";
 import SmallerContainer from "@/components/layouts/SmallerContainer";
 import BiggerContainer from "@/components/layouts/BiggerContainer";
 import TextSpacer from "@/components/layouts/TextSpacer";

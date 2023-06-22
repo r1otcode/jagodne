@@ -8,7 +8,7 @@ const titleClasses = classNames('text-light', 'font-normal', 'subpixel-antialias
     'xl:text-[14px] xl:leading-[17.98px]',
     '2xl:text-[15px] 2xl:leading-[22px]',
     '3xl:text-[15px] 3xl:leading-[22px]',
-    '4xl:text-[18px] 4xl:leading-[27px]',
+    '4xl:text-[18px] 4xl:leading-[27px] 4xl:font-light',
 
 
 )
