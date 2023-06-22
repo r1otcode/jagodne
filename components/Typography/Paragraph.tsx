@@ -5,10 +5,10 @@ const titleClasses = classNames('text-light', 'font-normal', 'subpixel-antialias
     'sm:text-[14px] sm:leading-[20px]',
     'md:text-[15px] md:leading-[21px]',
     'lg:text-[15px] lg:leading-[22px]',
-    'xl:text-[13px] xl:leading-[17.98px]',
-    '2xl:text-[13px] 2xl:leading-[18px]',
+    'xl:text-[14px] xl:leading-[17.98px]',
+    '2xl:text-[15px] 2xl:leading-[22px]',
     '3xl:text-[15px] 3xl:leading-[22px]',
-    '4xl:text-[18px] 4xl:leading-[27px]',
+    '4xl:text-[18px] 4xl:leading-[27px] 4xl:font-light',
 
 
 )

@@ -36,7 +36,7 @@ const Content = () => {
               />
               <TextSpacer>
                 <H3Title>
-                  <span className={"text-accent"}>Odpowiedzialność</span>
+                  <span className={"text-accent text-black"}>Odpowiedzialność</span>
                   <span className={"font-medium"}>
                     {" "}
                     za wszystkie fazy inwestycji
@@ -72,7 +72,7 @@ const Content = () => {
               />
               <TextSpacer>
                 <H3Title>
-                  <span className={"text-accent"}>
+                  <span className={"text-accent text-black"}>
                     Zaplecze technologiczno-produkcyjne
                   </span>{" "}
                   <span className={"font-medium"}>
@@ -127,7 +127,7 @@ const Content = () => {
                     {" "}
                     Stosujemy technologie pozwalające na urzeczywistnienie wizji
                   </span>{" "}
-                  <span className={"text-accent"}>
+                  <span className={"text-accent text-black"}>
                     {" "}
                     wyprzedzających swoje czasy
                   </span>
@@ -158,7 +158,7 @@ const Content = () => {
               <TextSpacer>
                 <H3Title>
                   <span className={"font-medium"}>Wspieramy inwestycje na</span>
-                  <span className={"text-accent"}>
+                  <span className={"text-accent text-black"}>
                     {" "}
                     etapie przedwykonawczym
                   </span>
@@ -180,7 +180,7 @@ const Content = () => {
             <BorderedContainer>
               <TextSpacer>
                 <H3Title>
-                  <span className={"text-accent"}>Certyfikowane</span>
+                  <span className={"text-accent text-black"}>Certyfikowane</span>
                   <br /> <span className={"font-medium"}>rozwiązania</span>
                 </H3Title>
                 <Paragraph>
