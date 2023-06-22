@@ -8,7 +8,20 @@ import BiggerContainer from "@/components/layouts/BiggerContainer";
 import TextSpacer from "@/components/layouts/TextSpacer";
 import H3Title from "@/components/Typography/H3Title";
 import SmallButton from "@/components/SmallButton";
-
+import Carousel from "./lightBox";
+const slides = [
+  { src: "/images/wizualizacja_1.png", width: 1200, height: 600 },
+  { src: "/images/wizualizacja_2.png", width: 800, height: 600 },
+  { src: "/images/wizualizacja_3.png", width: 800, height: 600 },
+  { src: "/images/wizualizacja_4.png", width: 800, height: 600 },
+  { src: "/images/wizualizacja_5.png", width: 800, height: 600 },
+  { src: "/images/wizualizacja_5.png", width: 800, height: 600 },
+  { src: "/images/wizualizacja_5.png", width: 800, height: 600 },
+  { src: "/images/wizualizacja_5.png", width: 800, height: 600 },
+  { src: "/images/wizualizacja_5.png", width: 800, height: 600 },
+  { src: "/images/wizualizacja_5.png", width: 800, height: 600 },
+  { src: "/images/wizualizacja_5.png", width: 800, height: 600 },
+];
 const Content = () => {
   const howWedoItClasses = classNames(
     "xs:mt-[40px]",
@@ -198,6 +211,9 @@ const Content = () => {
                   ogniowej R15-R240.{" "}
                 </Paragraph>
               </TextSpacer>
+            </BorderedContainer>
+            <BorderedContainer>
+              <Carousel slides={slides} />
             </BorderedContainer>
           </SmallerContainer>
         </div>

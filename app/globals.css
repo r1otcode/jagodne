@@ -291,8 +291,44 @@ button.yarl__button {
   }
 }
 img.react-photo-album--photo {
-  height: 207px!important;
+  height: 281px!important;
   object-fit: fill;
+}
+@media only screen and (max-width:1535px){
+  img.react-photo-album--photo {
+    height: 200px!important;
+    object-fit: fill;
+  }
+}
+@media only screen and (max-width:1365px){
+  img.react-photo-album--photo {
+    height: 225px!important;
+    object-fit: fill;
+  }
+}
+@media only screen and (max-width:1023px){
+  img.react-photo-album--photo {
+    height: 163px!important;
+    object-fit: fill;
+  }
+}
+@media only screen and (max-width:785px){
+  img.react-photo-album--photo {
+    height: 125px!important;
+    object-fit: fill;
+  }
+}
+@media only screen and (max-width:479px){
+  img.react-photo-album--photo {
+    height: 200px!important;
+    object-fit: fill;
+  }
+}
+@media only screen and (max-width:389px){
+  img.react-photo-album--photo {
+    height: 161px!important;
+    object-fit: fill;
+  }
 }
 .go_button {
   position: absolute;
