@@ -36,7 +36,7 @@ const Content = () => {
               />
               <TextSpacer>
                 <H3Title>
-                  <span className={"text-accent"}>Więcej</span> niż projekt
+                  <span className={"text-accent font-black"}>Więcej</span> <span className={"font-medium"}>niż projekt</span>
                 </H3Title>
                 <Paragraph>
                   Przed rozpoczęciem procesu projektowego staramy się uzyskać
@@ -67,8 +67,8 @@ const Content = () => {
               />
               <TextSpacer>
                 <H3Title>
-                  <span className={"text-accent"}>Wsparcie</span> na etapie
-                  briefu
+                  <span className={"text-accent text-black"}>Wsparcie</span> <span className={"font-medium"}>na etapie
+                  briefu</span>
                 </H3Title>
                 <Paragraph>
                   Doradzamy w optymalizacji parametrów pierwszo- i
@@ -98,7 +98,7 @@ const Content = () => {
               />
               <TextSpacer>
                 <H3Title>
-                  Szeroka<span className={"text-accent"}> perspektywa</span>
+                <span className={"font-medium"}>Szeroka</span><span className={"text-accent text-black"}> perspektywa</span>
                 </H3Title>
                 <Paragraph>
                   W podejmowanych przedsięwzięciach uwzględniamy możliwe
@@ -124,8 +124,8 @@ const Content = () => {
               />
               <TextSpacer>
                 <H3Title>
-                  Kosztorysowanie{" "}
-                  <span className={"text-accent"}> w czasie rzeczywistym</span>
+                <span className={"font-medium"}>Kosztorysowanie{" "}</span>
+                  <span className={"text-accent text-black"}> w czasie rzeczywistym</span>
                 </H3Title>
                 <Paragraph>
                   Zapewniamy elastyczny model współpracy, pozostawiając bufor na
@@ -152,8 +152,8 @@ const Content = () => {
               />
               <TextSpacer>
                 <H3Title>
-                  <span className={"text-accent"}>Odpowiedzialność</span> za
-                  proces koncepcyjny, projektowy i wykonawczy
+                  <span className={"text-accent text-black"}>Odpowiedzialność</span> <span className={"font-medium"}>za
+                  proces koncepcyjny, projektowy i wykonawczy</span>
                 </H3Title>
                 <Paragraph>
                   Dysponujemy własną pracownią, w ramach której opracowujemy
