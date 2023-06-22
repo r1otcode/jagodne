@@ -438,3 +438,29 @@ sup {
   background-size: cover;
   transition: all 0.5s ease;
 }
+.mr-2 {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color:transparent; /* Zmień na wybrany kolor lub obrazek tła */
+  border: none;
+  outline: 2px solid gray; /* Dodaj szary kontur */
+  cursor: pointer;
+  padding: 0px!important;
+}
+.mr-2:checked {
+  content: "\2713";
+  font-size: 12px; 
+  color: gray; 
+  
+  
+  outline: 2px solid gray;
+  
+  border-radius: 50%;
+ 
+
+}
+
