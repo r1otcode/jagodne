@@ -86,12 +86,12 @@ const ContactFrom = () => {
 
     return (
         <div className="flex xs:flex-col sm:flex-col md:flex-col lg:flex-col flex-row">
-            <div className="xs:w-full sm:w-full  md:w-full lg:w-full w-3/10 xs:mt-[40px] xs:mb-[50px] sm:mt-[40px] sm:mb-[50px] md:mt-[40px] md:mb-[50px] lg:mt-[40px] lg:mb-[50px] ">
+            <div className="xs:w-full sm:w-full  md:w-full lg:w-full w-[26%] xs:mt-[40px] xs:mb-[50px] sm:mt-[40px] sm:mb-[50px] md:mt-[40px] md:mb-[50px] lg:mt-[40px] lg:mb-[50px] ">
 <Paragraph>
     Jesteś zainteresowany powyższą konfiguracją lub chciałbyś zapytać nas o jej szczegóły? Skontaktuj się z nami.
 </Paragraph>
             </div>
-            <div className="xs:w-full sm:w-full  md:w-full lg:w-full w-7/10 xl:pl-[40px] 2xl:pl-[40px] 3xl:pl-[40px] 4xl:pl-[40px]">
+            <div className="xs:w-full sm:w-full  md:w-full lg:w-full w-[74%] xl:pl-[40px] 2xl:pl-[40px] 3xl:pl-[40px] 4xl:pl-[40px]">
                 <form className="flex flex-col" onSubmit={handleSubmit}>
                     <input
                         type="text"
@@ -178,9 +178,11 @@ const Gallery = ({photos}) => {
 
         )
     const [index, setIndex] = useState(-1);
+    
     return (
         <div className={galleryClasses}>
         <PhotoAlbum
+        
             columns={(containerWidth) => {
                 if (containerWidth < 479) return 1;
                 if (containerWidth < 1365) return 2;
