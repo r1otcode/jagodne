@@ -1,3 +1,4 @@
+// use client
 import H2TitleWpis from "@/components/Typography/H2TitleWpis";
 import Paragraph from "@/components/Typography/Paragraph_light";
 import TextSpacer from "@/components/spacers/textSpacer";
@@ -9,6 +10,7 @@ import LinkWpis from "@/components/Typography/LinkWpis";
 import H4TitleWpis from "@/components/Typography/H4TitleWpis";
 import BorderedContainer from "../BorderedContainer";
 import BorderedContainerInline from "../BorderedContainerInline";
+import Carousel from "./lightBox";
 
 const SinglePostContent = () => {
     const SinglePostContentClasses = classNames('z-10', 'mx-auto',
@@ -74,9 +76,7 @@ const SinglePostContent = () => {
             <Paragraph>Paragraph – Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Cras mattis consectetur purus sit amet fermentum. Vestibulum id ligula porta felis euismod semper. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</Paragraph>
             <TextSpacer/>
             <BorderedContainer>
-            <video width="100%" className={videoClasses} autoPlay muted loop>
-                    <source src="/assets/timelapse-1080_resized.mp4" type="video/mp4" />
-                </video>
+           <Carousel/>
                 </BorderedContainer>
                 <BorderedContainer>
                 <Paragraph>
