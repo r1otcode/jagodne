@@ -92,59 +92,64 @@ const ContactFrom = () => {
 </Paragraph>
             </div>
             <div className="xs:w-full sm:w-full  md:w-full lg:w-full w-[74%] xl:pl-[40px] 2xl:pl-[40px] 3xl:pl-[40px] 4xl:pl-[40px]">
+                <div className="py-[20px]">
+            {formErrors.name && <p className="text-light text-[12px] py-[5px] error-msg xs:text-[13px] sm:text-[14px] md:text-[14px] lg:text-[14px] xl:text-[14px] 2xl:text-[14px] 3xl:text-[15px] 4xl:text-[16px]">Imię i nazwisko / Nazwa firmy: {formErrors.name}</p>}
+            {formErrors.email && <p className="text-light text-[12px] py-[5px] error-msg xs:text-[13px] sm:text-[14px] md:text-[14px] lg:text-[14px] xl:text-[14px] 2xl:text-[14px] 3xl:text-[15px] 4xl:text-[16px]">Adres e-mail:  {formErrors.email}</p>}
+            {formErrors.phone && <p className="text-light text-[12px] py-[5px] error-msg xs:text-[13px] sm:text-[14px] md:text-[14px] lg:text-[14px] xl:text-[14px] 2xl:text-[14px] 3xl:text-[15px] 4xl:text-[16px]">Nr. telefonu: {formErrors.phone}</p>}
+            </div>
                 <form className="flex flex-col" onSubmit={handleSubmit}>
                     <input
                         type="text"
                         name="name"
                         placeholder="Imię i nazwisko / Nazwa firmy"
-                        className="border border-grid border-gray-300 p-2  bg-transparent	font-normal text-[14px] leading-[22px] text-[#9C9C9C]"
+                        className="border border-grid border-gray-300 p-2  bg-transparent	font-normal text-[14px] leading-[22px] text-[#9C9C9C] xs:text-[13px] sm:text-[14px] md:text-[14px] lg:text-[14px] xl:text-[14px] 2xl:text-[14px] 3xl:text-[15px] 4xl:text-[16px]"
                         value={formState.name}
                         onChange={handleChange}
                     />
-                    {formErrors.name && <p className="text-light text-[12px] py-[5px]">{formErrors.name}</p>}
+                   
 
                     <input
                         type="email"
                         name="email"
                         placeholder="Adres e-mail"
-                        className="border border-b-0 border-t-0 border-grid p-2 font-normal text-[14px] leading-[22px] text-[#9C9C9C]"
+                        className="border border-b-0 border-t-0 border-grid p-2 font-normal text-[14px] leading-[22px] text-[#9C9C9C] xs:text-[13px] sm:text-[14px] md:text-[14px] lg:text-[14px] xl:text-[14px] 2xl:text-[14px] 3xl:text-[15px] 4xl:text-[16px]"
                         value={formState.email}
                         onChange={handleChange}
                     />
-                    {formErrors.email && <p className="text-light text-[12px] py-[5px]">{formErrors.email}</p>}
+                    
 
                     <input
                         type="tel"
                         name="phone"
                         placeholder="Nr telefonu"
-                        className="border border-grid p-2 font-normal text-[14px] leading-[22px] text-[#9C9C9C]"
+                        className="border border-grid p-2 font-normal text-[14px] leading-[22px] text-[#9C9C9C] xs:text-[13px] sm:text-[14px] md:text-[14px] lg:text-[14px] xl:text-[14px] 2xl:text-[14px] 3xl:text-[15px] 4xl:text-[16px]"
                         value={formState.phone}
                         onChange={handleChange}
                     />
-                    {formErrors.phone && <p className="text-light text-[12px] py-[5px]">{formErrors.phone}</p>}
+                    
 
                     <div className="flex items-center mb-2 form_separator items-start">
                         <input
                             type="radio"
                             name="radio"
                             value="option1"
-                            className="mr-2 self-start" 
+                            className={ formErrors.radio ? 'input_error mr-2 self-start' : 'mr-2 self-start' } 
                             onChange={handleChange}
                         />
-                        <label>Wyrażam zgodę, aby moje dane osobowe w zakresie obejmującym: imię, nazwisko, numer telefonu i adres e-mail, były przetwarzane przez JAGODNE Sp. z o.o. z siedzibą w Siedlcach przy ulicy Brzeskiej 65 (dalej zwana Jagodne) we własnych celach marketingowych, co obejmuje m.in. prezentowania usług w tym przygotowania odpowiedniej oferty.</label>
+                        <label className="text-[12px]">Wyrażam zgodę, aby moje dane osobowe w zakresie obejmującym: imię, nazwisko, numer telefonu i adres e-mail, były przetwarzane przez JAGODNE Sp. z o.o. z siedzibą w Siedlcach przy ulicy Brzeskiej 65 (dalej zwana Jagodne) we własnych celach marketingowych, co obejmuje m.in. prezentowania usług w tym przygotowania odpowiedniej oferty.</label>
                     </div>
-                    {formErrors.radio && <p className="text-light text-[12px] py-[5px]">{formErrors.radio}</p>}
+                   
 
 
                     <div className="flex items-center mb-2 items-start">
                         <input
                             type="radio"
-                            name="radio"
+                            name="radio2"
                             value="option2" 
                             className="mr-2 self-start"
                             onChange={handleChange}
                         />
-                        <label>Wyrażam zgodę na otrzymywanie od Jagodne informacji handlowo-marketingowych w postaci wiadomości elektronicznych. (opcjonalnie)</label>
+                        <label className="text-[12px]">Wyrażam zgodę na otrzymywanie od Jagodne informacji handlowo-marketingowych w postaci wiadomości elektronicznych. (opcjonalnie)</label>
                     </div>
                     <p className={'form_info'}>Administratorem Państwa danych osobowych jest Jagodne Sp. z o.o. z siedzibą w Siedlcach przy ulicy Brzeskiej 65. Informujemy, że podanie danych osobowych zawartych w formularzu jest dobrowolne, ale niezbędne do udzielenia odpowiedzi na zapytanie, a także, że przysługują Państwu prawa dostępu do Państwa danych osobowych, ich zmiany (w tym aktualizacji), a także pozostałe prawa opisane w Polityce prywatności. Dane osobowe podane przez Państwo będą przetwarzane w celu udzielenia odpowiedzi na zapytanie, a jeśli udzielili Państwo określonych zgód – również na podstawie ww. zgody i w celu w jej treści określonym. Zachęcamy do zapoznania się z pozostałymi informacjami dostępnymi w Polityce Prywatności, w tym dot. okresów przechowywania danych i kategorii odbiorców danych.</p>
 

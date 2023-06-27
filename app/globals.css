@@ -486,3 +486,18 @@ height: 50px;
   .swiper-button-disabled {
     opacity: 0!important;
   }
+  .error-msg {
+    color: #DF4C4C;
+    padding:0;
+    position: relative;
+  }
+  .input_error::after {
+    content: "";
+   width: 20px;
+   height:20px;
+   position: relative;
+   top: -4px;
+   left: -4px;
+   display: block;
+   border: 1px solid red;
+  }
