@@ -15,6 +15,8 @@ import useStore from "@/context";
 import MobileHeaderTitle from "@/components/Typography/HeaderTitleMobile";
 import HeaderTitle from "@/components/Typography/HeaderTitle";
 import style from "./style.module.css"
+import AddDate from "./addDate";
+import BackButton from "./backButton";
 const menuHeader = classNames(
   "flex",
   "justify-center",
@@ -191,7 +193,7 @@ const DefaultHeader: React.FC<{
   return (
     <>
       <MenuLayout close={close} open={open} state={modalOpen} />
-      <div className="relative">
+      <div className={`relative ${style.relative}`}>
         <div className={menuHeader}>
           <div className={leftMenuWrapper}>
             <LangSwitcher mobile={true} />
@@ -229,6 +231,10 @@ const DefaultHeader: React.FC<{
                       <div className={mainTitleWrapper}>
                      
                         <PageTitle maxW={false}>{children}</PageTitle>
+                        <AddDate>
+                            10/04/2023
+                        </AddDate>
+                        <BackButton/>
                       </div>
                      
                     </motion.div>
