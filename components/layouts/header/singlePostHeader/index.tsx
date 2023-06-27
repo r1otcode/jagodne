@@ -7,14 +7,14 @@ import Menu from "@/components/menu";
 import LangSwitcher from "@/components/LangSwitcher";
 import ScrollDown from "@/components/ScrollDown";
 import Paragraph from "@/components/Typography/Paragraph";
-import { useState } from "react";
+import { ReactNode, useState } from "react";
 import MenuLayout from "@/components/MenuLayout";
 import { AnimatePresence } from "framer-motion";
 import { motion } from "framer-motion";
 import useStore from "@/context";
 import MobileHeaderTitle from "@/components/Typography/HeaderTitleMobile";
 import HeaderTitle from "@/components/Typography/HeaderTitle";
-
+import style from "./style.module.css"
 const menuHeader = classNames(
   "flex",
   "justify-center",
@@ -31,7 +31,7 @@ const menuHeader = classNames(
 );
 const mainHeader = classNames(
   "w-full",
-  "h-[100vh]",
+  "h-[100vh]"
 
   // "xs:pt-[160px]",
   // "sm:pt-[227px]",
@@ -94,15 +94,15 @@ const headerContentWrapper = classNames(
   "4xl:flex"
 );
 const mainTitleWrapper = classNames(
-  "border-[#505050] ",
+  
   "xs:w-full",
   "sm:w-full",
   "md:w-full",
   "lg:w-full",
-  "xl:w-[calc(14.285%*5)] xl:border-l xl:pl-[30px]",
-  "2xl:w-[calc(14.285%*5)] 2xl:border-l 2xl:pl-[20px]",
-  "3xl:w-[calc(14.285%*5)] 3xl:border-l 3xl:pl-[30px]",
-  "4xl:w-[calc(14.285%*5)] 4xl:border-l 4xl:pl-[30px]"
+  "xl:w-[calc(14.285%*5)]  xl:pl-[30px]",
+  "2xl:w-[calc(14.285%*5)]  2xl:pl-[20px]",
+  "3xl:w-[calc(14.285%*5)]  3xl:pl-[30px]",
+  "4xl:w-[calc(14.285%*5)]  4xl:pl-[30px]"
 );
 const paragraphWrapper = classNames(
   "border-[#505050]",
@@ -176,7 +176,11 @@ const dropInn = {
   },
 };
 
-const ProjektowanieHeader = () => {
+const DefaultHeader: React.FC<{
+  title: string;
+  description: string | ReactNode;
+  children: string | ReactNode;
+}> = ({children }) => {
   const [modalOpen, setModalOpen] = useState(false);
   // @ts-ignore
   const loading = useStore((store) => store.loading);
@@ -202,13 +206,16 @@ const ProjektowanieHeader = () => {
           </div>
         </div>
 
-        <div className={mainHeader}>
+        <div className={`${mainHeader} ${style.mainHeader}`}>
+        <img className={style.img_backgound} src="/images/aktualnosci_8.png" />
+        <div className={style.gradient_overlay}></div>
           <Container center={true}>
             <div className={"relative"}>
               <AnimatePresence
                 initial={true}
                 mode="wait"
-                onExitComplete={() => useStore.setState({ loading: false })}
+
+
               >
                 {!loading && (
                   <>
@@ -220,46 +227,23 @@ const ProjektowanieHeader = () => {
                       className={headerContentWrapper}
                     >
                       <div className={mainTitleWrapper}>
-                        <MobileHeaderTitle>Projektowanie</MobileHeaderTitle>
-                        <PageTitle>
-                          Twój pomysł na inwestycję w skali
-                          <span className={"text-accent"}> big picture</span>
-                        </PageTitle>
+                     
+                        <PageTitle maxW={false}>{children}</PageTitle>
                       </div>
-                      <div className={paragraphWrapper}>
-                        <HeaderTitle>Projektowanie</HeaderTitle>
-                        <Paragraph>
-                          Nie boimy się odważnych i złożonych projektów
-                          zorientowanych na maksymalizację zwrotu z inwestycji.
-                          Budujemy dziś z myślą o potrzebach jutra.
-                        </Paragraph>
-                      </div>
+                     
                     </motion.div>
                   </>
                 )}
               </AnimatePresence>
             </div>
-            <AnimatePresence initial={true} mode="wait">
-              {!loading && (
-                  <motion.div
-                      variants={dropInn}
-                      initial="hidden"
-                      animate="visible"
-                      exit="exit"
-                      className="circle-bg"
-                  >
-                    <img alt="circle" src={"/assets/circle-blue-gradient.svg"} />
-                  </motion.div>
-              )}
-            </AnimatePresence>
+           
           </Container>
 
-
-          <ScrollDown />
+    
         </div>
       </div>
     </>
   );
 };
 
-export default ProjektowanieHeader;
+export default DefaultHeader;

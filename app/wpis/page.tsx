@@ -1,14 +1,14 @@
 
 import Content from "@/components/layouts/aktualnosci/Content";
 import CtaNormal from "@/components/layouts/CtaNormal";
-import DefaultHeader from "@/components/layouts/header/DefaultHeader";
+import WpistHeader from "../../components/layouts/header/singlePostHeader";
 
 export default function Home() {
     return (
         <>
-            <DefaultHeader title={'Aktualności'} description={"Nullam id dolor id nibh ultricies vehicula ut id elit. Vestibulum id ligula porta felis euismod semper. Integer posuere erat a ante venenatis dapibus posuere ."}>
-                Aenean eu leo quam pellentesque ornare sem lacinia quam
-            </DefaultHeader>
+            <WpistHeader>
+            H1 Aenean eu leo quam pellentesque ornare sem lacinia quam
+            </WpistHeader>
             <Content />
             <CtaNormal />
 
