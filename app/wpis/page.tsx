@@ -1,5 +1,5 @@
 
-// use client
+"use client"
 import Content from "@/components/layouts/aktualnosci/Content";
 import CtaNormal from "@/components/layouts/CtaNormal";
 import WpistHeader from "../../components/layouts/header/singlePostHeader";
