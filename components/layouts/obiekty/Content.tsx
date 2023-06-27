@@ -8,6 +8,7 @@ import BiggerContainer from "@/components/layouts/BiggerContainer";
 import TextSpacer from "@/components/layouts/TextSpacer";
 import H3Title from "@/components/Typography/H3Title";
 import SmallButton from "@/components/SmallButton";
+import ImageAnimation from "@/components/imageAnimation";
 
 const Content = () => {
   const howWedoItClasses = classNames(
@@ -27,13 +28,29 @@ const Content = () => {
         <div className={"flex flex-col"}>
           <SmallerContainer right={true}>
             <BorderedContainer>
+              <ImageAnimation>
               <img
-                src={"/images/obiekty_systemowe_1.png"}
+                src={"/images/obiekty_systemowe/photo_0011_1.1.jpg"}
                 alt={"photo"}
                 className={
-                  "w-full xs:h-[250px] sm:h-[250px] md:h-[400px] lg:h-[400px] xl:h-[300px] 2xl:h-[400px] 3xl:h-[450px] 4xl:h-[560px]"
+                  "image_scroller w-full xs:h-[250px] sm:h-[250px] md:h-[400px] lg:h-[400px] xl:h-[300px] 2xl:h-[400px] 3xl:h-[450px] 4xl:h-[560px]"
                 }
               />
+                <img
+                    src={"/images/obiekty_systemowe/photo_0010_1.2.jpg"}
+                    alt={"photo"}
+                    className={
+                      "image_scroller w-full xs:h-[250px] sm:h-[250px] md:h-[400px] lg:h-[400px] xl:h-[300px] 2xl:h-[400px] 3xl:h-[450px] 4xl:h-[560px]"
+                    }
+                />
+                <img
+                    src={"/images/obiekty_systemowe/photo_0009_1.3.jpg"}
+                    alt={"photo"}
+                    className={
+                      "image_scroller w-full xs:h-[250px] sm:h-[250px] md:h-[400px] lg:h-[400px] xl:h-[300px] 2xl:h-[400px] 3xl:h-[450px] 4xl:h-[560px]"
+                    }
+                />
+              </ImageAnimation>
               <TextSpacer>
                 <H3Title>
                   <span className={"text-accent text-black"}>Krótki</span>
@@ -54,13 +71,29 @@ const Content = () => {
 
           <BiggerContainer right={false}>
             <BorderedContainer>
-              <img
-                src={"/images/obiekty_systemowe_2.png"}
-                alt={"photo"}
-                className={
-                  "w-full xs:h-[250px] sm:h-[250px] md:h-[400px] lg:h-[400px] xl:h-[300px] 2xl:h-[400px] 3xl:h-[450px] 4xl:h-[560px]"
-                }
-              />
+              <ImageAnimation>
+                <img
+                    src={"/images/obiekty_systemowe/photo_0008_2.1.jpg"}
+                    alt={"photo"}
+                    className={
+                      "image_scroller w-full xs:h-[250px] sm:h-[250px] md:h-[400px] lg:h-[400px] xl:h-[300px] 2xl:h-[400px] 3xl:h-[450px] 4xl:h-[560px]"
+                    }
+                />
+                <img
+                    src={"/images/obiekty_systemowe/photo_0007_2.2.jpg"}
+                    alt={"photo"}
+                    className={
+                      "image_scroller w-full xs:h-[250px] sm:h-[250px] md:h-[400px] lg:h-[400px] xl:h-[300px] 2xl:h-[400px] 3xl:h-[450px] 4xl:h-[560px]"
+                    }
+                />
+                <img
+                    src={"/images/obiekty_systemowe/photo_0006_2.3.jpg"}
+                    alt={"photo"}
+                    className={
+                      "image_scroller w-full xs:h-[250px] sm:h-[250px] md:h-[400px] lg:h-[400px] xl:h-[300px] 2xl:h-[400px] 3xl:h-[450px] 4xl:h-[560px]"
+                    }
+                />
+              </ImageAnimation>
               <TextSpacer>
                 <H3Title>
                   <span className={"text-accent text-black"}>Przeznaczenie</span><br />
@@ -81,13 +114,29 @@ const Content = () => {
 
           <SmallerContainer right={true}>
             <BorderedContainer>
-              <img
-                src={"/images/obiekty_systemowe_3.png"}
-                alt={"photo"}
-                className={
-                  "w-full xs:h-[250px] sm:h-[250px] md:h-[400px] lg:h-[400px] xl:h-[300px] 2xl:h-[400px] 3xl:h-[450px] 4xl:h-[560px]"
-                }
-              />
+              <ImageAnimation>
+                <img
+                    src={"/images/obiekty_systemowe/photo_0005_3.1.jpg"}
+                    alt={"photo"}
+                    className={
+                      "image_scroller w-full xs:h-[250px] sm:h-[250px] md:h-[400px] lg:h-[400px] xl:h-[300px] 2xl:h-[400px] 3xl:h-[450px] 4xl:h-[560px]"
+                    }
+                />
+                <img
+                    src={"/images/obiekty_systemowe/photo_0004_3.2.jpg"}
+                    alt={"photo"}
+                    className={
+                      "image_scroller w-full xs:h-[250px] sm:h-[250px] md:h-[400px] lg:h-[400px] xl:h-[300px] 2xl:h-[400px] 3xl:h-[450px] 4xl:h-[560px]"
+                    }
+                />
+                <img
+                    src={"/images/obiekty_systemowe/photo_0003_3.3.jpg"}
+                    alt={"photo"}
+                    className={
+                      "image_scroller w-full xs:h-[250px] sm:h-[250px] md:h-[400px] lg:h-[400px] xl:h-[300px] 2xl:h-[400px] 3xl:h-[450px] 4xl:h-[560px]"
+                    }
+                />
+              </ImageAnimation>
               <TextSpacer>
                 <H3Title>
                   <span className={"text-accent text-black"}>Premium</span>
@@ -108,13 +157,29 @@ const Content = () => {
 
           <BiggerContainer right={false}>
             <BorderedContainer>
-              <img
-                src={"/images/obiekty_systemowe_4.png"}
-                alt={"photo"}
-                className={
-                  "w-full xs:h-[250px] sm:h-[250px] md:h-[400px] lg:h-[400px] xl:h-[300px] 2xl:h-[400px] 3xl:h-[450px] 4xl:h-[560px]"
-                }
-              />
+              <ImageAnimation>
+                <img
+                    src={"/images/obiekty_systemowe/photo_0002_4.1.jpg"}
+                    alt={"photo"}
+                    className={
+                      "image_scroller w-full xs:h-[250px] sm:h-[250px] md:h-[400px] lg:h-[400px] xl:h-[300px] 2xl:h-[400px] 3xl:h-[450px] 4xl:h-[560px]"
+                    }
+                />
+                <img
+                    src={"/images/obiekty_systemowe/photo_0001_4.2.jpg"}
+                    alt={"photo"}
+                    className={
+                      "image_scroller w-full xs:h-[250px] sm:h-[250px] md:h-[400px] lg:h-[400px] xl:h-[300px] 2xl:h-[400px] 3xl:h-[450px] 4xl:h-[560px]"
+                    }
+                />
+                <img
+                    src={"/images/obiekty_systemowe/photo_0000_4.3.jpg"}
+                    alt={"photo"}
+                    className={
+                      "image_scroller w-full xs:h-[250px] sm:h-[250px] md:h-[400px] lg:h-[400px] xl:h-[300px] 2xl:h-[400px] 3xl:h-[450px] 4xl:h-[560px]"
+                    }
+                />
+              </ImageAnimation>
               <TextSpacer>
                 <H3Title>
                   <span className={"text-accent text-black"}>Wysoki standard</span>

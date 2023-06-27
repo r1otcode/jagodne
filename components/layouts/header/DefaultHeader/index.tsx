@@ -187,7 +187,36 @@ const DefaultHeader: React.FC<{
 
   const close = () => setModalOpen(false);
   const open = () => setModalOpen(true);
+  const leftMenuWrapper = classNames(
+      "inline-flex",
+      "items-center",
+      "xs:top-[41px] xs:left-[20px]",
+      "sm:top-[34px] sm:left-[20px]",
+      "md:top-[20px] md:left-[20px] ",
+      "lg:top-[30px] lg:left-[30px]",
+      "xl:top-[30px] xl:left-[30px]",
+      "2xl:top-[20px] 2xl:left-[20px]",
+      "3xl:top-[30px] 3xl:left-[30px]",
+      "4xl:top-[40px] 4xl:left-[40px]",
+      "fixed",
+      "hover:z-[50]",
 
+  );
+  const menuButtonWrapper = classNames(
+      "inline-flex",
+      "items-center",
+      "xs:top-[20px] xs:right-[20px]",
+      "sm:top-[20px] sm:right-[20px]",
+      "md:top-[20px] md:right-[20px] ",
+      "lg:top-[30px] lg:right-[30px]",
+      "xl:top-[30px] xl:right-[30px]",
+      "2xl:top-[20px] 2xl:right-[20px]",
+      "3xl:top-[30px] 3xl:right-[30px]",
+      "4xl:top-[40px] 4xl:right-[40px]",
+      "fixed",
+      !modalOpen && "hover:z-[50]",
+      modalOpen && "modal_opened"
+  );
   return (
     <>
       <MenuLayout close={close} open={open} state={modalOpen} />

@@ -5,7 +5,7 @@ interface SmallerContainerInterface {
     right?: boolean;
 }
 const SmallerContainer = ({children, right} : SmallerContainerInterface) => {
-    const smallerContainerClasses = classNames( 'z-10',
+    const smallerContainerClasses = classNames( 'z-',
         'xs:w-full',
         'sm:w-full',
         'md:w-full',

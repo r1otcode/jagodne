@@ -7,6 +7,7 @@ import SmallerContainer from "@/components/layouts/SmallerContainer";
 import BiggerContainer from "@/components/layouts/BiggerContainer";
 import TextSpacer from "@/components/layouts/TextSpacer";
 import H3Title from "@/components/Typography/H3Title";
+import ImageAnimation from "@/components/imageAnimation";
 
 const Content = () => {
   const howWedoItClasses = classNames(
@@ -27,13 +28,29 @@ const Content = () => {
           <SmallerContainer right={true}>
             {/*// @ts-ignore*/}
             <BorderedContainer>
+              <ImageAnimation>
               <img
-                src={"/images/projektowanie_1.png"}
+                src={"/images/projektowanie/photo_0014_1.1.jpg"}
                 alt={"photo"}
                 className={
-                  "w-full xs:h-[250px] sm:h-[250px] md:h-[400px] lg:h-[400px] xl:h-[300px] 2xl:h-[400px] 3xl:h-[450px] 4xl:h-[560px]"
+                  "image_scroller w-full xs:h-[250px] sm:h-[250px] md:h-[400px] lg:h-[400px] xl:h-[300px] 2xl:h-[400px] 3xl:h-[450px] 4xl:h-[560px]"
                 }
               />
+                <img
+                    src={"/images/projektowanie/photo_0013_1.2.jpg"}
+                    alt={"photo"}
+                    className={
+                      "image_scroller w-full xs:h-[250px] sm:h-[250px] md:h-[400px] lg:h-[400px] xl:h-[300px] 2xl:h-[400px] 3xl:h-[450px] 4xl:h-[560px]"
+                    }
+                />
+                <img
+                    src={"/images/projektowanie/photo_0012_1.3.jpg"}
+                    alt={"photo"}
+                    className={
+                      "image_scroller w-full xs:h-[250px] sm:h-[250px] md:h-[400px] lg:h-[400px] xl:h-[300px] 2xl:h-[400px] 3xl:h-[450px] 4xl:h-[560px]"
+                    }
+                />
+              </ImageAnimation>
               <TextSpacer>
                 <H3Title>
                   <span className={"text-accent font-black"}>Więcej</span> <span className={"font-medium"}>niż projekt</span>
@@ -58,13 +75,29 @@ const Content = () => {
           <BiggerContainer right={false}>
             {/*// @ts-ignore*/}
             <BorderedContainer>
-              <img
-                src={"/images/projektowanie_2.png"}
-                alt={"photo"}
-                className={
-                  "w-full xs:h-[250px] sm:h-[250px] md:h-[400px] lg:h-[400px] xl:h-[300px] 2xl:h-[400px] 3xl:h-[450px] 4xl:h-[560px]"
-                }
-              />
+              <ImageAnimation>
+                <img
+                    src={"/images/projektowanie/photo_0011_2.1.jpg"}
+                    alt={"photo"}
+                    className={
+                      "image_scroller w-full xs:h-[250px] sm:h-[250px] md:h-[400px] lg:h-[400px] xl:h-[300px] 2xl:h-[400px] 3xl:h-[450px] 4xl:h-[560px]"
+                    }
+                />
+                <img
+                    src={"/images/projektowanie/photo_0010_2.2.jpg"}
+                    alt={"photo"}
+                    className={
+                      "image_scroller w-full xs:h-[250px] sm:h-[250px] md:h-[400px] lg:h-[400px] xl:h-[300px] 2xl:h-[400px] 3xl:h-[450px] 4xl:h-[560px]"
+                    }
+                />
+                <img
+                    src={"/images/projektowanie/photo_0009_2.3.jpg"}
+                    alt={"photo"}
+                    className={
+                      "image_scroller w-full xs:h-[250px] sm:h-[250px] md:h-[400px] lg:h-[400px] xl:h-[300px] 2xl:h-[400px] 3xl:h-[450px] 4xl:h-[560px]"
+                    }
+                />
+              </ImageAnimation>
               <TextSpacer>
                 <H3Title>
                   <span className={"text-accent text-black"}>Wsparcie</span> <span className={"font-medium"}>na etapie
@@ -88,14 +121,29 @@ const Content = () => {
           <SmallerContainer right={true}>
             {/*// @ts-ignore*/}
             <BorderedContainer>
-              <img
-                src={"/images/projektowanie_3.png"}
-                alt={"photo"}
-                className={
-                  "" +
-                  "w-full xs:h-[250px] sm:h-[250px] md:h-[400px] lg:h-[400px] xl:h-[300px] 2xl:h-[400px] 3xl:h-[450px] 4xl:h-[560px]"
-                }
-              />
+              <ImageAnimation>
+                <img
+                    src={"/images/projektowanie/photo_0008_3.1.jpg"}
+                    alt={"photo"}
+                    className={
+                      "image_scroller w-full xs:h-[250px] sm:h-[250px] md:h-[400px] lg:h-[400px] xl:h-[300px] 2xl:h-[400px] 3xl:h-[450px] 4xl:h-[560px]"
+                    }
+                />
+                <img
+                    src={"/images/projektowanie/photo_0007_3.2.jpg"}
+                    alt={"photo"}
+                    className={
+                      "image_scroller w-full xs:h-[250px] sm:h-[250px] md:h-[400px] lg:h-[400px] xl:h-[300px] 2xl:h-[400px] 3xl:h-[450px] 4xl:h-[560px]"
+                    }
+                />
+                <img
+                    src={"/images/projektowanie/photo_0006_3.3.jpg"}
+                    alt={"photo"}
+                    className={
+                      "image_scroller w-full xs:h-[250px] sm:h-[250px] md:h-[400px] lg:h-[400px] xl:h-[300px] 2xl:h-[400px] 3xl:h-[450px] 4xl:h-[560px]"
+                    }
+                />
+              </ImageAnimation>
               <TextSpacer>
                 <H3Title>
                 <span className={"font-medium"}>Szeroka</span><span className={"text-accent text-black"}> perspektywa</span>
@@ -115,13 +163,29 @@ const Content = () => {
           <BiggerContainer right={false}>
             {/*// @ts-ignore*/}
             <BorderedContainer>
-              <img
-                src={"/images/projektowanie_4.png"}
-                alt={"photo"}
-                className={
-                  "w-full xs:h-[250px] sm:h-[250px] md:h-[400px] lg:h-[400px] xl:h-[300px] 2xl:h-[400px] 3xl:h-[450px] 4xl:h-[560px]"
-                }
-              />
+              <ImageAnimation>
+                <img
+                    src={"/images/projektowanie/photo_0005_4.1.jpg"}
+                    alt={"photo"}
+                    className={
+                      "image_scroller w-full xs:h-[250px] sm:h-[250px] md:h-[400px] lg:h-[400px] xl:h-[300px] 2xl:h-[400px] 3xl:h-[450px] 4xl:h-[560px]"
+                    }
+                />
+                <img
+                    src={"/images/projektowanie/photo_0004_4.2.jpg"}
+                    alt={"photo"}
+                    className={
+                      "image_scroller w-full xs:h-[250px] sm:h-[250px] md:h-[400px] lg:h-[400px] xl:h-[300px] 2xl:h-[400px] 3xl:h-[450px] 4xl:h-[560px]"
+                    }
+                />
+                <img
+                    src={"/images/projektowanie/photo_0003_4.3.jpg"}
+                    alt={"photo"}
+                    className={
+                      "image_scroller w-full xs:h-[250px] sm:h-[250px] md:h-[400px] lg:h-[400px] xl:h-[300px] 2xl:h-[400px] 3xl:h-[450px] 4xl:h-[560px]"
+                    }
+                />
+              </ImageAnimation>
               <TextSpacer>
                 <H3Title>
                 <span className={"font-medium"}>Kosztorysowanie{" "}</span>
@@ -142,14 +206,29 @@ const Content = () => {
           <SmallerContainer right={true}>
             {/*// @ts-ignore*/}
             <BorderedContainer>
-              <img
-                src={"/images/1.png"}
-                alt={"photo"}
-                className={
-                  "" +
-                  "w-full xs:h-[250px] sm:h-[250px] md:h-[400px] lg:h-[400px] xl:h-[300px] 2xl:h-[400px] 3xl:h-[450px] 4xl:h-[560px]"
-                }
-              />
+              <ImageAnimation>
+                <img
+                    src={"/images/projektowanie/photo_0002_5.1.jpg"}
+                    alt={"photo"}
+                    className={
+                      "image_scroller w-full xs:h-[250px] sm:h-[250px] md:h-[400px] lg:h-[400px] xl:h-[300px] 2xl:h-[400px] 3xl:h-[450px] 4xl:h-[560px]"
+                    }
+                />
+                <img
+                    src={"/images/projektowanie/photo_0001_5.2.jpg"}
+                    alt={"photo"}
+                    className={
+                      "image_scroller w-full xs:h-[250px] sm:h-[250px] md:h-[400px] lg:h-[400px] xl:h-[300px] 2xl:h-[400px] 3xl:h-[450px] 4xl:h-[560px]"
+                    }
+                />
+                <img
+                    src={"/images/projektowanie/photo_0000_5.3.jpg"}
+                    alt={"photo"}
+                    className={
+                      "image_scroller w-full xs:h-[250px] sm:h-[250px] md:h-[400px] lg:h-[400px] xl:h-[300px] 2xl:h-[400px] 3xl:h-[450px] 4xl:h-[560px]"
+                    }
+                />
+              </ImageAnimation>
               <TextSpacer>
                 <H3Title>
                   <span className={"text-accent text-black"}>Odpowiedzialność</span> <span className={"font-medium"}>za

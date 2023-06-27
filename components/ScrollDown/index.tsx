@@ -64,7 +64,7 @@ const ScrollDown = () => {
           initial="hidden"
           animate="visible"
           exit="exit"
-          className={"mx-auto w-full text-center absolute bottom-[20px] "}
+          className={"mx-auto w-full text-center absolute xs:bottom-[20px] sm:bottom-[20px] md:bottom-[40px] lg:bottom-[40px] xl:bottom-[40px] 2xl:bottom-[40px] 3xl:bottom-[40px] 4xl:bottom-[40px]"}
         >
           <svg
             width="28"

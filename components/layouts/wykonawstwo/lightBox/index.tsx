@@ -19,13 +19,11 @@ interface Slide {
 
 export default function Carousel() {
   const slides: Slide[] = [
-    { src: "/images/certyfikat.png", width: 600, height: 1200 },
-    { src: "/images/certyfikat.png", width: 600, height: 1200 },
-    { src: "/images/certyfikat.png", width: 600, height: 1200 },
-    { src: "/images/certyfikat.png", width: 600, height: 1200 },
-    { src: "/images/certyfikat.png", width: 600, height: 1200 },
-    { src: "/images/certyfikat.png", width: 600, height: 1200 },
-    { src: "/images/certyfikat.png", width: 600, height: 1200 },
+    { src: "/images/wykonawstwo/certyfikaty/PL/Spawalnicze_Swiadectwo_Kawalifikacji_Jagodne_PL.png", width: 600, height: 1200 },
+    { src: "/images/wykonawstwo/certyfikaty/PL/Certyfikaty_EN_ISO_3834_Jagodne_PL.png", width: 600, height: 1200 },
+    { src: "/images/wykonawstwo/certyfikaty/PL/Certyfikaty_EN_1090_2_Jagodne_PL.png", width: 600, height: 1200 },
+    { src: "/images/wykonawstwo/certyfikaty/PL/Certificate_FPC_1090_EN_PL_2021_PL.png", width: 600, height: 1200 },
+    { src: "/images/wykonawstwo/certyfikaty/PL/Certificate_FPC_1090_EN_PL_2020_PL.png", width: 600, height: 1200 },
   ];
 
   const [open, setOpen] = useState(false);

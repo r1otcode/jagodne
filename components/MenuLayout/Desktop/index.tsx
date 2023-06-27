@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import classNames from "classnames";
 import Link from "next/link";
 import LangSwitcher from "@/components/LangSwitcher";
-import CloseMenu from "@/components/MenuLayout/closeMenu";
+
 import useStore from "@/context";
 import { usePathname, useRouter } from "next/navigation";
 
@@ -55,12 +55,7 @@ const Desktop = ({ close, open, state }: DesktopLayoutInterface) => {
 
   return (
     <>
-      <div className={menuButtonWrapper}>
-        <div className={menuHolder}>
-          <LangSwitcher />
-          <CloseMenu close={close} open={open} state={state} />
-        </div>
-      </div>
+
 
       <div>
         <div className={menuGridClasses}>

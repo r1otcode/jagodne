@@ -29,10 +29,7 @@ const Mobile = ({ open, close, state }: MobileLayoutInterface) => {
   return (
     <>
       <div className={layoutClasses}>
-        <div className={menuHolder}>
-          <LangSwitcher mobile={true}/>
-          <CloseMenu close={close} open={open} state={state} />
-        </div>
+
         <ul className={Menu}>
           <li className={menuItem}>
             <Link href={"/projektowanie"}>Projektowanie</Link>

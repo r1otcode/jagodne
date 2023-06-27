@@ -41,6 +41,7 @@ import TextSpacer from "@/components/spacers/textSpacer";
 
 
 const ContactFrom = () => {
+    const [isValid, setIsValid] = useState(false);
     const [formState, setFormState] = useState({
         name: '',
         email: '',
@@ -62,6 +63,7 @@ const ContactFrom = () => {
         });
     };
 
+
     const handleSubmit = (e) => {
         e.preventDefault();
 
@@ -74,6 +76,9 @@ const ContactFrom = () => {
         };
 
         setFormErrors(errors);
+        if (Object.values(errors).every(x => x === null)) {
+           setIsValid(true);
+        }
     };
     const [isShown, setIsShown] = useState(false);
     useEffect(() => {
@@ -85,6 +90,15 @@ const ContactFrom = () => {
     }, [isShown]);
 
     return (
+        <>
+            {isValid && (
+            <div className={'text-center mb-[60px]'}>
+
+            <Paragraph>Dziękujemy za przesłanie zapytania. Skontaktujemy się z państwem tak szybko, jak to możliwe.</Paragraph>
+
+                </div>
+                )}
+
         <div className="flex xs:flex-col sm:flex-col md:flex-col lg:flex-col flex-row">
             <div className="xs:w-full sm:w-full  md:w-full lg:w-full w-[26%] xs:mt-[40px] xs:mb-[50px] sm:mt-[40px] sm:mb-[50px] md:mt-[40px] md:mb-[50px] lg:mt-[40px] lg:mb-[50px] ">
 <Paragraph>
@@ -164,7 +178,7 @@ const ContactFrom = () => {
                 </form>
             </div>
         </div>
-
+        </>
 
     );
 }

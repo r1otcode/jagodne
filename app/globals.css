@@ -368,7 +368,7 @@ img.react-photo-album--photo {
 }
 
 .spin {
-  transition: transform 1s ease-in-out;
+  transition: transform 0.3s ease-in-out;
 }
 .spin:hover {
   transform: rotate(45deg);
@@ -420,24 +420,89 @@ sup {
 .z-max {
   z-index: 99;
 }
-.active {
-  background: url("../public/images/img_test.png");
-  background-blend-mode: SCREEN;
-  background-size: cover;
-}
-.homepage:hover {
-  background: url("../public/images/img_test.png");
+/*.active {*/
+/*  background: url("../public/images/img_test.png");*/
+/*  background-blend-mode: SCREEN;*/
+/*  background-size: cover;*/
+/*}*/
+
+.homepage:hover, .active.homepage {
+  background: url("../public/images/menu/menu_0008_home.jpg"), rgb(0 0 0 / 50%);
   background-blend-mode: SCREEN;
   background-size: cover;
   transition: all 0.5s ease;
+  position: relative;
 }
 
-.projektowanie:hover, .wykonawstwo:hover, .generalny:hover, .obiekty:hover, .konfigurator:hover, .aktualnosci:hover, .zespol:hover, .kontakt:hover {
-  background: url("../public/images/img_test.png");
+.projektowanie:hover, .active.projektowanie {
+  background: url("../public/images/menu/menu_0007_projektowanie.jpg"), rgb(0 0 0 / 50%);
   background-blend-mode: SCREEN;
   background-size: cover;
   transition: all 0.5s ease;
+  position: relative;
 }
+.wykonawstwo:hover, .active.wykonawstwo {
+  background: url("../public/images/menu/menu_0005_wykonawstwo.jpg"), rgb(0 0 0 / 50%);
+  background-blend-mode: SCREEN;
+  background-size: cover;
+  transition: all 0.5s ease;
+  position: relative;
+}
+.generalny:hover, .active.generalny {
+  background: url("../public/images/menu/menu_0006_generalny.jpg"), rgb(0 0 0 / 50%);
+  background-blend-mode: SCREEN;
+  background-size: cover;
+  transition: all 0.5s ease;
+  position: relative;
+}
+.obiekty:hover, .active.obiekty {
+  background: url("../public/images/menu/menu_0004_obiekty.jpg"), rgb(0 0 0 / 50%);
+  background-blend-mode: SCREEN;
+  background-size: cover;
+  transition: all 0.5s ease;
+  position: relative;
+}
+.konfigurator:hover, .active.konfigurator {
+  background: url("../public/images/menu/menu_0003_konfigurator.jpg"), rgb(0 0 0 / 50%);
+  background-blend-mode: SCREEN;
+  background-size: cover;
+  transition: all 0.5s ease;
+  position: relative;
+}
+.aktualnosci:hover, .active.aktualnosci {
+  background: url("../public/images/menu/menu_0002_aktualnosci.jpg"), rgb(0 0 0 / 50%);
+  background-blend-mode: SCREEN;
+  background-size: cover;
+  transition: all 0.5s ease;
+  position: relative;
+}
+.zespol:hover, .active.zespol {
+  background: url("../public/images/menu/menu_0001_zespol.jpg"), rgb(0 0 0 / 50%);
+  background-blend-mode: SCREEN;
+  background-size: cover;
+  transition: all 0.5s ease;
+  position: relative;
+}
+.kontakt:hover, .active.kontakt {
+  background: url("../public/images/menu/menu_0000_kontakt.jpg"), rgb(0 0 0 / 50%);
+  background-blend-mode: SCREEN;
+  background-size: cover;
+  transition: all 0.5s ease;
+  position: relative;
+}
+
+
+
+/*.active::before{*/
+/*  background-color: rgba(50, 50, 52, 0.5);*/
+/*  content: '';*/
+/*  display: block;*/
+/*  height: 100%;*/
+/*  position: absolute;*/
+/*  width: 100%;*/
+/*}*/
+
+
 .mr-2 {
   appearance: none;
   -webkit-appearance: none;
@@ -503,4 +568,17 @@ height: 50px;
   }
   .mr-2:focus{
     outline: 1px solid gray;
-  } 
+  }
+
+  .modal_opened {
+    z-index:99;
+  }
+.lg_close_icon {
+  mix-blend-mode: unset;
+}
+.lg_close_icon {
+  transition: transform 0.3s ease-in-out;
+}
+.lg_close_icon:hover {
+  transform: rotate(45deg);
+}
