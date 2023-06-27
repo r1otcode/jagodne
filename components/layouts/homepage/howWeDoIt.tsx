@@ -12,6 +12,7 @@ import BorderedContainerInline from "@/components/layouts/BorderedContainerInlin
 import H3Title from "@/components/Typography/H3Title";
 import { motion } from "framer-motion"
 import { useInView } from "react-intersection-observer";
+import ImageAnimation from "@/components/imageAnimation";
 
 const HowWeDoIt = () => {
     const howWedoItClasses = classNames(
@@ -122,8 +123,15 @@ const HowWeDoIt = () => {
                 <SmallerContainer>
 
                     <BorderedContainer>
-                        <img src={'/images/1.png'} alt={'photo'} className={'' +
+                        <ImageAnimation>
+                        <img src={'/images/strona_glowna/photo_0005_1.1.jpg'} alt={'photo'} className={'' +
                             'w-full xs:h-[250px] sm:h-[250px] md:h-[400px] lg:h-[400px] xl:h-[300px] 2xl:h-[400px] 3xl:h-[450px] 4xl:h-[560px]'}/>
+                            <img src={'/images/strona_glowna/photo_0004_1.2.jpg'} alt={'photo'} className={'' +
+                                'w-full xs:h-[250px] sm:h-[250px] md:h-[400px] lg:h-[400px] xl:h-[300px] 2xl:h-[400px] 3xl:h-[450px] 4xl:h-[560px]'}/>
+                            <img src={'/images/strona_glowna/photo_0003_1.3.jpg'} alt={'photo'} className={'' +
+                                'w-full xs:h-[250px] sm:h-[250px] md:h-[400px] lg:h-[400px] xl:h-[300px] 2xl:h-[400px] 3xl:h-[450px] 4xl:h-[560px]'}/>
+
+                        </ImageAnimation>
                         <TextSpacer>
                             <H3Title>Budownictwo kubaturowe w standardzie
                                 <span className={'text-accent'}> premium</span></H3Title>
@@ -140,7 +148,12 @@ const HowWeDoIt = () => {
                     <BiggerContainer right={true}>
 
                         <BorderedContainer>
-                            <img src={'/images/2.png'} alt={'photo'} className={'w-full xs:h-[250px] sm:h-[250px] md:h-[400px] lg:h-[400px] xl:h-[300px] 2xl:h-[400px] 3xl:h-[450px] 4xl:h-[560px]'}/>
+                            <ImageAnimation>
+                            <img src={'/images/strona_glowna/photo_0002_2.1.jpg'} alt={'photo'} className={'w-full xs:h-[250px] sm:h-[250px] md:h-[400px] lg:h-[400px] xl:h-[300px] 2xl:h-[400px] 3xl:h-[450px] 4xl:h-[560px]'}/>
+                                <img src={'/images/strona_glowna/photo_0001_2.2.jpg'} alt={'photo'} className={'w-full xs:h-[250px] sm:h-[250px] md:h-[400px] lg:h-[400px] xl:h-[300px] 2xl:h-[400px] 3xl:h-[450px] 4xl:h-[560px]'}/>
+                                <img src={'/images/strona_glowna/photo_0000_2.3.jpg'} alt={'photo'} className={'w-full xs:h-[250px] sm:h-[250px] md:h-[400px] lg:h-[400px] xl:h-[300px] 2xl:h-[400px] 3xl:h-[450px] 4xl:h-[560px]'}/>
+
+                            </ImageAnimation>
                             <TextSpacer>
                                 <H3Title>Zapewniamy innowacyjny <br/>
                                     <span className={'text-accent'}> know-how</span>, dedykowany na każdy scenariusz
