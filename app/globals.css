@@ -459,3 +459,28 @@ sup {
   border-radius: 50%;
 }
 
+
+.carousel .swiper-slide {
+  padding:0px 20%;
+}
+.carousel .swiper-button-next:after {
+content: url("../public/assets/arrow_right.svg");
+
+}
+.carousel .swiper-button-prev:after {
+  content: url("../public/assets/arrow_left.svg");
+  
+  }
+  .carousel .swiper-button-prev {
+    left:7%;
+    width: 30px;
+height: 50px;
+  }
+  .carousel .swiper-button-next {
+    right: 7%;
+    width: 30px;
+height: 50px;
+  }
+  .swiper-button-disabled {
+    opacity: 0!important;
+  }

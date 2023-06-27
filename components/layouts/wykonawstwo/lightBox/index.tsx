@@ -1,91 +1,70 @@
-import * as React from "react";
-import { PhotoAlbum } from "react-photo-album";
+import React, { useState } from "react";
+import SwiperCore, { Navigation } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
 import Lightbox from "yet-another-react-lightbox";
 import Inline from "yet-another-react-lightbox/plugins/inline";
 import "yet-another-react-lightbox/styles.css";
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
+SwiperCore.use([Navigation]);
 
+interface Slide {
+  src: string;
+  width: number;
+  height: number;
+}
 
 export default function Carousel() {
-    const slides = [
-        { src: "/images/certyfikat.png", width: 600, height: 1200 },
-        { src: "/images/certyfikat.png", width: 600, height: 1200 },
-        { src: "/images/certyfikat.png", width: 600, height: 1200 },
-        { src: "/images/certyfikat.png", width: 600, height: 1200 },
-        { src: "/images/certyfikat.png", width: 600, height: 1200 },
-        { src: "/images/certyfikat.png", width: 600, height: 1200 },
-        { src: "/images/certyfikat.png", width: 600, height: 1200 },
+  const slides: Slide[] = [
+    { src: "/images/certyfikat.png", width: 600, height: 1200 },
+    { src: "/images/certyfikat.png", width: 600, height: 1200 },
+    { src: "/images/certyfikat.png", width: 600, height: 1200 },
+    { src: "/images/certyfikat.png", width: 600, height: 1200 },
+    { src: "/images/certyfikat.png", width: 600, height: 1200 },
+    { src: "/images/certyfikat.png", width: 600, height: 1200 },
+    { src: "/images/certyfikat.png", width: 600, height: 1200 },
+  ];
 
-      ]; 
-  const [open, setOpen] = React.useState(false);
-  const [index, setIndex] = React.useState(0);
+  const [open, setOpen] = useState(false);
+  const [lightboxIndex, setLightboxIndex] = useState(0);
 
   const toggleOpen = (state: boolean) => () => setOpen(state);
 
-  const updateIndex = ({ index: current }: { index: number }) =>
-    setIndex(current);
-   
-      
-      
-      return (
+  const updateLightboxIndex = ({ index: current }: { index: number }) => setLightboxIndex(current);
+
+  const handleSlideClick = (index: number) => {
+    setLightboxIndex(index);
+    setOpen(true);
+    console.log(lightboxIndex)
+  };
+
+  return (
     <>
-      
-<div className="cert">
-<PhotoAlbum
-        
-        columns={(containerWidth) => {
-            if (containerWidth < 479) return 1;
-            if (containerWidth < 1365) return 1;
-            return 1;
-        }}
-      
-        layout="masonry" photos={slides}  onClick={({ index }) => setIndex(index)}
-    />
-      <Lightbox
-        index={index}
-        slides={slides}
-        plugins={[Inline]}
-        on={{
-          view: updateIndex,
-          click: toggleOpen(true),
-        }}
-        carousel={{
-          padding: 0,
-          spacing: 0,
-          imageFit: "cover",
-        }}
-        render={{
-             iconPrev: () => <img alt={''} className={''} src={'/assets/arrow_left.svg'} />,
-             iconNext: () => <img  alt={''} src={'/assets/arrow_right.svg'} />,
-            iconClose: () => <img alt={''} className={'lg_close_icon'} src={'/assets/close_icon.svg'} />,
-          }}
-        inline={{
-          style: {
-            width: "60%",
-          
-           
-           aspectRatio: '2 / 3',
-            margin: "0 auto",
-            
-          },
-        }}
-      />
+      <div className="carousel">
+        <Swiper navigation={true} className="swiper-container">
+ 
+          {slides.map((slide, index) => (
+            <SwiperSlide key={index} onClick={() => handleSlideClick(index)}>
+              <img src={slide.src} alt="" width={slide.width} height={slide.height} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
 
       <Lightbox
-        open={open}
-        close={toggleOpen(false)}
         render={{
             iconPrev: () => <img alt={''} className={''} src={'/assets/arrow_left.svg'} />,
             iconNext: () => <img  alt={''} src={'/assets/arrow_right.svg'} />,
-           iconClose: () => <img alt={''} className={'lg_close_icon'} src={'/assets/close_icon.svg'} />,
-         }}
-        index={index}
+            iconClose: () => <img alt={''} className={'lg_close_icon'} src={'/assets/close_icon.svg'} />,
+        }}
+        styles={{ container: { backgroundColor: "rgba(50, 50, 52, 0.9)" } }}
+        open={open}
+        index={lightboxIndex}
+        close={() => setOpen(false)}
         slides={slides}
-        on={{ view: updateIndex }}
-        animation={{ fade: 0 }}
-        controller={{ closeOnPullDown: true, closeOnBackdropClick: true }}
-      />
-      </div>
+    />
     </>
   );
 }
