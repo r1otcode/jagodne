@@ -123,12 +123,12 @@ const ContactFrom = () => {
                     />
                     {formErrors.phone && <p className="text-light text-[12px] py-[5px]">{formErrors.phone}</p>}
 
-                    <div className="flex items-center mb-2 form_separator">
+                    <div className="flex items-center mb-2 form_separator items-start">
                         <input
                             type="radio"
                             name="radio"
                             value="option1"
-                            className="mr-2"
+                            className="mr-2 self-start" 
                             onChange={handleChange}
                         />
                         <label>Wyrażam zgodę, aby moje dane osobowe w zakresie obejmującym: imię, nazwisko, numer telefonu i adres e-mail, były przetwarzane przez JAGODNE Sp. z o.o. z siedzibą w Siedlcach przy ulicy Brzeskiej 65 (dalej zwana Jagodne) we własnych celach marketingowych, co obejmuje m.in. prezentowania usług w tym przygotowania odpowiedniej oferty.</label>
@@ -136,12 +136,12 @@ const ContactFrom = () => {
                     {formErrors.radio && <p className="text-light text-[12px] py-[5px]">{formErrors.radio}</p>}
 
 
-                    <div className="flex items-center mb-2">
+                    <div className="flex items-center mb-2 items-start">
                         <input
                             type="radio"
                             name="radio"
-                            value="option2"
-                            className="mr-2"
+                            value="option2" 
+                            className="mr-2 self-start"
                             onChange={handleChange}
                         />
                         <label>Wyrażam zgodę na otrzymywanie od Jagodne informacji handlowo-marketingowych w postaci wiadomości elektronicznych. (opcjonalnie)</label>

@@ -442,21 +442,23 @@ sup {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-  width: 5px;
-  height: 5px;
+  width: 18px;
+  height: 18px;
+  min-width: 18px;
   border-radius: 50%;
   background-color:transparent; /* Zmień na wybrany kolor lub obrazek tła */
   border: none;
-  outline: 2px solid gray; /* Dodaj szary kontur */
+  outline: 1px solid gray; /* Dodaj szary kontur */
   cursor: pointer;
-  padding: 0px!important;
+  padding: 3px!important;
 }
 .mr-2:checked {
-  content: "\2713";
+  content: url("../public/assets/icon_accept@3x.svg");
   font-size: 12px; 
   color: gray; 
-  outline: 2px solid gray;
+  outline: 1px solid gray;
   border-radius: 50%;
+  
 }
 
 
