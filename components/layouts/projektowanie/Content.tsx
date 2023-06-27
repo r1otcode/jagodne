@@ -100,7 +100,7 @@ const Content = () => {
               </ImageAnimation>
               <TextSpacer>
                 <H3Title>
-                  <span className={"text-accent text-black"}>Wsparcie</span> <span className={"font-medium"}>na etapie
+                  <span className={"text-accent font-black"}>Wsparcie</span> <span className={"font-medium"}>na etapie
                   briefu</span>
                 </H3Title>
                 <Paragraph>
@@ -146,7 +146,7 @@ const Content = () => {
               </ImageAnimation>
               <TextSpacer>
                 <H3Title>
-                <span className={"font-medium"}>Szeroka</span><span className={"text-accent text-black"}> perspektywa</span>
+                <span className={"font-medium"}>Szeroka</span><span className={"text-accent font-black"}> perspektywa</span>
                 </H3Title>
                 <Paragraph>
                   W podejmowanych przedsięwzięciach uwzględniamy możliwe
@@ -189,7 +189,7 @@ const Content = () => {
               <TextSpacer>
                 <H3Title>
                 <span className={"font-medium"}>Kosztorysowanie{" "}</span>
-                  <span className={"text-accent text-black"}> w czasie rzeczywistym</span>
+                  <span className={"text-accent font-black"}> w czasie rzeczywistym</span>
                 </H3Title>
                 <Paragraph>
                   Zapewniamy elastyczny model współpracy, pozostawiając bufor na
@@ -231,7 +231,7 @@ const Content = () => {
               </ImageAnimation>
               <TextSpacer>
                 <H3Title>
-                  <span className={"text-accent text-black"}>Odpowiedzialność</span> <span className={"font-medium"}>za
+                  <span className={"text-accent font-black"}>Odpowiedzialność</span> <span className={"font-medium"}>za
                   proces koncepcyjny, projektowy i wykonawczy</span>
                 </H3Title>
                 <Paragraph>

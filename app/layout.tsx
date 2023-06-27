@@ -1,11 +1,12 @@
 "use client"
 import './globals.css'
 import localFont from '@next/font/local'
-import React from "react";
+import React, {useEffect, useState} from "react";
 import MouseCross from "@/components/mouseCross";
 import Footer from "@/components/layouts/Footer";
 import useStore from "@/context";
 import {AnimatePresence, motion} from "framer-motion";
+import {hasCookie, setCookie} from "cookies-next";
 
 
 
@@ -56,6 +57,9 @@ export default function RootLayout({
 }) {
   // @ts-ignore
   const loading = useStore((store) => store.loading);
+
+
+
 
 
   return (

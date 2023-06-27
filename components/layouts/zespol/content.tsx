@@ -30,9 +30,9 @@ const Content = () => {
             <BorderedContainer>
               <TextSpacer>
                 <H3Title>
-                  <span className={"text-accent"}>Inwestorski</span> <span className={'font-medium'}> punkt
+                  <span className={"text-accent font-black"}>Inwestorski</span> <span className={'font-medium'}> punkt
                   widzenia i </span>
-                  <span className={"text-accent"}>interdyscyplinarne </span>
+                  <span className={"text-accent font-black"}>interdyscyplinarne </span>
                   <span className={'font-medium'}> umiejętności</span>
                 </H3Title>
                 <Paragraph>

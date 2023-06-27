@@ -7,13 +7,15 @@ import Menu from "@/components/menu";
 import LangSwitcher from "@/components/LangSwitcher";
 import ScrollDown from "@/components/ScrollDown";
 import Paragraph from "@/components/Typography/Paragraph";
-import { ReactNode, useState } from "react";
+import {ReactNode, useEffect, useState} from "react";
 import MenuLayout from "@/components/MenuLayout";
 import { AnimatePresence } from "framer-motion";
 import { motion } from "framer-motion";
 import useStore from "@/context";
 import MobileHeaderTitle from "@/components/Typography/HeaderTitleMobile";
 import HeaderTitle from "@/components/Typography/HeaderTitle";
+import {getCookie, hasCookie, setCookie} from "cookies-next";
+
 
 const menuHeader = classNames(
   "flex",
@@ -116,6 +118,8 @@ const paragraphWrapper = classNames(
   "4xl:w-[calc(14.285%*2)] 4xl:border-l 4xl:pl-[30px]"
 );
 
+
+
 const dropIn = {
   hidden: {
     y: 200,
@@ -146,35 +150,7 @@ const dropIn = {
   },
 };
 
-const dropInn = {
-  hidden: {
-    x: "0vw",
-    // rotate:0,
-    transition: {
-      delay: 0,
-      duration: 2,
-      type: "linear",
-    },
-  },
-  visible: {
-    x: `${Math.random() * (60 - 30) + 30}vw`,
-    // rotate: Math.random() * (360),
-    transition: {
-      delay: 0,
-      duration: 1.5,
-      type: "linear",
-    },
-  },
-  exit: {
-    x: "0vw",
-    // rotate:0,
-    transition: {
-      delay: 0,
-      duration: 1.5,
-      type: "linear",
-    },
-  },
-};
+
 
 const DefaultHeader: React.FC<{
   title: string;
@@ -187,21 +163,7 @@ const DefaultHeader: React.FC<{
 
   const close = () => setModalOpen(false);
   const open = () => setModalOpen(true);
-  const leftMenuWrapper = classNames(
-      "inline-flex",
-      "items-center",
-      "xs:top-[41px] xs:left-[20px]",
-      "sm:top-[34px] sm:left-[20px]",
-      "md:top-[20px] md:left-[20px] ",
-      "lg:top-[30px] lg:left-[30px]",
-      "xl:top-[30px] xl:left-[30px]",
-      "2xl:top-[20px] 2xl:left-[20px]",
-      "3xl:top-[30px] 3xl:left-[30px]",
-      "4xl:top-[40px] 4xl:left-[40px]",
-      "fixed",
-      "hover:z-[50]",
 
-  );
   const menuButtonWrapper = classNames(
       "inline-flex",
       "items-center",
@@ -217,6 +179,87 @@ const DefaultHeader: React.FC<{
       !modalOpen && "hover:z-[50]",
       modalOpen && "modal_opened"
   );
+  const leftMenuWrapper = classNames(
+      "inline-flex",
+      "items-center",
+      "xs:top-[41px] xs:left-[20px]",
+      "sm:top-[34px] sm:left-[20px]",
+      "md:top-[20px] md:left-[20px] ",
+      "lg:top-[30px] lg:left-[30px]",
+      "xl:top-[30px] xl:left-[30px]",
+      "2xl:top-[20px] 2xl:left-[20px]",
+      "3xl:top-[30px] 3xl:left-[30px]",
+      "4xl:top-[40px] 4xl:left-[40px]",
+      "fixed",
+      !modalOpen && "hover:z-[50]",
+      modalOpen && "modal_opened"
+
+  );
+  const exitPosition = getCookie('circle_exit_pos');
+  // const [exitPosition, setExitPosition] = useState(0);
+  // useEffect(() => {
+  //
+  //   console.log(exitPosition)
+  //
+  // },[]);
+  // useEffect(() => {
+  //   const timer = setTimeout(() => {
+  //     setExitPosition(Math.random() * (60 - 30) + 30);
+  //     setCookie('circle_pos', exitPosition);
+  //     console.log(exitPosition)
+  //   }, 5000);
+  //   return () => clearTimeout(timer);
+  // }, []);
+
+  // useEffect(() => {
+  //
+  //
+  //
+  //
+  //   },[loading]);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+
+      setCookie('circle_exit_pos', Math.random() * (60 - 30) + 30);
+      setCookie('circle_pos', `${Math.random() * (60 - 30) + 30}`);
+
+
+    }, 3000);
+    return () => clearTimeout(timer);
+  }, [loading]);
+
+
+  const dropInn = {
+    hidden: {
+      x: `${exitPosition}vw`,
+      // rotate:0,
+      transition: {
+        delay: 0,
+        duration: 2,
+        type: "linear",
+      },
+    },
+    visible: {
+      x: `${getCookie('circle_pos')}vw`,
+      // rotate: Math.random() * (360),
+      transition: {
+        delay: 0,
+        duration: 1.5,
+        type: "linear",
+      },
+    },
+    exit: {
+      x: `${exitPosition}vw`,
+      // rotate:0,
+      transition: {
+        delay: 0,
+        duration: 1.5,
+        type: "linear",
+      },
+    },
+  };
+
+
   return (
     <>
       <MenuLayout close={close} open={open} state={modalOpen} />
@@ -266,20 +309,26 @@ const DefaultHeader: React.FC<{
                 )}
               </AnimatePresence>
             </div>
-            <AnimatePresence initial={true} mode="wait">
-              {!loading && (
-                <motion.div
-                  variants={dropInn}
-                  initial="hidden"
-                  animate="visible"
-                  exit="exit"
-                  className="circle-bg"
-                >
-                  <img alt="circle" src={"/assets/circle-blue-gradient.svg"} />
-                </motion.div>
-              )}
-            </AnimatePresence>
+
           </Container>
+          <AnimatePresence initial={true} mode="wait">
+            {!loading && (
+                <motion.div
+                    variants={dropInn}
+                    initial="hidden"
+                    animate="visible"
+                    exit="exit"
+                    className="circle-bg"
+                >
+                  <div className="circle-bg__inner">
+
+
+                    <img alt="circle homepage_circle" className={'nomix rotate'} src={"/assets/circle_full.svg"} />
+                    {/*<div className={"circle-bg__inner__background"}></div>*/}
+                  </div>
+                </motion.div>
+            )}
+          </AnimatePresence>
 
           <ScrollDown />
         </div>

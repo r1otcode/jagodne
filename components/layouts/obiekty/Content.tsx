@@ -53,7 +53,7 @@ const Content = () => {
               </ImageAnimation>
               <TextSpacer>
                 <H3Title>
-                  <span className={"text-accent text-black"}>Krótki</span>
+                  <span className={"text-accent font-black"}>Krótki</span>
                   <span className={"font-medium"}> czas realizacji </span>
                 </H3Title>
                 <Paragraph>
@@ -96,7 +96,7 @@ const Content = () => {
               </ImageAnimation>
               <TextSpacer>
                 <H3Title>
-                  <span className={"text-accent text-black"}>Przeznaczenie</span><br />
+                  <span className={"text-accent font-black"}>Przeznaczenie</span><br />
                   <span className={"font-medium"}> Obiektów Systemowych</span>
                 </H3Title>
                 <Paragraph>
@@ -139,7 +139,7 @@ const Content = () => {
               </ImageAnimation>
               <TextSpacer>
                 <H3Title>
-                  <span className={"text-accent text-black"}>Premium</span>
+                  <span className={"text-accent font-black"}>Premium</span>
                   <span className={"font-medium"}> w cenie <br />standard</span>
                 </H3Title>
                 <Paragraph>
@@ -182,7 +182,7 @@ const Content = () => {
               </ImageAnimation>
               <TextSpacer>
                 <H3Title>
-                  <span className={"text-accent text-black"}>Wysoki standard</span>
+                  <span className={"text-accent font-black"}>Wysoki standard</span>
                   <span className={"font-medium"}> w standardzie</span>
                 </H3Title>
                 <Paragraph>

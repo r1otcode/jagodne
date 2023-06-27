@@ -66,7 +66,7 @@ const Content = () => {
               </ImageAnimation>
               <TextSpacer>
                 <H3Title>
-                  <span className={"text-accent text-black"}>Odpowiedzialność</span>
+                  <span className={"text-accent font-black"}>Odpowiedzialność</span>
                   <span className={"font-medium"}>
                     {" "}
                     za wszystkie fazy inwestycji
@@ -118,7 +118,7 @@ const Content = () => {
               </ImageAnimation>
               <TextSpacer>
                 <H3Title>
-                  <span className={"text-accent text-black"}>
+                  <span className={"text-accent font-black"}>
                     Zaplecze technologiczno-produkcyjne
                   </span>{" "}
                   <span className={"font-medium"}>
@@ -189,7 +189,7 @@ const Content = () => {
                     {" "}
                     Stosujemy technologie pozwalające na urzeczywistnienie wizji
                   </span>{" "}
-                  <span className={"text-accent text-black"}>
+                  <span className={"text-accent font-black"}>
                     {" "}
                     wyprzedzających swoje czasy
                   </span>
@@ -236,7 +236,7 @@ const Content = () => {
               <TextSpacer>
                 <H3Title>
                   <span className={"font-medium"}>Wspieramy inwestycje na</span>
-                  <span className={"text-accent text-black"}>
+                  <span className={"text-accent font-black"}>
                     {" "}
                     etapie przedwykonawczym
                   </span>
@@ -258,7 +258,7 @@ const Content = () => {
             <BorderedContainer>
               <TextSpacer>
                 <H3Title>
-                  <span className={"text-accent text-black"}>Certyfikowane</span>
+                  <span className={"text-accent font-black"}>Certyfikowane</span>
                   <br /> <span className={"font-medium"}>rozwiązania</span>
                 </H3Title>
                 <Paragraph>
