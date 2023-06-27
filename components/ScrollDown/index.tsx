@@ -81,9 +81,9 @@ const ScrollDown = () => {
               id="arrow"
               d="M10 23L14 27L18 23"
               stroke="#ECECEC"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
             <rect
               x="0.75"
@@ -92,7 +92,7 @@ const ScrollDown = () => {
               height="48.5"
               rx="13.25"
               stroke="#ECECEC"
-              stroke-width="1.5"
+              strokeWidth="1.5"
             />
           </svg>
         </motion.div>
