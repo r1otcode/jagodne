@@ -3,17 +3,21 @@ import Logo from "@/components/logo";
 import classNames from "classnames";
 import PageTitle from "@/components/Typography/PageTitle";
 import Container from "@/components/layouts/container";
+import Button from "@/components/Button";
 import Menu from "@/components/menu";
 import LangSwitcher from "@/components/LangSwitcher";
 import ScrollDown from "@/components/ScrollDown";
 import Paragraph from "@/components/Typography/Paragraph";
+//@ts-ignore
+import { Sierotki } from "sierotki";
+//@ts-ignore
+import ReactHtmlParser from "react-html-parser";
 import { useState } from "react";
 import MenuLayout from "@/components/MenuLayout";
 import { AnimatePresence } from "framer-motion";
 import { motion } from "framer-motion";
+
 import useStore from "@/context";
-import MobileHeaderTitle from "@/components/Typography/HeaderTitleMobile";
-import HeaderTitle from "@/components/Typography/HeaderTitle";
 
 const menuHeader = classNames(
   "flex",
@@ -32,7 +36,6 @@ const menuHeader = classNames(
 const mainHeader = classNames(
   "w-full",
   "h-[100vh]",
-
   // "xs:pt-[160px]",
   // "sm:pt-[227px]",
   // "md:pt-[225px]",
@@ -40,7 +43,8 @@ const mainHeader = classNames(
   // "xl:pt-[187px]",
   // "2xl:pt-[221px]",
   // "3xl:pt-[270px]",
-  // "4xl:pt-[341px]"
+  // "4xl:pt-[341px]",
+
 );
 
 const buttonsContainer = classNames(
@@ -99,10 +103,10 @@ const mainTitleWrapper = classNames(
   "sm:w-full",
   "md:w-full",
   "lg:w-full",
-  "xl:w-[calc(14.285%*5)] xl:border-l xl:pl-[30px]",
-  "2xl:w-[calc(14.285%*5)] 2xl:border-l 2xl:pl-[20px]",
-  "3xl:w-[calc(14.285%*5)] 3xl:border-l 3xl:pl-[30px]",
-  "4xl:w-[calc(14.285%*5)] 4xl:border-l 4xl:pl-[30px]"
+  "xl:w-[calc(14.285%*5)] xl:border-l xl:pl-[20px]",
+  "2xl:w-[calc(14.285%*5)] 2xl:border-l 2xl:pl-[30px]",
+  "3xl:w-[calc(14.285%*5)] 3xl:border-l 3xl:pl-[40px]",
+  "4xl:w-[calc(14.285%*5)] 4xl:border-l 4xl:pl-[50px]"
 );
 const paragraphWrapper = classNames(
   "border-[#505050]",
@@ -110,10 +114,10 @@ const paragraphWrapper = classNames(
   "sm:w-full sm:mt-[40px]",
   "md:w-full md:mt-[40px]",
   "lg:w-full lg:mt-[50px]",
-  "xl:w-[calc(14.285%*2)] xl:border-l xl:pl-[30px]",
-  "2xl:w-[calc(14.285%*2)] 2xl:border-l 2xl:pl-[20px]",
-  "3xl:w-[calc(14.285%*2)] 3xl:border-l 3xl:pl-[30px]",
-  "4xl:w-[calc(14.285%*2)] 4xl:border-l 4xl:pl-[30px]"
+    "xl:w-[calc(14.285%*2)] xl:border-l xl:pl-[20px]",
+    "2xl:w-[calc(14.285%*2)] 2xl:border-l 2xl:pl-[30px]",
+    "3xl:w-[calc(14.285%*2)] 3xl:border-l 3xl:pl-[40px]",
+    "4xl:w-[calc(14.285%*2)] 4xl:border-l 4xl:pl-[50px]"
 );
 
 const dropIn = {
@@ -157,7 +161,7 @@ const dropInn = {
     },
   },
   visible: {
-    x: `${Math.random() * (60 - 30) + 30}vw`,
+    x: `0`,
     // rotate: Math.random() * (360),
     transition: {
       delay: 0,
@@ -176,7 +180,7 @@ const dropInn = {
   },
 };
 
-const ProjektowanieHeader = () => {
+const HomepageHeader = () => {
   const [modalOpen, setModalOpen] = useState(false);
   // @ts-ignore
   const loading = useStore((store) => store.loading);
@@ -208,7 +212,7 @@ const ProjektowanieHeader = () => {
               <AnimatePresence
                 initial={true}
                 mode="wait"
-                onExitComplete={() => useStore.setState({ loading: false })}
+
               >
                 {!loading && (
                   <>
@@ -220,24 +224,37 @@ const ProjektowanieHeader = () => {
                       className={headerContentWrapper}
                     >
                       <div className={mainTitleWrapper}>
-                        <MobileHeaderTitle>Projektowanie</MobileHeaderTitle>
                         <PageTitle>
-                          Twój pomysł na inwestycję w skali
-                          <span className={"text-accent"}> big picture</span>
+                          Jagodne – satysfakcja <br/>
+                          i sukces mierzone<br/> w m<sup>2</sup>.
                         </PageTitle>
                       </div>
                       <div className={paragraphWrapper}>
-                        <HeaderTitle>Projektowanie</HeaderTitle>
                         <Paragraph>
-                          Nie boimy się odważnych i złożonych projektów
-                          zorientowanych na maksymalizację zwrotu z inwestycji.
-                          Budujemy dziś z myślą o potrzebach jutra.
+                          Specjalizujemy się w projektowaniu i wykonawstwie
+                          nowoczesnych obiektów budowlanych dla sektora
+                          komercyjnego, przemysłowego oraz użyteczności
+                          publicznej.
                         </Paragraph>
                       </div>
+                    </motion.div>
+
+                    <motion.div
+                      variants={dropIn}
+                      initial="hidden"
+                      animate="visible"
+                      exit="exit"
+                      className={buttonsContainer}
+                    >
+                      <Button href={"/projektowanie"}>Dowiedz się więcej</Button>
+                      <Button href={"/zespol"} dark={true} mobileHide={true}>
+                        Poznajmy się
+                      </Button>
                     </motion.div>
                   </>
                 )}
               </AnimatePresence>
+
             </div>
             <AnimatePresence initial={true} mode="wait">
               {!loading && (
@@ -248,11 +265,12 @@ const ProjektowanieHeader = () => {
                       exit="exit"
                       className="circle-bg"
                   >
-                    <img alt="circle" src={"/assets/circle-blue-gradient.svg"} />
+                    <img alt="circle homepage_circle" src={"/assets/circle-blue-gradient.svg"} />
                   </motion.div>
               )}
             </AnimatePresence>
           </Container>
+
 
 
           <ScrollDown />
@@ -262,4 +280,4 @@ const ProjektowanieHeader = () => {
   );
 };
 
-export default ProjektowanieHeader;
+export default HomepageHeader

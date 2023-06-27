@@ -130,7 +130,7 @@ const ContactFrom = () => {
 
                     <div className="flex items-center mb-2 form_separator items-start">
                         <input
-                            type="radio"
+                            type="checkbox"
                             name="radio"
                             value="option1"
                             className={ formErrors.radio ? 'input_error mr-2 self-start' : 'mr-2 self-start' } 
@@ -143,7 +143,7 @@ const ContactFrom = () => {
 
                     <div className="flex items-center mb-2 items-start">
                         <input
-                            type="radio"
+                            type="checkbox"
                             name="radio2"
                             value="option2" 
                             className="mr-2 self-start"
