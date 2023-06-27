@@ -37,7 +37,7 @@ const LinkWrapper = ({ children, href, ...rest }) => {
         <Link  onMouseEnter={() => setIsShown(true)}
                onMouseLeave={() => setIsShown(false)}
                onClick={handleClick}
-               href={href}>children</Link>
+               href={href}>{children}</Link>
     )
 }
 
