@@ -115,4 +115,20 @@ ul.blue-marker li {
 
 
 }
+.cert {
+  position: relative;
+}
 
+.cert .yet-another-react-lightbox__content .yet-another-react-lightbox__button.yet-another-react-lightbox__button--prev {
+  position: absolute;
+  left: 10px; /* Możesz dostosować położenie przycisku wstecz */
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.cert .yet-another-react-lightbox__content .yet-another-react-lightbox__button.yet-another-react-lightbox__button--next {
+  position: absolute;
+  right: 10px; /* Możesz dostosować położenie przycisku następny */
+  top: 50%;
+  transform: translateY(-50%);
+}

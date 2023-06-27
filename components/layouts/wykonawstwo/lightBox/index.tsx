@@ -1,5 +1,5 @@
 import * as React from "react";
-
+import { PhotoAlbum } from "react-photo-album";
 import Lightbox from "yet-another-react-lightbox";
 import Inline from "yet-another-react-lightbox/plugins/inline";
 import "yet-another-react-lightbox/styles.css";
@@ -8,13 +8,13 @@ import "yet-another-react-lightbox/styles.css";
 
 export default function Carousel() {
     const slides = [
-        { src: "/images/placeholder.jpg", width: 600, height: 1200 },
-        { src: "/images/placeholder.jpg", width: 600, height: 1200 },
-        { src: "/images/placeholder.jpg", width: 600, height: 1200 },
-        { src: "/images/placeholder.jpg", width: 600, height: 1200 },
-        { src: "/images/placeholder.jpg", width: 600, height: 1200 },
-        { src: "/images/placeholder.jpg", width: 600, height: 1200 },
-        { src: "/images/placeholder.jpg", width: 600, height: 1200 },
+        { src: "/images/certyfikat.png", width: 600, height: 1200 },
+        { src: "/images/certyfikat.png", width: 600, height: 1200 },
+        { src: "/images/certyfikat.png", width: 600, height: 1200 },
+        { src: "/images/certyfikat.png", width: 600, height: 1200 },
+        { src: "/images/certyfikat.png", width: 600, height: 1200 },
+        { src: "/images/certyfikat.png", width: 600, height: 1200 },
+        { src: "/images/certyfikat.png", width: 600, height: 1200 },
 
       ]; 
   const [open, setOpen] = React.useState(false);
@@ -31,6 +31,16 @@ export default function Carousel() {
     <>
       
 <div className="cert">
+<PhotoAlbum
+        
+        columns={(containerWidth) => {
+            if (containerWidth < 479) return 1;
+            if (containerWidth < 1365) return 1;
+            return 1;
+        }}
+      
+        layout="masonry" photos={slides}  onClick={({ index }) => setIndex(index)}
+    />
       <Lightbox
         index={index}
         slides={slides}
@@ -52,9 +62,9 @@ export default function Carousel() {
         inline={{
           style: {
             width: "60%",
-            height: "600px",
-            maxWidth: "900px",
-            aspectRatio: "3 / 2",
+          
+           
+           aspectRatio: '2 / 3',
             margin: "0 auto",
             
           },
