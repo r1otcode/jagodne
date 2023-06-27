@@ -147,9 +147,61 @@ body {
 /*  background: linear-gradient(0deg, #323234 0%, rgba(50, 50, 52, 0.00) 100%);*/
 /*}*/
 .circle-bg__inner {
-  padding-top: 266px;
+
   background: linear-gradient(0deg, #323234 50%, rgba(50, 50, 52, 0.00) 85%);
 
+}
+@media screen and (max-width: 389px) {
+  .circle-bg__inner {
+    padding-top: 213px;
+    background: linear-gradient(358deg, #323234 30%, rgba(50, 50, 52, 0.00) 60%);
+
+  }
+
+}
+@media screen and (min-width: 390px) and (max-width: 479px) {
+  .circle-bg__inner {
+    padding-top: 328px;
+    background: linear-gradient(358deg, #323234 30%, rgba(50, 50, 52, 0.00) 60%);
+
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 785px) {
+  .circle-bg__inner {
+    padding-top: 326px;
+    background: linear-gradient(358deg, #323234 30%, rgba(50, 50, 52, 0.00) 60%);
+
+  }
+}
+@media screen and (min-width: 786px) and (max-width: 1023px) {
+  .circle-bg__inner {
+    padding-top: 361px;
+
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1365px) {
+  .circle-bg__inner {
+    padding-top: 157px;
+
+  }
+}
+@media screen and (min-width: 1366px) and (max-width: 1535px) {
+  .circle-bg__inner {
+    padding-top: 169px;
+
+  }
+}
+@media screen and (min-width: 1536px) and (max-width: 1919px) {
+  .circle-bg__inner {
+    padding-top: 221px;
+
+  }
+}
+@media screen and (min-width: 1920px)  {
+  .circle-bg__inner {
+    padding-top: 272px;
+
+  }
 }
 .circle-bg__inner__background {
   position: absolute;

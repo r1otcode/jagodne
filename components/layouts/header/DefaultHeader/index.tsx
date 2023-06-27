@@ -228,6 +228,10 @@ const DefaultHeader: React.FC<{
     return () => clearTimeout(timer);
   }, [loading]);
 
+  useEffect(() => {
+    console.log('ex',exitPosition)
+  },[exitPosition]);
+
 
   const dropInn = {
     hidden: {
