@@ -162,21 +162,7 @@ const HomepageHeader = () => {
 
   const close = () => setModalOpen(false);
   const open = () => setModalOpen(true);
-  const leftMenuWrapper = classNames(
-      "inline-flex",
-      "items-center",
-      "xs:top-[41px] xs:left-[20px]",
-      "sm:top-[34px] sm:left-[20px]",
-      "md:top-[20px] md:left-[20px] ",
-      "lg:top-[30px] lg:left-[30px]",
-      "xl:top-[30px] xl:left-[30px]",
-      "2xl:top-[20px] 2xl:left-[20px]",
-      "3xl:top-[30px] 3xl:left-[30px]",
-      "4xl:top-[40px] 4xl:left-[40px]",
-      "fixed",
-      "hover:z-[50]",
 
-  );
   const menuButtonWrapper = classNames(
       "inline-flex",
       "items-center",
@@ -191,6 +177,22 @@ const HomepageHeader = () => {
       "fixed",
       !modalOpen && "hover:z-[50]",
       modalOpen && "modal_opened"
+  );
+  const leftMenuWrapper = classNames(
+      "inline-flex",
+      "items-center",
+      "xs:top-[41px] xs:left-[20px]",
+      "sm:top-[34px] sm:left-[20px]",
+      "md:top-[20px] md:left-[20px] ",
+      "lg:top-[30px] lg:left-[30px]",
+      "xl:top-[30px] xl:left-[30px]",
+      "2xl:top-[20px] 2xl:left-[20px]",
+      "3xl:top-[30px] 3xl:left-[30px]",
+      "4xl:top-[40px] 4xl:left-[40px]",
+      "fixed",
+      !modalOpen && "hover:z-[50]",
+      modalOpen && "modal_opened"
+
   );
   return (
     <>
@@ -211,6 +213,7 @@ const HomepageHeader = () => {
         </div>
 
         <div className={mainHeader}>
+
           <Container center={true}>
             <div className={"relative"}>
               <AnimatePresence
@@ -260,22 +263,27 @@ const HomepageHeader = () => {
               </AnimatePresence>
 
             </div>
-            <AnimatePresence initial={true} mode="wait">
-              {!loading && (
-                  <motion.div
-                      variants={dropInn}
-                      initial="hidden"
-                      animate="visible"
-                      exit="exit"
-                      className="circle-bg"
-                  >
-                    <img alt="circle homepage_circle" src={"/assets/circle-blue-gradient.svg"} />
-                  </motion.div>
-              )}
-            </AnimatePresence>
+
           </Container>
 
+          <AnimatePresence initial={true} mode="wait">
+            {!loading && (
+                <motion.div
+                    variants={dropInn}
+                    initial="hidden"
+                    animate="visible"
+                    exit="exit"
+                    className="circle-bg"
+                >
+                  <div className="circle-bg__inner">
 
+
+                    <img alt="circle homepage_circle" className={'nomix rotate'} src={"/assets/circle_full.svg"} />
+                    {/*<div className={"circle-bg__inner__background"}></div>*/}
+                  </div>
+                </motion.div>
+            )}
+          </AnimatePresence>
 
           <ScrollDown />
         </div>

@@ -126,13 +126,39 @@ body {
 .circle-bg {
   position: absolute;
 
+  top: 0;
+  width: 100vw;
+
   /*left: 50%;*/
   /*transform: translateY(-50%);*/
   z-index:-1;
 }
 .circle-bg img {
   margin:0 auto;
+  z-index: -1;
+  position: relative;
 
+
+}
+/*.circle-bg img:before {*/
+/*  content: '';*/
+/*  position: absolute;*/
+/*  top: 0;*/
+/*  background: linear-gradient(0deg, #323234 0%, rgba(50, 50, 52, 0.00) 100%);*/
+/*}*/
+.circle-bg__inner {
+  padding-top: 266px;
+  background: linear-gradient(0deg, #323234 50%, rgba(50, 50, 52, 0.00) 85%);
+
+}
+.circle-bg__inner__background {
+  position: absolute;
+  height: 50%;
+  background-color: #323234;
+  z-index: 1;
+  bottom: 0;
+  /* border: 1px solid white; */
+  width: 100vw;
 }
 ul.blue-marker li:before {
   content: '';
@@ -360,8 +386,8 @@ img.react-photo-album--photo {
     transform: rotate(360deg);
   }
 }
-.jakisdiv {
-  animation-duration: 100s;
+.rotate {
+  animation-duration: 300s;
   animation-name: rotate;
   animation-iteration-count: infinite;
   animation-direction: alternate;

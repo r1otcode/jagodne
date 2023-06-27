@@ -19,7 +19,7 @@ const Container = ({ children, center} : ContainerProps ) => {
         '2xl:max-w-[1062px]',
         '3xl:max-w-[1194px]',
         '4xl:max-w-[1494px]',
-        center && 'flex justify-center items-center h-[80vh]'
+        center && 'flex justify-center items-center h-[100vh]'
     )
     return (
         <div className={containerClasses}>
