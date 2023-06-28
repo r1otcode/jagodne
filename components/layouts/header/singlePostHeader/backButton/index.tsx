@@ -10,13 +10,16 @@ const BackButton:React.FC = () => {
     useEffect(() => {
 
         if (isShown) {
-          document.body.classList.add("cursor-pointer");
+          document.body.classList.add("cursor-pointer_post_2");
         } else {
-          document.body.classList.remove("cursor-pointer");
+          document.body.classList.remove("cursor-pointer_post_2");
         }
       }, [isShown]);
     return (
+        <>
+        <div className="overlay_2"></div>
         <div className={bttnClasses}
+        
         onMouseEnter={() => (setIsShown(true) )}
       onMouseLeave={() => (setIsShown(false) )}>
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -24,6 +27,7 @@ const BackButton:React.FC = () => {
 </svg>
 
         </div>
+        </>
     )
 
 }

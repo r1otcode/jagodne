@@ -683,3 +683,21 @@ body .overlay {
     transition: opacity 0.5s ease-in-out;
   
 }
+body .overlay_2 {
+  width:100vw;
+  height:100vh;
+  background-color: rgb(50, 50, 52);
+  position: fixed;
+  top:0;
+  left:0;
+  pointer-events: none;
+  opacity:0;
+  z-index: 10;
+  transition: opacity 0.5s ease-in-out;
+}
+.cursor-pointer_post_2 .overlay_2 {
+ 
+    opacity:0.8;
+    transition: opacity 0.5s ease-in-out;
+  
+}

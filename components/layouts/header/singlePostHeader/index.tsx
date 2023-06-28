@@ -205,7 +205,7 @@ const HomepageHeader = ({children}) => {
       "3xl:top-[30px] 3xl:right-[30px]",
       "4xl:top-[40px] 4xl:right-[40px]",
       "fixed",
-      'z-[50]',
+      'z-[2]',
       !modalOpen && "hover:z-[50]",
       modalOpen && "modal_opened"
   );
@@ -221,7 +221,7 @@ const HomepageHeader = ({children}) => {
       "3xl:top-[30px] 3xl:left-[30px]",
       "4xl:top-[40px] 4xl:left-[40px]",
       "fixed",
-      'z-[50]',
+      'z-[2]',
       !modalOpen && "hover:z-[50]",
       modalOpen && "modal_opened"
 
