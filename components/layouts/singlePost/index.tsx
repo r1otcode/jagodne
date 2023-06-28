@@ -13,6 +13,7 @@ import BorderedContainerInline from "../BorderedContainerInline";
 import Carousel from "./lightBox";
 import TextPadding from "@/components/spacers/textPadding";
 import PostsNavigation from "./PostsNavigation";
+import AnotherPosts from "./AnotherArticles";
 
 const SinglePostContent = () => {
     const SinglePostContentClasses = classNames('z-10', 'mx-auto',
@@ -109,6 +110,7 @@ Nullam id dolor id nibh ultricies vehicula ut id elit. Donec sed odio dui. Nulla
         </div>
         <TextSpacer/> 
         <PostsNavigation/>
+        <AnotherPosts/>
         </div>
     );
 }
