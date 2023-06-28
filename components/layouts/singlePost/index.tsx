@@ -12,6 +12,7 @@ import BorderedContainer from "../BorderedContainer";
 import BorderedContainerInline from "../BorderedContainerInline";
 import Carousel from "./lightBox";
 import TextPadding from "@/components/spacers/textPadding";
+import PostsNavigation from "./PostsNavigation";
 
 const SinglePostContent = () => {
     const SinglePostContentClasses = classNames('z-10', 'mx-auto',
@@ -23,6 +24,19 @@ const SinglePostContent = () => {
         '2xl:w-[796px]',
         '3xl:w-[796px]',
         '4xl:w-[796px]',
+
+       
+
+        );
+        const PageWrapperClasses = classNames('z-10', 'mx-auto',
+        'xs:w-[280px]',
+        'sm:w-[350px]',
+        'md:w-[420px]',
+        'lg:w-[598px]',
+        'xl:w-[796px]',
+        '2xl:w-[1062px]',
+        '3xl:w-[1194px]',
+        '4xl:w-[1494px]',
 
        
 
@@ -41,7 +55,7 @@ const SinglePostContent = () => {
         );
     return (
 
-
+        <div className={PageWrapperClasses}>
         <div  className={SinglePostContentClasses}>
           <H2TitleWpis>H2 Vestibulum id ligula porta felis euismod semper. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</H2TitleWpis>
           <TextSpacer/>
@@ -89,9 +103,13 @@ const SinglePostContent = () => {
                 
                 </BorderedContainer> 
                 <TextSpacer/> 
-            <Paragraph>Paragraph – Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Cras mattis consectetur purus sit amet fermentum. Vestibulum id ligula porta felis euismod semper. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</Paragraph>
-        </div>
+            <Paragraph>Paragraph – cras mattis consectetur purus sit amet fermentum. Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Cras mattis consectetur purus sit amet fermentum.
+Nullam id dolor id nibh ultricies vehicula ut id elit. Donec sed odio dui. Nullam id dolor id nibh ultricies vehicula ut id elit. Cras mattis consectetur purus sit amet fermentum.</Paragraph>
         
+        </div>
+        <TextSpacer/> 
+        <PostsNavigation/>
+        </div>
     );
 }
 export default SinglePostContent;
