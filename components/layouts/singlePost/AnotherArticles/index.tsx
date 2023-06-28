@@ -163,7 +163,7 @@ const h4Classes = classNames(
 
 ) 
 const thumbClasses = classNames(
-    
+    'w-full',
     "xs:aspect-[2/1] xs:object-cover xs:w-full",
     "sm:aspect-[2/1] sm:object-cover sm:w-full",
     "md:aspect-[2/1] md:object-cover md:w-full",

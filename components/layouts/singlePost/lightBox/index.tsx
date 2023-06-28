@@ -19,13 +19,13 @@ interface Slide {
 
 export default function Carousel() {
   const slides: Slide[] = [
-    { src: "/images/certyfikat.png", width: 600, height: 1200 },
-    { src: "/images/certyfikat.png", width: 600, height: 1200 },
-    { src: "/images/certyfikat.png", width: 600, height: 1200 },
-    { src: "/images/certyfikat.png", width: 600, height: 1200 },
-    { src: "/images/certyfikat.png", width: 600, height: 1200 },
-    { src: "/images/certyfikat.png", width: 600, height: 1200 },
-    { src: "/images/certyfikat.png", width: 600, height: 1200 },
+    { src: "/images/aktualnosci_8.png", width: 12009, height: 600 },
+    { src: "/images/aktualnosci_8.png", width: 1200, height: 600 },
+    { src: "/images/aktualnosci_8.png", width: 1200, height: 600 },
+    { src: "/images/aktualnosci_8.png", width: 1200, height: 600 },
+    { src: "/images/aktualnosci_8.png", width: 1200, height: 600 },
+    { src: "/images/aktualnosci_8.png", width: 1200, height: 600 },
+    { src: "/images/aktualnosci_8.png", width: 1200, height: 600 },
   ];
 
   const [open, setOpen] = useState(false);
@@ -43,7 +43,7 @@ export default function Carousel() {
 
   return (
     <>
-      <div className="carousel">
+      <div className="carousel-1">
         <Swiper navigation={true} className="swiper-container">
  
           {slides.map((slide, index) => (
