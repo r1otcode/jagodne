@@ -20,7 +20,7 @@ import style from "./style.module.css"
 import AddDate from "./addDate";
 import BackButton from "./backButton";
 import useStore from "@/context";
-
+import { useEffect } from "react";
 const menuHeader = classNames(
   "flex",
   "justify-center",
@@ -185,7 +185,7 @@ const dropInn = {
 };
 
 const HomepageHeader = ({children}) => {
-
+  const [isShown, setIsShown] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
   // @ts-ignore
   const loading = useStore((store) => store.loading);
@@ -205,6 +205,7 @@ const HomepageHeader = ({children}) => {
       "3xl:top-[30px] 3xl:right-[30px]",
       "4xl:top-[40px] 4xl:right-[40px]",
       "fixed",
+      'z-[50]',
       !modalOpen && "hover:z-[50]",
       modalOpen && "modal_opened"
   );
@@ -220,10 +221,12 @@ const HomepageHeader = ({children}) => {
       "3xl:top-[30px] 3xl:left-[30px]",
       "4xl:top-[40px] 4xl:left-[40px]",
       "fixed",
+      'z-[50]',
       !modalOpen && "hover:z-[50]",
       modalOpen && "modal_opened"
 
   );
+
   return (
     <>
       <MenuLayout close={close} open={open} state={modalOpen} />
