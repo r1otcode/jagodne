@@ -1,4 +1,4 @@
-// use client
+"use client"
 import H2TitleWpis from "@/components/Typography/H2TitleWpis";
 import Paragraph from "@/components/Typography/Paragraph_light";
 import TextSpacer from "@/components/spacers/textSpacer";
