@@ -11,6 +11,7 @@ import H4TitleWpis from "@/components/Typography/H4TitleWpis";
 import BorderedContainer from "../BorderedContainer";
 import BorderedContainerInline from "../BorderedContainerInline";
 import Carousel from "./lightBox";
+import TextPadding from "@/components/spacers/textPadding";
 
 const SinglePostContent = () => {
     const SinglePostContentClasses = classNames('z-10', 'mx-auto',
@@ -65,10 +66,11 @@ const SinglePostContent = () => {
                 </video>
                 </BorderedContainer>
                 <BorderedContainer>
+                
                 <Paragraph>
-               
+                <TextPadding>
                 Krótki opis filmu powyżej (caption) – maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi porta gravida at eget metus.
-               
+                </TextPadding>
                 </Paragraph>
                 
                 </BorderedContainer>  
@@ -80,9 +82,9 @@ const SinglePostContent = () => {
                 </BorderedContainer>
                 <BorderedContainer>
                 <Paragraph>
-               
+               <TextPadding>
                 Krótki opis filmu powyżej (caption) – maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi porta gravida at eget metus.
-               
+                </TextPadding>
                 </Paragraph>
                 
                 </BorderedContainer> 
