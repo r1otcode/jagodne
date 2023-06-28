@@ -3,20 +3,24 @@ import Logo from "@/components/logo";
 import classNames from "classnames";
 import PageTitle from "@/components/Typography/PageTitle";
 import Container from "@/components/layouts/container";
+import Button from "@/components/Button";
 import Menu from "@/components/menu";
 import LangSwitcher from "@/components/LangSwitcher";
 import ScrollDown from "@/components/ScrollDown";
 import Paragraph from "@/components/Typography/Paragraph";
-import { ReactNode, useState } from "react";
+//@ts-ignore
+import { Sierotki } from "sierotki";
+//@ts-ignore
+import ReactHtmlParser from "react-html-parser";
+import { useState } from "react";
 import MenuLayout from "@/components/MenuLayout";
 import { AnimatePresence } from "framer-motion";
 import { motion } from "framer-motion";
-import useStore from "@/context";
-import MobileHeaderTitle from "@/components/Typography/HeaderTitleMobile";
-import HeaderTitle from "@/components/Typography/HeaderTitle";
 import style from "./style.module.css"
 import AddDate from "./addDate";
 import BackButton from "./backButton";
+import useStore from "@/context";
+
 const menuHeader = classNames(
   "flex",
   "justify-center",
@@ -58,6 +62,7 @@ const buttonsContainer = classNames(
   "4xl:mt-[100px]"
 );
 const menuButtonWrapper = classNames(
+  "z-150",
   "inline-flex",
   "items-center",
   "xs:top-[20px] xs:right-[20px]",
@@ -70,6 +75,7 @@ const menuButtonWrapper = classNames(
   "4xl:top-[40px] 4xl:right-[40px]",
   "fixed",
   "hover:z-[50]"
+  
 );
 const leftMenuWrapper = classNames(
   "inline-flex",
@@ -159,7 +165,7 @@ const dropInn = {
     },
   },
   visible: {
-    x: `${Math.random() * (60 - 30) + 30}vw`,
+    x: `0`,
     // rotate: Math.random() * (360),
     transition: {
       delay: 0,
@@ -178,11 +184,8 @@ const dropInn = {
   },
 };
 
-const DefaultHeader: React.FC<{
-  title: string;
-  description: string | ReactNode;
-  children: string | ReactNode;
-}> = ({children }) => {
+const HomepageHeader = ({children}) => {
+
   const [modalOpen, setModalOpen] = useState(false);
   // @ts-ignore
   const loading = useStore((store) => store.loading);
@@ -190,10 +193,41 @@ const DefaultHeader: React.FC<{
   const close = () => setModalOpen(false);
   const open = () => setModalOpen(true);
 
+  const menuButtonWrapper = classNames(
+      "inline-flex",
+      "items-center",
+      "xs:top-[20px] xs:right-[20px]",
+      "sm:top-[20px] sm:right-[20px]",
+      "md:top-[20px] md:right-[20px] ",
+      "lg:top-[30px] lg:right-[30px]",
+      "xl:top-[30px] xl:right-[30px]",
+      "2xl:top-[20px] 2xl:right-[20px]",
+      "3xl:top-[30px] 3xl:right-[30px]",
+      "4xl:top-[40px] 4xl:right-[40px]",
+      "fixed",
+      !modalOpen && "hover:z-[50]",
+      modalOpen && "modal_opened"
+  );
+  const leftMenuWrapper = classNames(
+      "inline-flex",
+      "items-center",
+      "xs:top-[41px] xs:left-[20px]",
+      "sm:top-[34px] sm:left-[20px]",
+      "md:top-[20px] md:left-[20px] ",
+      "lg:top-[30px] lg:left-[30px]",
+      "xl:top-[30px] xl:left-[30px]",
+      "2xl:top-[20px] 2xl:left-[20px]",
+      "3xl:top-[30px] 3xl:left-[30px]",
+      "4xl:top-[40px] 4xl:left-[40px]",
+      "fixed",
+      !modalOpen && "hover:z-[50]",
+      modalOpen && "modal_opened"
+
+  );
   return (
     <>
       <MenuLayout close={close} open={open} state={modalOpen} />
-      <div className={`relative ${style.relative}`}>
+      <div className="relative">
         <div className={menuHeader}>
           <div className={leftMenuWrapper}>
             <LangSwitcher mobile={true} />
@@ -252,4 +286,4 @@ const DefaultHeader: React.FC<{
   );
 };
 
-export default DefaultHeader;
+export default HomepageHeader
