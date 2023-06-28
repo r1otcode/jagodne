@@ -14,6 +14,8 @@ import Carousel from "./lightBox";
 import TextPadding from "@/components/spacers/textPadding";
 import PostsNavigation from "./PostsNavigation";
 import AnotherPosts from "./AnotherArticles";
+import VideoDescription from "@/components/Typography/videoDescription";
+import VideoPadding from "@/components/spacers/videoPadding";
 
 const SinglePostContent = () => {
     const SinglePostContentClasses = classNames('z-10', 'mx-auto',
@@ -82,11 +84,11 @@ const SinglePostContent = () => {
                 </BorderedContainer>
                 <BorderedContainer>
                 
-                <Paragraph>
-                <TextPadding>
+                <VideoDescription>
+                <VideoPadding>
                 Krótki opis filmu powyżej (caption) – maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi porta gravida at eget metus.
-                </TextPadding>
-                </Paragraph>
+                </VideoPadding>
+                </VideoDescription>
                 
                 </BorderedContainer>  
             <TextSpacer/>
@@ -96,11 +98,11 @@ const SinglePostContent = () => {
            <Carousel/>
                 </BorderedContainer>
                 <BorderedContainer>
-                <Paragraph>
-               <TextPadding>
+                <VideoDescription>
+               <VideoPadding>
                 Krótki opis filmu powyżej (caption) – maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi porta gravida at eget metus.
-                </TextPadding>
-                </Paragraph>
+                </VideoPadding>
+                </VideoDescription>
                 
                 </BorderedContainer> 
                 <TextSpacer/> 
