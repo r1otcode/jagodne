@@ -97,7 +97,7 @@ const AnotherPosts = () => {
     "3xl:mt-[120px]",
     "4xl:mt-[120px]"
   );
-  const gridClasses = classNames(            "grid xs:grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-3 3xl:grid-cols-3 4xl:grid-cols-3  text-center text-light",
+  const gridClasses = classNames(            "grid xs:grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-3 3xl:grid-cols-3 4xl:grid-cols-3  text-center text-light",
       "xs:gap-[40px]",
 "sm:gap-[40px]",
 "md:gap-[10px]",
@@ -161,7 +161,19 @@ const h4Classes = classNames(
     '3xl:text-[30px] 3xl:leading-[45px] 3xl:mb-[30px]',
     '4xl:text-[40px] 4xl:leading-[60px] 4xl:mb-[30px]',
 
-)    
+) 
+const thumbClasses = classNames(
+    
+    "xs:aspect-[2/1] xs:object-cover xs:w-full",
+    "sm:aspect-[2/1] sm:object-cover sm:w-full",
+    "md:aspect-[2/1] md:object-cover md:w-full",
+    "lg:aspect-square lg:object-cover ",
+    "xl:aspect-square xl:object-cover ",
+    "2xl:aspect-square 2xl:object-cover ",
+    "3xl:aspect-square 3xl:object-cover ",
+    "4xl:aspect-square 4xl:object-cover ",
+    
+)   
     const randomPosts = postsData
   .sort(() => 0.5 - Math.random()) // Losowe sortowanie tablicy
   .slice(0, 3); // Wybierz pierwsze trzy elementy
@@ -178,7 +190,7 @@ const h4Classes = classNames(
                    <a className={'single_post_item'} href={'#'}>
                        <div className={'single_post_item_img'}>
                            <img className={'go_button nomix'} src={'/assets/button_post.svg'} alt={'go_Button'} />
-                            <img className={'thumb '} src={post.img} alt={post.alt} />
+                            <img className={thumbClasses} src={post.img} alt={post.alt} />
                        </div>
 
                        <div className={dateClasses}>{post.date}</div>
