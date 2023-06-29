@@ -619,18 +619,22 @@ content: url("../public/assets/arrow_right.svg");
   content: url("../public/assets/arrow_left.svg");
   
   }
-  .carousel .swiper-button-prev 
+  .carousel .swiper-button-prev,
   .carousel-1 .swiper-button-prev{
     left:7%;
     width: 30px;
 height: 50px;
   }
-  .carousel .swiper-button-next
+ 
+
+  .carousel .swiper-button-next,
   .carousel-1 .swiper-button-next {
     right: 7%;
     width: 30px;
 height: 50px;
   }
+
+
   .swiper-button-disabled {
     opacity: 0!important;
   }
