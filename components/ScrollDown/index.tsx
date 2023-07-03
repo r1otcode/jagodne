@@ -72,7 +72,7 @@ const ScrollDown = () => {
             viewBox="0 0 28 50"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            className={"mx-auto  hover:z-50  hover:relative md:mx-[20px] sm:mx-[20px] sm:left-[20px] xs:hidden"}
+            className={"mx-auto  hover:z-50  hover:relative md:mx-[20px] sm:mx-[20px] xs:hidden"}
             onMouseEnter={() => setIsShown(true)}
             onMouseLeave={() => setIsShown(false)}
             onClick={handleClickScroll}
