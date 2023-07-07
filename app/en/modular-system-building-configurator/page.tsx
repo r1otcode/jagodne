@@ -4,7 +4,7 @@ import {
   sConfigurator,
   mConfigurator,
   lConfigurator,
-} from "@/mockupData/configurator";
+} from "@/mockupData/EnConfigurator";
 import H4TitleNoMG from "@/components/Typography/H4TitleNoMG";
 import Paragraph from "@/components/Typography/Paragraph";
 import Container from "@/components/layouts/container";
@@ -322,25 +322,25 @@ const inactiveButtonClasses = classNames('hover:z-[50] bg-transparent rounded-[5
     return (
     <>
       <DefaultHeader
-        title={"Konfigurator obiektów systemowych"}
+        title={"Modular System Building configurator"}
         description={
-          "Konfigurator pozwala na szybką i precyzyjną estymację kosztów oraz wizualizację budynków modułowych, na podstawie wybranych parametrów."
+          "The configurator makes it possible to quickly and precisely determine the cost of construction of modular buildings based on selected parameters."
         }
       >
-        Precyzyjne szacowanie kosztów inwestycji i realistyczne wizualizacje
+       Precise determination of project costs and realistic visualizations
       </DefaultHeader>
       <div id={"section-1"}>
         <Container>
           <div className={"text-center xs:mt-[139px] sm:mt-[40px] md:mt-[120px] lg:mt-[120px] xl:mt-[120px] 2xl:mt-[120px] 3xl:mt-[120px] 4xl:mt-[120px]"}>
-            <H4TitleNoMG>Witamy w konfiguratorze</H4TitleNoMG>
+            <H4TitleNoMG>Welcome to configurator</H4TitleNoMG>
               <TextSpacer />
             <Paragraph>
-              Obsługa konfiguratora jest intuicyjna, narzędzie umożliwia
-              wygenerowanie wizualizacji planowanej inwestycji, a wybór budynku
-              modułowego powstałego w symulacji skraca proces projektowy do
-              zaledwie miesiąca. <br />
+            This tool lets you
+generate a visualization of the project considered, and the selection of a modular
+building created using this piece of software shortens the design process to just a
+month.<br />
               <br />
-              Zacznij od wybrania wielkości budynku:
+              Choose one of the three options available:
             </Paragraph>
           </div>
         </Container>
