@@ -2,7 +2,7 @@
 
 import HomepageHeader from "@/components/layouts/en/header/homepage";
 import HowWeDoIt from "@/components/layouts/en/homepage/howWeDoIt";
-import Cta from "@/components/layouts/en/Cta";
+import Cta from "@/components/layouts/en/cta";
 import useStore from "@/context";
 import {AnimatePresence, motion} from "framer-motion";
 import {dropIn} from "../../animationConfig";
