@@ -127,18 +127,14 @@ social identity (hereinafter referred to as Personal Data).
                   <ol type={"1"} className={"list-decimal"}>
                     <li>
                       <Paragraph>
-                        Dane osobowe są zabezpieczone przed bezprawnym
-                        udostępnieniem osobom nieupoważnionym, zabraniem przez
-                        osoby nieupoważnione, zniszczeniem, utratą, uszkodzeniem
-                        lub zmianą oraz przetwarzaniem niezgodnym z przepisami
-                        prawa powszechnie obowiązującego. Administrator stosuje
-                        odpowiednie środki bezpieczeństwa w celu ochrony Danych
-                        osobowych. Zaliczają się do nich wewnętrzne kontrole
-                        zebranych danych, procedury przechowywania i
-                        przetwarzania oraz fizyczne i informatyczne środki
-                        bezpieczeństwa mające na celu ochronę przed
-                        nieupoważnionym dostępem do systemów, w których
-                        przechowujemy Dane osobowe.
+                      Personal Data shall be protected against unauthorized access, being taking
+possession of by unauthorized persons, destruction, loss, damage or
+alteration, and processing in violation of generally applicable laws. The
+Controller makes use of appropriate security measures to protect Personal
+Data. These measures include internal controls over collected data, storage
+and processing procedures, and physical and IT security measures to protect
+Personal Data against unauthorized access to the systems where we store
+such Personal Data.
                         <br />
                         <br />
                       </Paragraph>
@@ -146,65 +142,54 @@ social identity (hereinafter referred to as Personal Data).
 
                     <li>
                       <Paragraph>
-                        Polityka prywatności dotyczy przetwarzania wszystkich
-                        Danych osobowych, przetwarzanych przez Administratora w
-                        sposób całkowicie lub częściowo zautomatyzowany oraz do
-                        przetwarzania w sposób inny niż zautomatyzowany Danych
-                        osobowych stanowiących część zbioru danych lub mających
-                        stanowić część zbioru danych, w szczególności
-                        przetwarzanych w systemach informatycznych będących w
-                        dyspozycji Administratora.
+                      The Privacy Policy applies to the processing of all Personal Data processed by
+the Controller in a fully or partially automated manner, and to the non-
+automated processing of Personal Data which are part of a set of data or
+intended to be part of a set of data — especially of data processed in the
+Controller’s computer systems.
                         <br />
                         <br />
                       </Paragraph>
                     </li>
                     <li>
                       <Paragraph>
-                        Podanie Danych osobowych jest dobrowolne, jednakże
-                        niezbędne np.: w celu przygotowania i udzielenia
-                        odpowiedzi na kierowane do Administratora zapytania. W
-                        formularzu, w celu kontaktu, niezbędne jest podanie
-                        następujących danych: imię i nazwisko, telefon
-                        kontaktowy, adres e-mail oraz treść wiadomości –
-                        zapytania.
+                      Providing Personal Data is voluntary, but it is necessary to provide Personal
+Data e.g. in order to send inquiries to the Controller and have the Controller
+respond to such inquiries.
                         <br />
                         <br />
                       </Paragraph>
                     </li>
                     <li>
                       <Paragraph>
-                        W formularzu, w celu kontaktu, niezbędne jest podanie
-                        następujących danych: imię i nazwisko, telefon
-                        kontaktowy, adres e-mail oraz treść wiadomości –
-                        zapytania.
+                      It is necessary to provide the following data in the form for communication
+purposes: name and surname, phone number, e-mail address, and the
+content of the message (inquiry).
                         <br />
                         <br />
                       </Paragraph>
                     </li>
                     <li>
                       <Paragraph>
-                        Administrator przetwarza Dane osobowe Użytkowników
-                        Serwisu, w celu wynikającym z funkcji formularza - w
-                        celu i zakresie niezbędnym do kontaktu informacyjnego
-                        tj. do przygotowania i udzielenia odpowiedzi na
-                        wiadomość za pomocą formularza znajdującego się w
-                        Serwisie.
+                      The Controller processes the Personal Data of Website Users for the purpose
+determined by the function of the form — for the purpose and to the extent
+necessary for communication purposes, i.e. to prepare and respond to a
+message using the form featured on the Website.
                         <br />
                         <br />
                       </Paragraph>
                     </li>
                     <li>
                       <Paragraph>
-                        Dane sobowe są również potrzebne do: <br />
+                      Personal data are also required: <br />
                         <br />
                         <ol type={"a"} className={"abc"}>
-                          <li>przesyłania powiadomień e-mail, </li>
+                          <li>to send e-mail notifications, </li>
                           <li>
-                            marketingu bezpośredniego produktów i usług
-                            Administratora,
+                          to directly market (advertise) the Controller’s products and services,
                           </li>
                           <li>
-                            tworzenia rejestrów i ewidencji związanych z RODO.
+                          to create records and registers related to the GDPR.
                           </li>
                         </ol>
                       </Paragraph>
@@ -219,7 +204,7 @@ social identity (hereinafter referred to as Personal Data).
             <BorderedContainer>
               <TextSpacer>
                 <H4TitleNoMG>
-                  4. Podstawa prawna przetwarzania danych osobowych
+                  4. Legal basis for the processing of personal data
                 </H4TitleNoMG>
               </TextSpacer>
             </BorderedContainer>
@@ -232,55 +217,43 @@ social identity (hereinafter referred to as Personal Data).
                   <ol type={"1"} className={"list-decimal"}>
                     <li>
                       <Paragraph>
-                        Podstawa prawna przetwarzania danych, uzależniona jest
-                        od celu przetwarzania danych, a więc
+                      The legal basis for the processing of data depends on the purpose of data
+processing, therefore:
                         <br />
                         <br />
                         <ol type={"a"} className={"abc"}>
                           <li>
-                            w celu obsługi zapytania przesłanego przez formularz
-                            lub bezpośrednio drogą elektroniczną przetwarzane są
-                            podane Dane osobowe, jak: imię, nazwisko, dane
-                            kontaktowe. Podstawą prawną takiego przetwarzania
-                            danych jest art. 6 ust. 1 lit. b RODO. Jeżeli
-                            Użytkownik zdecyduje się podać również inne dane,
-                            uznajemy, że wyraził zgodę na przetwarzanie również
-                            tych danych — wtedy podstawą prawną takiego
-                            przetwarzania jest art. 6 ust. 1 lit. a RODO, który
-                            pozwala przetwarzać Dane osobowe na podstawie
-                            dobrowolnie udzielonej zgody;{" "}
+                          in order to handle the inquiry sent through the form or directly by e-mail, the
+Personal Data provided — such as name, surname, contact details — are
+processed. The legal basis for such data processing is Article 6(1)(b) of the
+GDPR. If the User decides to provide other data as well, it will be considered
+that they have consented to the processing of these data as well, in which
+case the legal basis for such processing is Article 6(1)(a) of the GDPR, which
+allows the processing of Personal Data on the basis of a voluntary consent;{" "}
                           </li>
                           <li>
                             {" "}
-                            w przypadku przyjęcia oferty/złożenia zamówienia – w
-                            celu zawarcia i realizacji umowy, przetwarzane są
-                            takie Dane osobowe jak: imię i nazwisko lub
-                            ewentualnie firmę, adres zamieszkania lub siedziba,
-                            numer PESEL lub numer NIP, adres e-mail. Podstawą
-                            prawna takiego przetwarzania danych jest art. 6 ust.
-                            1 lit. b RODO;
+                            in the case of acceptance of a proposal/submission of an order — for the
+purpose of concluding and carrying out a contract, the Personal Data
+processed include: name and surname or possibly company name, address of
+residence or registered office, PESEL number or NIP number, e-mail address.
+The legal basis for such data processing is Article 6(1)(b) of the GDPR;
                           </li>
                           <li>
-                            w celu realizacji marketingu bezpośredniego
-                            Administratora – przetwarzane są takie Dane osobowe
-                            jak: imię i nazwisko lub ewentualnie firmę, adres
-                            e-mail, numer telefonu. Podstawą prawna takiego
-                            przetwarzania danych jest art. 6 ust. 1 lit. f)
-                            RODO,
+                          for the purpose of the Controller’s direct marketing activities, the Personal
+Data processed include: name and surname or possibly company, e-mail
+address, telephone number. The legal basis for such data processing is Article
+6(1)(f) of the GDPR;
                           </li>
                           <li>
-                            w celu administrowania stroną internetową
-                            przetwarzane są takie dane osobowe, jak: adres IP,
-                            data i czas serwera, informacje o przeglądarce
-                            internetowej, informacje o systemie operacyjnym —
-                            dane te są zapisywane automatycznie w tzw. logach
-                            serwera, przy każdorazowym korzystaniu z Serwisu.
-                            Podstawą prawną takiego przetwarzania danych jest
-                            art. 6 ust. 1 lit. f RODO, który pozwala przetwarzać
-                            dane osobowe, jeżeli tym sposobem Administrator
-                            realizuje swój prawnie uzasadniony interes (w tym
-                            przypadku interesem Administratora jest
-                            administrowanie stroną internetową).
+                          in order to administer the website, the following Personal Data are
+processed: IP address, server date and time, information about the browser
+used, information about the operating system — these data are recorded
+automatically in the so-called server logs, each time the Website is visited and
+used. The legal basis for such processing is Article 6(1)(f) of the GDPR, which
+allows the processing of Personal Data if the processing of Personal Data
+enables the Controller to pursue their legitimate interest (in this case the
+Controller’s interest is the administration of the Website).
                           </li>
                         </ol>
                       </Paragraph>
@@ -294,7 +267,7 @@ social identity (hereinafter referred to as Personal Data).
           <SmallerContainer right={false}>
             <BorderedContainer>
               <TextSpacer>
-                <H4TitleNoMG>5. Prawa osoby, której dane dotyczą</H4TitleNoMG>
+                <H4TitleNoMG>5. Rights of data subjects</H4TitleNoMG>
               </TextSpacer>
             </BorderedContainer>
           </SmallerContainer>
@@ -306,9 +279,9 @@ social identity (hereinafter referred to as Personal Data).
                   <ol type={"1"} className={"list-decimal"}>
                     <li>
                       <Paragraph>
-                        Jeżeli przetwarzanie Danych osobowych odbywa się na
-                        podstawie zgody, w każdej chwili Użytkownik może tę
-                        zgodę cofnąć — wedle własnego uznania.
+                      If the processing of Personal Data takes place on the basis of the User’s
+consent, the User may withdraw this consent at any time — at their own
+discretion.
                         <br />
                         <br />
                       </Paragraph>
@@ -316,32 +289,29 @@ social identity (hereinafter referred to as Personal Data).
 
                     <li>
                       <Paragraph>
-                        Jeżeli Użytkownik chciałby cofnąć zgodę na przetwarzanie
-                        Danych osobowych, to w tym celu wystarczy wysłać maila
-                        na adres wskazany w pkt 2 Polityki lub listownie na
-                        adres siedziby Administratora.
+                      If the User would like to withdraw their consent to the processing of Personal
+Data, they need to send an e-mail to the address indicated in item 2 of the
+Privacy Policy or a letter by standard mail to the Controller’s registered
+address.
                         <br />
                         <br />
                       </Paragraph>
                     </li>
                     <li>
                       <Paragraph>
-                        Osobie, której Dane osobowe dotyczą, przysługuje prawo
-                        dostępu do treści swoich Danych osobowych oraz prawo ich
-                        sprostowania, usunięcia lub ograniczenia przetwarzania,
-                        prawo do przenoszenia danych oraz w zakresie celów
-                        marketingowych, prawo wniesienia sprzeciwu wobec ich
-                        przetwarzania.
+                      Data subjects have the right to access the content of their Personal Data and
+the right to rectify them, erase them, or restrict the processing thereof, the right
+to data portability and, with respect to marketing purposes, the right to object
+to the processing of their Personal Data.
                         <br />
                         <br />
                       </Paragraph>
                     </li>
                     <li>
                       <Paragraph>
-                        Osobie, której Dane osobowe dotyczą, przysługuje prawo
-                        wniesienia skargi do organu nadzorczego, gdy uzna, iż
-                        przetwarzanie Danych osobowych narusza przepisy
-                        powszechnie obowiązującego prawa.
+                      Data subjects have the right to lodge a complaint with a supervisory authority if
+they consider that the processing of their Personal Data violates the provisions
+of generally applicable law.
                         <br />
                         <br />
                       </Paragraph>
@@ -355,7 +325,7 @@ social identity (hereinafter referred to as Personal Data).
           <SmallerContainer right={false}>
             <BorderedContainer>
               <TextSpacer>
-                <H4TitleNoMG>6. Okres przechowywania danych</H4TitleNoMG>
+                <H4TitleNoMG>6. Data retention period</H4TitleNoMG>
               </TextSpacer>
             </BorderedContainer>
           </SmallerContainer>
@@ -367,46 +337,39 @@ social identity (hereinafter referred to as Personal Data).
                   <ol type={"1"} className={"list-decimal"}>
                     <li>
                       <Paragraph>
-                        Dane osobowe są przechowywane przez:
+                      Personal Data are retained:
                         <br />
                         <br />
                         <ol type={"a"} className={"abc"}>
                           <li>
-                            okres trwania korespondencji w sprawie i niezbędny
-                            do realizacji celu wynikającego z treści zapytania,
-                            a następnie, w zależności od tego, jakie będą
-                            rezultaty korespondencji – albo zasilą bazę Klientów
-                            i będą dalej przetwarzane w celu realizacji umowy
-                            albo dane zostaną usunięte jeżeli nie zaistnieje
-                            możliwość nawiązania współpracy. W przypadku
-                            czytelnego zamknięcia rozmów i nie nawiązania
-                            współpracy, dane zostaną niezwłocznie usunięte. W
-                            przypadku zawarcia umowy, dane będą przetwarzane
-                            przez czas niezbędny do realizacji i korzystania z
-                            praw i obowiązków z niej wynikających, w tym przez
-                            czas niezbędny do realizacji obowiązków wynikających
-                            z przepisów prawa nałożonych na Administratora i
-                            dochodzenia roszczeń oraz obrony przed roszczeniami;
+                          throughout the period of exchange of communication regarding an inquiry,
+i.e. as long as it may be necessary to fulfill the purpose arising from the
+content of the inquiry, and then, depending on the results of the said
+exchange, these data will either be included in the database of customers
+and be further processed for the purpose of carrying out the contract
+concluded or be erased if there is no possibility to collaborate. If the
+exchange of communication ends without any form of collaboration being
+established, the data will be erased immediately. If a contract is concluded,
+the data will be processed for the time necessary to carry out the contract
+and to exercise the rights and obligations arising therefrom — including the
+time necessary to fulfill the legal obligations imposed on the Controller and
+to assert claims and defend against claims;
                           </li>
                           <li>
-                            do czasu cofnięcia zgody lub osiągnięcia celu
-                            przetwarzania — w odniesieniu do Danych osobowych
-                            przetwarzanych na podstawie zgody;
+                          until the consent given is withdrawn or the purpose of the processing of
+Personal Data is achieved — applies to Personal Data processed on the
+basis of a consent given;
                           </li>
                           <li>
-                            do czasu skutecznego wniesienia sprzeciwu lub
-                            osiągnięcia celu przetwarzania — w odniesieniu do
-                            danych osobowych przetwarzanych na podstawie prawnie
-                            uzasadnionego interesu Administratora Danych
-                            Osobowych,
+                          until an objection to the processing of Personal Data is filed or the purpose
+of the processing of Personal Data is achieved — applies to Personal Data
+processed on the basis of the Personal Data Controller’s legitimate
+interest,
                           </li>
                           <li>
-                            w celu realizacji marketingu bezpośredniego
-                            Administratora – przetwarzane są takie Dane osobowe
-                            jak: imię i nazwisko lub ewentualnie firmę, adres
-                            e-mail, numer telefonu. Podstawą prawna takiego
-                            przetwarzania danych jest art. 6 ust. 1 lit. f)
-                            RODO,
+                          until the Personal Data processed become out-of-date or no longer useful
+— applies to Personal Data processed mainly for the purpose of cookie
+use and Website administration,
                           </li>
                           <li>
                             do czasu zdezaktualizowania się lub utraty
@@ -420,13 +383,10 @@ social identity (hereinafter referred to as Personal Data).
 
                     <li>
                       <Paragraph>
-                        Okresy przechowywania danych mogą zostać przedłużone w
-                        przypadku, gdy dane są niezbędne do ustalenia,
-                        dochodzenia lub obrony przed ewentualnymi roszczeniami,
-                        a po tym okresie jedynie w przypadku i zakresie, w jakim
-                        będą wymagać tego przepisy prawa. Po upływie okresu
-                        przetwarzania, dane są nieodwracalnie usuwane lub
-                        anonimizowane.
+                      The data retention periods may be extended if data are necessary to establish,
+assert, or defend against any possible claims, and afterwards only if and to the
+extent it is required under the applicable law. After the expiry of the data
+retention period, the data are irreversibly erased or anonymized.
                         <br />
                         <br />
                       </Paragraph>
@@ -440,7 +400,7 @@ social identity (hereinafter referred to as Personal Data).
           <SmallerContainer right={false}>
             <BorderedContainer>
               <TextSpacer>
-                <H4TitleNoMG>7. Odbiorcy danych</H4TitleNoMG>
+                <H4TitleNoMG>7. Data recipients</H4TitleNoMG>
               </TextSpacer>
             </BorderedContainer>
           </SmallerContainer>
@@ -452,13 +412,11 @@ social identity (hereinafter referred to as Personal Data).
                   <ol type={"1"} className={"list-decimal"}>
                     <li>
                       <Paragraph>
-                        Dane osobowe Użytkownika są ujawniane upoważnionym
-                        pracownikom oraz partnerom, takim jak: dostawcy
-                        odpowiedzialni za obsługę systemów informatycznych i
-                        sprzętu, podmioty świadczącym usługi prawne lub
-                        księgowe, kurierzy, agencje marketingowe, podmioty
-                        świadczące usługi wysyłania maili lub smsów i operatorzy
-                        płatności
+                      User Personal Data are disclosed to authorized employers and partners such
+as: suppliers responsible for the management of IT systems, software, and
+hardware, entities providing legal or accounting services, courier companies,
+marketing agencies, entities providing e-mailing or SMS services, and
+payment operators.
                         <br />
                         <br />
                       </Paragraph>
@@ -466,10 +424,9 @@ social identity (hereinafter referred to as Personal Data).
 
                     <li>
                       <Paragraph>
-                        Jeżeli Użytkownik chciałby cofnąć zgodę na przetwarzanie
-                        Danych osobowych, to w tym celu wystarczy wysłać maila
-                        na adres wskazany w pkt 2 Polityki lub listownie na
-                        adres siedziby Administratora.
+                      We may disclose selected information to relevant authorities or third parties
+who may request such information based on a relevant legal basis and in
+accordance with the law in force.
                         <br />
                         <br />
                       </Paragraph>
@@ -486,8 +443,7 @@ social identity (hereinafter referred to as Personal Data).
                     </li>
                     <li>
                       <Paragraph>
-                        Administrator nie przekazuje danych osobowych do państw
-                        trzecich.
+                      The Controller does not transfer Personal Data to third countries.
                         <br />
                         <br />
                       </Paragraph>
@@ -502,7 +458,7 @@ social identity (hereinafter referred to as Personal Data).
             <BorderedContainer>
               <TextSpacer>
                 <H4TitleNoMG>
-                  8. Polityka „cookies” i wymagania techniczne
+                  8. Cookie policy and technical requirements
                 </H4TitleNoMG>
               </TextSpacer>
             </BorderedContainer>
@@ -515,11 +471,10 @@ social identity (hereinafter referred to as Personal Data).
                   <ol type={"1"} className={"list-decimal"}>
                     <li>
                       <Paragraph>
-                        W związku z korzystaniem z Serwisu, zbierane są pliki
-                        typu cookies („ciasteczka”),obejmujące zawartość
-                        tekstową które mogą zawierać dane osobowe w postaci
-                        adresu IP komputera oraz unikalnego identyfikatora
-                        urządzenia zapisanego w pliku.
+                      The use of the Website involves the collection of cookie files (“cookies”)
+including textual content that may contain Personal Data in the form of the
+computer IP address and a unique identifier assigned to the file save on the
+device.
                         <br />
                         <br />
                       </Paragraph>
@@ -527,38 +482,32 @@ social identity (hereinafter referred to as Personal Data).
 
                     <li>
                       <Paragraph>
-                        Podstawą prawną dla zbierania danych odczytywanych z
-                        plików cookies jest art. 6 ust. 1 lit. f) RODO,
-                        dopuszczający przetwarzanie danych osobowych dla
-                        osiągnięcia usprawiedliwionego celu Administratora.
-                        Celem takim jest dostosowanie strony do indywidualnych
-                        ustawień Użytkownika oraz zapamiętanie wprowadzanych
-                        przez Użytkownika danych związanych z korzystaniem z
-                        Serwisu, jak również prowadzenie analiz statystycznych
-                        dotyczących Użytkowników i odwiedzających stronę na
-                        potrzeby Administratora.
+                      The legal basis for the collection of data read from cookies is Article 6(1)(f) of
+the GDPR, which allows Personal Data to be processed to enable the
+Controller to pursue and achieve a legitimate interest. Such an interest is
+adjusting the Website to the User’s individual setting and saving the data the
+User may enter in connection with the use of the Website, as well as carrying
+out statistical analyses concerning Website Users and visitors for the
+Controller’s needs.
                         <br />
                         <br />
                       </Paragraph>
                     </li>
                     <li>
                       <Paragraph>
-                        Można zrezygnować ze zbierania plików cookies wybierając
-                        odpowiednie ustawienia przeglądarki, z której
-                        korzystasz, jednak należy pamiętać, że w takim przypadku
-                        korzystanie z wszystkich funkcji Serwisu może okazać się
-                        utrudnione.
+                      You may decide to block the use of cookies by changing the settings in your
+browser, but bear in mind that if you do so, you may find it difficult to take full
+advantage of all the features of the Website.
                         <br />
                         <br />
                       </Paragraph>
                     </li>
                     <li>
                       <Paragraph>
-                        Można uzyskać dostęp do swoich danych w formie zbieranej
-                        poprzez analizę zawartości plików cookies, w treści w
-                        jakiej znajdują się na dysku komputera, które są
-                        następnie wykorzystywane przez witrynę oraz w każdej
-                        chwili je usunąć.
+                      You can access your data in the form in which they are collected through the
+analysis of the content of cookies, with the content in which they are available
+on the hard drive of the computer, which are then used by the Website. You
+can also erase your data at any time.
                         <br />
                         <br />
                       </Paragraph>
@@ -566,22 +515,19 @@ social identity (hereinafter referred to as Personal Data).
 
                     <li>
                       <Paragraph>
-                        Użytkownikowi przysługuje prawo ich usunięcia,
-                        wniesienia sprzeciwu wobec ich przetwarzania, jak
-                        również prawo wniesienia skargi do organu nadzorczego.
+                      User has the right to erase their data, to object to the processing thereof, and
+to lodge a complaint with a supervisory authority.
                         <br />
                         <br />
                       </Paragraph>
                     </li>
                     <li>
                       <Paragraph>
-                        Wyłączenie stosowania cookies może spowodować
-                        utrudnienia korzystanie z niektórych usług w ramach
-                        Serwisu, w szczególności wymagających logowania.
-                        Wyłączenie opcji przyjmowania cookies nie powoduje
-                        natomiast braku możliwości czytania lub oglądania treści
-                        zamieszczanych w Serwisie z zastrzeżeniem tych, do
-                        których dostęp wymaga logowania.
+                      Blocking the use of cookies may make it difficult to use some of the services
+the Website offers, especially those that require logging in. Blocking the use
+of cookies will not make it impossible to read or view the content featured on
+the Website — except for the content that can be accessed only upon logging
+in.
                         <br />
                         <br />
                       </Paragraph>
