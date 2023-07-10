@@ -15,7 +15,7 @@ interface MenuLayoutProps {
 const dropIn = {
     hidden: {
         y: "100vh",
-        opacity: 0,
+        opacity: 1,
         transition: {
             duration: 1,
             type: "reverse",
@@ -33,7 +33,7 @@ const dropIn = {
     exit: {
 
         y: "100vh",
-        opacity: 0,
+        opacity: 1,
         transition: {
             duration: 1,
             type: "reverse",
