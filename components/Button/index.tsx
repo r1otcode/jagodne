@@ -7,7 +7,7 @@ import useStore from "../../context"
 
 const Button = (props: any) => {
   const buttonClasses = classNames(
-    "flex justify-center font-bold w-max  text-light bg-accent rounded-[50px] px-[33px] py-[20px] hover:z-50 hover:relative transition-control",
+    "flex justify-center font-bold w-max  text-light bg-accent rounded-[50px] px-[33px] py-[20px] hover:z-50 hover:relative transition-control     leading-[200%]",
     props.dark ? "bg-dark border border-[#505050]" : "bg-accent ",
     props.mobileHide && "xs:hidden sm:hidden ",
       props.center && 'mx-auto'
