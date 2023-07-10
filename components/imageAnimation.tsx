@@ -9,7 +9,7 @@ const ImageAnimation =({children}) => {
                 className={'inline-flex bg-dark'}
                 initial={{ x: 0 }}
                 animate={{ x: '-200%' }}
-                transition={{ duration: 60, delay: 2, ease: "linear", repeat: Infinity, repeatType: "loop" }}
+                transition={{ duration: 30, delay: 2, ease: "linear", repeat: Infinity, repeatType: "loop" }}
             >
                 {children}
             </motion.div>
