@@ -86,7 +86,7 @@ const HowWeDoIt = () => {
                 <div className={'flex flex-col'}>
                     <SmallerContainer right={false}>
 
-                        <BorderedContainer>
+                        <BorderedContainer hideTopBorder={true}>
                             <TextSpacer>
                                 <Paragraph>
                                     We skillfully combine form and function, creating unconventional and timeless
@@ -97,7 +97,7 @@ const HowWeDoIt = () => {
                         </BorderedContainer>
                     </SmallerContainer>
 
-                    <BorderedContainerInline right={true}>
+                    <BorderedContainerInline right={true} hideTopBorder={true}>
 
                         <img
                             alt="jagodne"
