@@ -439,7 +439,7 @@ img.react-photo-album--photo {
   }
 }
 .rotate {
-  animation-duration: 100s;
+  animation-duration: 70s;
   animation-name: rotate;
   animation-iteration-count: infinite;
   animation-direction: alternate;
