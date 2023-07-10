@@ -1,26 +1,19 @@
-"use client";
-
-import ZespolHeader from "@/components/layouts/header/zespol";
-import Content from "@/components/layouts/en/team/content";
-import TeamFlex from "@/components/layouts/en/team/teamFlex";
-import CtaZespol from "@/components/layouts/CtaZespol";
+'use client'
+import Content from "@/components/layouts/en/contact-us/content";
 import DefaultHeader from "@/components/layouts/header/DefaultHeader";
+import CtaContact from "@/components/layouts/CtaContact";
+import {AnimatePresence, motion} from "framer-motion";
 import useStore from "@/context";
 import {dropIn} from "@/animationConfig";
-import {AnimatePresence, motion} from "framer-motion";
-
-
-
 
 export default function Home() {
     // @ts-ignore
     const loading = useStore((store) => store.loading);
     return (
         <>
-            <DefaultHeader title={'Team'} description={'We go where business goes. We plan with both today and tomorrow in mind. We transform visions into profit that sits on a solid foundation.'}>
-            All competencies under one roof
+            <DefaultHeader title={'Contact us'} description={'Masz pytania lub potrzebujesz wyjaśnienia? Zadzwoń lub napisz do nas, posługując się danymi poniżej.'}>
+            Get in touch with us.
             </DefaultHeader>
-
             <AnimatePresence
                 initial={true}
                 mode="wait"
@@ -34,13 +27,13 @@ export default function Home() {
                         exit="exit"
 
                     >
-            <Content />
-            <TeamFlex />
+
+                        <Content />
+                        <CtaContact />
                     </motion.div>
                 )}
             </AnimatePresence>
-            <CtaZespol />
-           
-          </>
+
+        </>
     );
 }
