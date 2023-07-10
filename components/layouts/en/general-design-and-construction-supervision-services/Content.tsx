@@ -249,7 +249,7 @@ const Content = () => {
                                     Modular System Buildings — Learn more and use the configurator
                                     </Paragraph>
                                     <br />
-                                    <SmallButton link={"/en/konfigurator-obiektow-systemowych"}>
+                                    <SmallButton link={"/en/modular-system-building-configurator"}>
                                         Open configurator
                                     </SmallButton>
                                 </TextSpacer>

@@ -251,8 +251,8 @@ industrial, and public utility sectors.
                       exit="exit"
                       className={buttonsContainer}
                     >
-                      <Button href={"/en/projektowanie"}>Learn more</Button>
-                      <Button href={"/en/zespol"} dark={true} mobileHide={true}>
+                      <Button href={"/en/design"}>Learn more</Button>
+                      <Button href={"/en/team"} dark={true} mobileHide={true}>
                       Let’s get to know each other
                       </Button>
                     </motion.div>

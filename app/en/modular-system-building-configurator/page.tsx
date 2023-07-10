@@ -102,7 +102,7 @@ const ContactFrom = () => {
         <div className="flex xs:flex-col sm:flex-col md:flex-col lg:flex-col flex-row">
             <div className="xs:w-full sm:w-full  md:w-full lg:w-full w-[26%] xs:mt-[40px] xs:mb-[50px] sm:mt-[40px] sm:mb-[50px] md:mt-[40px] md:mb-[50px] lg:mt-[40px] lg:mb-[50px] ">
 <Paragraph>
-    Jesteś zainteresowany powyższą konfiguracją lub chciałbyś zapytać nas o jej szczegóły? Skontaktuj się z nami.
+Any questions? Can’t find the right solution in the configurator?
 </Paragraph>
             </div>
             <div className="xs:w-full sm:w-full  md:w-full lg:w-full w-[74%] xl:pl-[40px] 2xl:pl-[40px] 3xl:pl-[40px] 4xl:pl-[40px]">
@@ -150,7 +150,11 @@ const ContactFrom = () => {
                             className={ formErrors.radio ? 'input_error mr-2 self-start' : 'mr-2 self-start' } 
                             onChange={handleChange}
                         />
-                        <label className="text-[12px]">Wyrażam zgodę, aby moje dane osobowe w zakresie obejmującym: imię, nazwisko, numer telefonu i adres e-mail, były przetwarzane przez JAGODNE Sp. z o.o. z siedzibą w Siedlcach przy ulicy Brzeskiej 65 (dalej zwana Jagodne) we własnych celach marketingowych, co obejmuje m.in. prezentowania usług w tym przygotowania odpowiedniej oferty.</label>
+                        <label className="text-[12px]">I give my consent for my personal data, including my name, surname, telephone number,
+and e-mail address, to be processed by Jagodne spółka z ograniczoną odpowiedzialnością
+with its registered office in Siedlce, ul. Brzeska 65 (hereinafter referred to as Jagodne) for its
+own marketing purposes, which includes e.g. marketing of services — including preparing
+relevant proposals.</label>
                     </div>
                    
 
@@ -163,7 +167,8 @@ const ContactFrom = () => {
                             className="mr-2 self-start"
                             onChange={handleChange}
                         />
-                        <label className="text-[12px]">Wyrażam zgodę na otrzymywanie od Jagodne informacji handlowo-marketingowych w postaci wiadomości elektronicznych. (opcjonalnie)</label>
+                        <label className="text-[12px]">I give my consent to receive commercial and marketing information from Jagodne in the form
+of: Electronic messages, Phone (optional)</label>
                     </div>
                     <p className={'form_info'}>Administratorem Państwa danych osobowych jest Jagodne Sp. z o.o. z siedzibą w Siedlcach przy ulicy Brzeskiej 65. Informujemy, że podanie danych osobowych zawartych w formularzu jest dobrowolne, ale niezbędne do udzielenia odpowiedzi na zapytanie, a także, że przysługują Państwu prawa dostępu do Państwa danych osobowych, ich zmiany (w tym aktualizacji), a także pozostałe prawa opisane w Polityce prywatności. Dane osobowe podane przez Państwo będą przetwarzane w celu udzielenia odpowiedzi na zapytanie, a jeśli udzielili Państwo określonych zgód – również na podstawie ww. zgody i w celu w jej treści określonym. Zachęcamy do zapoznania się z pozostałymi informacjami dostępnymi w Polityce Prywatności, w tym dot. okresów przechowywania danych i kategorii odbiorców danych.</p>
 
@@ -173,7 +178,7 @@ const ContactFrom = () => {
                         onMouseEnter={() => setIsShown(true)}
                         onMouseLeave={() => setIsShown(false)} className={'hover:z-[50] form_btn font-medium'}
                     >
-                        Prześlij
+                       Send
                     </button>
                 </form>
             </div>
