@@ -27,7 +27,7 @@ export default function Home() {
                     initial="hidden"
                     animate="visible"
                     exit="exit"
-
+                    className={' bg-dark'}
                 > <HowWeDoIt />
                     <Cta />
                     </motion.div>
