@@ -1,6 +1,6 @@
 'use client'
 import Content from "@/components/layouts/en/contact-us/content";
-import DefaultHeader from "@/components/layouts/header/DefaultHeader";
+import DefaultHeader from "@/components/layouts/en/header/defaultHeader";
 import CtaContact from "@/components/layouts/CtaContact";
 import {AnimatePresence, motion} from "framer-motion";
 import useStore from "@/context";

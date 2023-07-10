@@ -1,7 +1,7 @@
 'use client'
 import Content from "@/components/layouts/en/contractorship/Content";
 import CtaNormal from "@/components/layouts/CtaNormal";
-import DefaultHeader from "@/components/layouts/header/DefaultHeader";
+import DefaultHeader from "@/components/layouts/en/header/defaultHeader";
 import useStore from "@/context";
 import {dropIn} from "@/animationConfig";
 import {AnimatePresence, motion} from "framer-motion";

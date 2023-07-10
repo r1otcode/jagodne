@@ -4,7 +4,7 @@ import ZespolHeader from "@/components/layouts/header/zespol";
 import Content from "@/components/layouts/en/team/content";
 import TeamFlex from "@/components/layouts/en/team/teamFlex";
 import CtaZespol from "@/components/layouts/CtaZespol";
-import DefaultHeader from "@/components/layouts/header/DefaultHeader";
+import DefaultHeader from "@/components/layouts/en/header/defaultHeader";
 import useStore from "@/context";
 import {dropIn} from "@/animationConfig";
 import {AnimatePresence, motion} from "framer-motion";

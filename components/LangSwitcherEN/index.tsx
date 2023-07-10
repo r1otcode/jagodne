@@ -27,10 +27,10 @@ const LangSwitcher = ({mobile}: LangSwitcherProps ) => {
     )
     return (
         <div className={langSwitcherClasses}>
+           <Link href="/"><span  onMouseEnter={() => setIsShown(true)}
+                   onMouseLeave={() => setIsShown(false)} className={nextLang}>Polski <span className={'mx-[5px]'}>•</span> </span></Link>
             <span  onMouseEnter={() => setIsShown(true)}
-                   onMouseLeave={() => setIsShown(false)} className={currentLang}>Polski <span className={'mx-[5px]'}>•</span> </span>
-            <Link href="/en"><span  onMouseEnter={() => setIsShown(true)}
-                   onMouseLeave={() => setIsShown(false)} className={nextLang}> English</span></Link>
+                   onMouseLeave={() => setIsShown(false)}  className={currentLang}> English</span>
         </div>
     )
 }

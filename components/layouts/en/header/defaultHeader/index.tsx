@@ -3,21 +3,19 @@ import Logo from "@/components/logo";
 import classNames from "classnames";
 import PageTitle from "@/components/Typography/PageTitle";
 import Container from "@/components/layouts/container";
-import Button from "@/components/Button";
 import Menu from "@/components/menu";
 import LangSwitcher from "@/components/LangSwitcherEN";
 import ScrollDown from "@/components/ScrollDown";
 import Paragraph from "@/components/Typography/Paragraph";
-//@ts-ignore
-import { Sierotki } from "sierotki";
-//@ts-ignore
-import ReactHtmlParser from "react-html-parser";
-import { useState } from "react";
+import {ReactNode, useEffect, useState} from "react";
 import MenuLayout from "@/components/MenuLayout/MenuLayoutEN";
 import { AnimatePresence } from "framer-motion";
 import { motion } from "framer-motion";
-
 import useStore from "@/context";
+import MobileHeaderTitle from "@/components/Typography/HeaderTitleMobile";
+import HeaderTitle from "@/components/Typography/HeaderTitle";
+import {getCookie, hasCookie, setCookie} from "cookies-next";
+
 
 const menuHeader = classNames(
   "flex",
@@ -35,7 +33,8 @@ const menuHeader = classNames(
 );
 const mainHeader = classNames(
   "w-full",
-  "h-[100vh]",
+  "h-[100vh]"
+
   // "xs:pt-[160px]",
   // "sm:pt-[227px]",
   // "md:pt-[225px]",
@@ -43,8 +42,7 @@ const mainHeader = classNames(
   // "xl:pt-[187px]",
   // "2xl:pt-[221px]",
   // "3xl:pt-[270px]",
-  // "4xl:pt-[341px]",
-
+  // "4xl:pt-[341px]"
 );
 
 const buttonsContainer = classNames(
@@ -59,8 +57,34 @@ const buttonsContainer = classNames(
   "3xl:mt-[70px]",
   "4xl:mt-[100px]"
 );
-
-
+const menuButtonWrapper = classNames(
+  "inline-flex",
+  "items-center",
+  "xs:top-[20px] xs:right-[20px]",
+  "sm:top-[20px] sm:right-[20px]",
+  "md:top-[20px] md:right-[20px] ",
+  "lg:top-[30px] lg:right-[30px]",
+  "xl:top-[30px] xl:right-[30px]",
+  "2xl:top-[20px] 2xl:right-[20px]",
+  "3xl:top-[30px] 3xl:right-[30px]",
+  "4xl:top-[40px] 4xl:right-[40px]",
+  "fixed",
+  "hover:z-[50]"
+);
+const leftMenuWrapper = classNames(
+  "inline-flex",
+  "items-center",
+  "xs:top-[41px] xs:left-[20px]",
+  "sm:top-[34px] sm:left-[20px]",
+  "md:top-[20px] md:left-[20px] ",
+  "lg:top-[30px] lg:left-[30px]",
+  "xl:top-[30px] xl:left-[30px]",
+  "2xl:top-[20px] 2xl:left-[20px]",
+  "3xl:top-[30px] 3xl:left-[30px]",
+  "4xl:top-[40px] 4xl:left-[40px]",
+  "fixed",
+  "hover:z-[50]"
+);
 const headerContentWrapper = classNames(
   "xs:block",
   "sm:block ",
@@ -77,10 +101,10 @@ const mainTitleWrapper = classNames(
   "sm:w-full",
   "md:w-full",
   "lg:w-full",
-  "xl:w-[calc(14.285%*5)] xl:border-l xl:pl-[20px]",
-  "2xl:w-[calc(14.285%*5)] 2xl:border-l 2xl:pl-[30px]",
-  "3xl:w-[calc(14.285%*5)] 3xl:border-l 3xl:pl-[40px]",
-  "4xl:w-[calc(14.285%*5)] 4xl:border-l 4xl:pl-[50px]"
+  "xl:w-[calc(14.285%*5)] xl:border-l xl:pl-[30px]",
+  "2xl:w-[calc(14.285%*5)] 2xl:border-l 2xl:pl-[20px]",
+  "3xl:w-[calc(14.285%*5)] 3xl:border-l 3xl:pl-[30px]",
+  "4xl:w-[calc(14.285%*5)] 4xl:border-l 4xl:pl-[30px]"
 );
 const paragraphWrapper = classNames(
   "border-[#505050]",
@@ -88,11 +112,13 @@ const paragraphWrapper = classNames(
   "sm:w-full sm:mt-[40px]",
   "md:w-full md:mt-[40px]",
   "lg:w-full lg:mt-[50px]",
-    "xl:w-[calc(14.285%*2)] xl:border-l xl:pl-[20px]",
-    "2xl:w-[calc(14.285%*2)] 2xl:border-l 2xl:pl-[30px]",
-    "3xl:w-[calc(14.285%*2)] 3xl:border-l 3xl:pl-[40px]",
-    "4xl:w-[calc(14.285%*2)] 4xl:border-l 4xl:pl-[50px]"
+  "xl:w-[calc(14.285%*2)] xl:border-l xl:pl-[30px]",
+  "2xl:w-[calc(14.285%*2)] 2xl:border-l 2xl:pl-[20px]",
+  "3xl:w-[calc(14.285%*2)] 3xl:border-l 3xl:pl-[30px]",
+  "4xl:w-[calc(14.285%*2)] 4xl:border-l 4xl:pl-[30px]"
 );
+
+
 
 const dropIn = {
   hidden: {
@@ -124,38 +150,13 @@ const dropIn = {
   },
 };
 
-const dropInn = {
-  hidden: {
-    x: "0vw",
-    // rotate:0,
-    transition: {
-      delay: 0,
-      duration: 2,
-      type: "linear",
-    },
-  },
-  visible: {
-    x: `0`,
-    // rotate: Math.random() * (360),
-    transition: {
-      delay: 0,
-      duration: 1.5,
-      type: "linear",
-    },
-  },
-  exit: {
-    x: "0vw",
-    // rotate:0,
-    transition: {
-      delay: 0,
-      duration: 1.5,
-      type: "linear",
-    },
-  },
-};
 
-const HomepageHeader = () => {
 
+const DefaultHeader: React.FC<{
+  title: string;
+  description: string | ReactNode;
+  children: string | ReactNode;
+}> = ({ title, description, children }) => {
   const [modalOpen, setModalOpen] = useState(false);
   // @ts-ignore
   const loading = useStore((store) => store.loading);
@@ -194,6 +195,75 @@ const HomepageHeader = () => {
       modalOpen && "modal_opened"
 
   );
+  const exitPosition = getCookie('circle_exit_pos');
+  // const [exitPosition, setExitPosition] = useState(0);
+  // useEffect(() => {
+  //
+  //   console.log(exitPosition)
+  //
+  // },[]);
+  // useEffect(() => {
+  //   const timer = setTimeout(() => {
+  //     setExitPosition(Math.random() * (60 - 30) + 30);
+  //     setCookie('circle_pos', exitPosition);
+  //     console.log(exitPosition)
+  //   }, 5000);
+  //   return () => clearTimeout(timer);
+  // }, []);
+
+  // useEffect(() => {
+  //
+  //
+  //
+  //
+  //   },[loading]);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+
+      setCookie('circle_exit_pos', Math.random() * (60 - 30) + 30);
+      setCookie('circle_pos', `${Math.random() * (60 - 30) + 30}`);
+
+
+    }, 3000);
+    return () => clearTimeout(timer);
+  }, [loading]);
+
+  useEffect(() => {
+    console.log('ex',exitPosition)
+  },[exitPosition]);
+
+
+  const dropInn = {
+    hidden: {
+      x: `${exitPosition}vw`,
+      // rotate:0,
+      transition: {
+        delay: 0,
+        duration: 2,
+        type: "linear",
+      },
+    },
+    visible: {
+      x: `${getCookie('circle_pos')}vw`,
+      // rotate: Math.random() * (360),
+      transition: {
+        delay: 0,
+        duration: 1.5,
+        type: "linear",
+      },
+    },
+    exit: {
+      x: `${exitPosition}vw`,
+      // rotate:0,
+      transition: {
+        delay: 0,
+        duration: 1.5,
+        type: "linear",
+      },
+    },
+  };
+
+
   return (
     <>
       <MenuLayout close={close} open={open} state={modalOpen} />
@@ -213,12 +283,12 @@ const HomepageHeader = () => {
         </div>
 
         <div className={mainHeader}>
-
           <Container center={true}>
             <div className={"relative"}>
               <AnimatePresence
                 initial={true}
                 mode="wait"
+
 
               >
                 {!loading && (
@@ -231,39 +301,20 @@ const HomepageHeader = () => {
                       className={headerContentWrapper}
                     >
                       <div className={mainTitleWrapper}>
-                        <PageTitle>
-                          Jagodne – satisfaction <br/>
-                          and success measured<br/> in m<sup>2</sup>.
-                        </PageTitle>
+                        <MobileHeaderTitle>{title}</MobileHeaderTitle>
+                        <PageTitle maxW={false}>{children}</PageTitle>
                       </div>
                       <div className={paragraphWrapper}>
-                        <Paragraph>
-                        We specialize in designing and constructing modern buildings for the commercial,
-industrial, and public utility sectors.
-                        </Paragraph>
+                        <HeaderTitle>{title}</HeaderTitle>
+                        <Paragraph>{description}</Paragraph>
                       </div>
-                    </motion.div>
-
-                    <motion.div
-                      variants={dropIn}
-                      initial="hidden"
-                      animate="visible"
-                      exit="exit"
-                      className={buttonsContainer}
-                    >
-                      <Button href={"/en/projektowanie"}>Learn more</Button>
-                      <Button href={"/en/zespol"} dark={true} mobileHide={true}>
-                      Let’s get to know each other
-                      </Button>
                     </motion.div>
                   </>
                 )}
               </AnimatePresence>
-
             </div>
 
           </Container>
-
           <AnimatePresence initial={true} mode="wait">
             {!loading && (
                 <motion.div
@@ -290,4 +341,4 @@ industrial, and public utility sectors.
   );
 };
 
-export default HomepageHeader
+export default DefaultHeader;

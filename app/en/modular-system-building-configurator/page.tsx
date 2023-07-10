@@ -8,7 +8,7 @@ import {
 import H4TitleNoMG from "@/components/Typography/H4TitleNoMG";
 import Paragraph from "@/components/Typography/Paragraph";
 import Container from "@/components/layouts/container";
-import DefaultHeader from "@/components/layouts/header/DefaultHeader";
+import DefaultHeader from "@/components/layouts/en/header/defaultHeader";
 import PhotoAlbum from "react-photo-album";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
