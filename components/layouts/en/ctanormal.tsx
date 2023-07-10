@@ -30,7 +30,8 @@ const CtaNormal = () => {
 
                 <H4TitleNoMG>Zapraszamy do kontaktu</H4TitleNoMG>
                 <ContactSpacer>
-                <Paragraph>Biuro Obsługi Klienta pracuje od poniedziałku do piątku, w godzinach 8.00-16.00.</Paragraph>
+                <Paragraph>Our Customer Service Center is available Monday through Friday from 8.00 am to 4.00
+pm.</Paragraph>
                 </ContactSpacer>
                 <Button href={'/en/kontakt'} center={true}>Let’s get to know each other</Button>
 
