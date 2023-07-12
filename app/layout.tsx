@@ -44,6 +44,41 @@ const Axiforma = localFont({
   variable: '--font-Axiforma'
 })
 
+const Outfit = localFont({
+  src: [
+    {
+      path: '../public/fonts/outfit/Outfit-Thin.ttf',
+      weight: '100'
+    },
+    {
+      path: '../public/fonts/outfit/Outfit-Light.ttf',
+      weight: '300'
+    },
+    {
+      path: '../public/fonts/outfit/Outfit-Regular.ttf',
+      weight: '400'
+    },
+    {
+      path: '../public/fonts/outfit/Outfit-Medium.ttf',
+      weight: '500'
+    },
+    {
+      path: '../public/fonts/outfit/Outfit-Bold.ttf',
+      weight: '700'
+    },
+    {
+      path: '../public/fonts/outfit//Outfit-ExtraBold.ttf',
+      weight: '800'
+    },
+    {
+      path: '../public/fonts/outfit/Outfit-Black.ttf',
+      weight: '900'
+    }
+  ],
+  variable: '--font-Outfit'
+})
+
+
 
 // export const metadata = {
 //   title: 'Jagodne',
@@ -64,7 +99,7 @@ export default function RootLayout({
 
   return (
 
-    <html lang="en" className={`${Axiforma.variable} font-sans bg-dark`}>
+    <html lang="en" className={`${Axiforma.variable} ${Outfit.variable} font-sans bg-dark`}>
 
 
 

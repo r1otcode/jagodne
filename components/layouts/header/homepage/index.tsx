@@ -1,7 +1,7 @@
 "use client";
 import Logo from "@/components/logo";
 import classNames from "classnames";
-import PageTitle from "@/components/Typography/PageTitle";
+import PageTitle from "@/components/Typography/pageTitleOutfit";
 import Container from "@/components/layouts/container";
 import Button from "@/components/Button";
 import Menu from "@/components/menu";

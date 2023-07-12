@@ -37,7 +37,9 @@ module.exports = {
       'dark': '#323234',
     },
     fontFamily: {
-      sans: ['var(--font-Axiforma)']
+      sans: ['var(--font-Axiforma)'],
+     outfit: ['var(--font-Outfit)']
+
     },
     extend: {
       backgroundImage: {
