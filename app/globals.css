@@ -449,7 +449,7 @@ img.react-photo-album--photo {
   transition: transform 0.3s ease-in-out;
 }
 .spin:hover {
-  transform: rotate(45deg);
+  transform: rotate(90deg);
 }
 div#menu-layout {
   height: calc(100vh + 120px);
@@ -505,68 +505,86 @@ sup {
 /*}*/
 
 .homepage:hover, .active.homepage {
+  opacity:0.15;
   background: url("../public/images/menu/menu_0008_home.jpg"), rgb(0 0 0 / 50%);
   background-blend-mode: SCREEN;
   background-size: cover;
   transition: all 0.5s ease;
   position: relative;
+
 }
 
 .projektowanie:hover, .active.projektowanie {
+  opacity:0.15;
   background: url("../public/images/menu/menu_0007_projektowanie.jpg"), rgb(0 0 0 / 50%);
   background-blend-mode: SCREEN;
   background-size: cover;
   transition: all 0.5s ease;
   position: relative;
+
 }
 .wykonawstwo:hover, .active.wykonawstwo {
+  opacity:0.15;
   background: url("../public/images/menu/menu_0005_wykonawstwo.jpg"), rgb(0 0 0 / 50%);
   background-blend-mode: SCREEN;
   background-size: cover;
   transition: all 0.5s ease;
   position: relative;
+
 }
 .generalny:hover, .active.generalny {
+  opacity:0.15;
   background: url("../public/images/menu/menu_0006_generalny.jpg"), rgb(0 0 0 / 50%);
   background-blend-mode: SCREEN;
   background-size: cover;
   transition: all 0.5s ease;
   position: relative;
+
 }
 .obiekty:hover, .active.obiekty {
+  opacity:0.15;
   background: url("../public/images/menu/menu_0004_obiekty.jpg"), rgb(0 0 0 / 50%);
   background-blend-mode: SCREEN;
   background-size: cover;
   transition: all 0.5s ease;
   position: relative;
+
 }
 .konfigurator:hover, .active.konfigurator {
+  opacity:0.15;
   background: url("../public/images/menu/menu_0003_konfigurator.jpg"), rgb(0 0 0 / 50%);
   background-blend-mode: SCREEN;
   background-size: cover;
   transition: all 0.5s ease;
   position: relative;
+
 }
 .aktualnosci:hover, .active.aktualnosci {
+  opacity:0.15;
   background: url("../public/images/menu/menu_0002_aktualnosci.jpg"), rgb(0 0 0 / 50%);
   background-blend-mode: SCREEN;
   background-size: cover;
   transition: all 0.5s ease;
   position: relative;
+
 }
 .zespol:hover, .active.zespol {
+  opacity:0.15;
   background: url("../public/images/menu/menu_0001_zespol.jpg"), rgb(0 0 0 / 50%);
   background-blend-mode: SCREEN;
   background-size: cover;
   transition: all 0.5s ease;
   position: relative;
+
 }
 .kontakt:hover, .active.kontakt {
+  opacity:0.15;
   background: url("../public/images/menu/menu_0000_kontakt.jpg"), rgb(0 0 0 / 50%);
   background-blend-mode: SCREEN;
   background-size: cover;
   transition: all 0.5s ease;
   position: relative;
+
 }
 
 
