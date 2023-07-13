@@ -767,14 +767,14 @@ body .overlay_2 {
 @media (min-width: 1366px) and (max-width: 1919px) {
   .yarl__toolbar {
     top: 20px !important;
-    right: 45px !important;
+    right: 40px !important;
   }
 }
 
 /* Dla 4xl ekranów */
 @media (min-width: 1920px) {
   .yarl__toolbar {
-    top: 40px !important;
+    top: 45px !important;
     right: 50px !important;
   }
 }
@@ -782,7 +782,7 @@ body .overlay_2 {
 /* Dla 5xl ekranów */
 @media (min-width: 2560px) {
   .yarl__toolbar {
-    top: 40px !important;
+    top: 45px !important;
     right: 50px !important;
   }
 }
