@@ -251,7 +251,7 @@ const HomepageHeader = () => {
                       </div>
                       <div className={paragraphWrapper}>
                         <Paragraph>
-                          Specjalizujemy się w projektowaniu i wykonawstwie
+                          Specjalizujemy się w projektowaniu <br/> i wykonawstwie
                           nowoczesnych obiektów budowlanych dla sektora
                           komercyjnego, przemysłowego oraz użyteczności
                           publicznej.
