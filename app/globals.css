@@ -509,7 +509,7 @@ sup {
   background: url("../public/images/menu/menu_0008_home.jpg"), rgb(0 0 0 / 50%);
   background-blend-mode: SCREEN;
   background-size: cover;
-  transition: all 0.5s ease;
+ 
   position: relative;
 
 }
@@ -519,7 +519,7 @@ sup {
   background: url("../public/images/menu/menu_0007_projektowanie.jpg"), rgb(0 0 0 / 50%);
   background-blend-mode: SCREEN;
   background-size: cover;
-  transition: all 0.5s ease;
+
   position: relative;
 
 }
@@ -528,7 +528,7 @@ sup {
   background: url("../public/images/menu/menu_0005_wykonawstwo.jpg"), rgb(0 0 0 / 50%);
   background-blend-mode: SCREEN;
   background-size: cover;
-  transition: all 0.5s ease;
+
   position: relative;
 
 }
@@ -537,7 +537,7 @@ sup {
   background: url("../public/images/menu/menu_0006_generalny.jpg"), rgb(0 0 0 / 50%);
   background-blend-mode: SCREEN;
   background-size: cover;
-  transition: all 0.5s ease;
+
   position: relative;
 
 }
@@ -546,7 +546,7 @@ sup {
   background: url("../public/images/menu/menu_0004_obiekty.jpg"), rgb(0 0 0 / 50%);
   background-blend-mode: SCREEN;
   background-size: cover;
-  transition: all 0.5s ease;
+
   position: relative;
 
 }
@@ -555,7 +555,7 @@ sup {
   background: url("../public/images/menu/menu_0003_konfigurator.jpg"), rgb(0 0 0 / 50%);
   background-blend-mode: SCREEN;
   background-size: cover;
-  transition: all 0.5s ease;
+
   position: relative;
 
 }
@@ -564,7 +564,7 @@ sup {
   background: url("../public/images/menu/menu_0002_aktualnosci.jpg"), rgb(0 0 0 / 50%);
   background-blend-mode: SCREEN;
   background-size: cover;
-  transition: all 0.5s ease;
+
   position: relative;
 
 }
@@ -573,7 +573,7 @@ sup {
   background: url("../public/images/menu/menu_0001_zespol.jpg"), rgb(0 0 0 / 50%);
   background-blend-mode: SCREEN;
   background-size: cover;
-  transition: all 0.5s ease;
+
   position: relative;
 
 }
@@ -582,7 +582,7 @@ sup {
   background: url("../public/images/menu/menu_0000_kontakt.jpg"), rgb(0 0 0 / 50%);
   background-blend-mode: SCREEN;
   background-size: cover;
-  transition: all 0.5s ease;
+
   position: relative;
 
 }

@@ -61,12 +61,12 @@ const Desktop = ({ close, open, state }: DesktopLayoutInterface) => {
         <div className={menuGridClasses}>
           <Link
             href={"/"}
-            className={'relative'}
+            className={'relative bg-dark border-grid border menu-bg border-b-0'}
           >
             <div  className={
               router == "/"
-                  ? "active homepage hover:z-[50] hover:relative col-span-1 bg-dark border-grid border menu-bg border-b-0 lg:h-[268px] xl:h-[124px] 2xl:h-[128px] 3xl:h-[174px] 4xl:h-[217px]"
-                  : "homepage hover:z-[50] hover:relative col-span-1 bg-dark border-grid border menu-bg border-b-0 lg:h-[268px] xl:h-[124px] 2xl:h-[128px] 3xl:h-[174px] 4xl:h-[217px]"
+                  ? "active homepage hover:z-[50] hover:relative col-span-1  lg:h-[268px] xl:h-[124px] 2xl:h-[128px] 3xl:h-[174px] 4xl:h-[217px]"
+                  : "homepage hover:z-[50] hover:relative col-span-1 lg:h-[268px] xl:h-[124px] 2xl:h-[128px] 3xl:h-[174px] 4xl:h-[217px]"
 
             }></div>
             <div className={"absolute top-[0]"}>
@@ -82,12 +82,12 @@ const Desktop = ({ close, open, state }: DesktopLayoutInterface) => {
           </Link>
           <Link
             href={"/projektowanie"}
-            className={'relative'}
+            className={'relative border-grid border border-l-0 border-b-0'}
           >
             <div className={
               router == "/projektowanie"
-                  ? "active projektowanie col-span-1 bg-dark border-grid border border-l-0 border-b-0 lg:h-[268px] xl:h-[124px] 2xl:h-[128px] 3xl:h-[174px] 4xl:h-[217px]"
-                  : " projektowanie col-span-1 bg-dark border-grid border border-l-0 border-b-0 lg:h-[268px] xl:h-[124px] 2xl:h-[128px] 3xl:h-[174px] 4xl:h-[217px]"
+                  ? "active projektowanie col-span-1 bg-dark  lg:h-[268px] xl:h-[124px] 2xl:h-[128px] 3xl:h-[174px] 4xl:h-[217px]"
+                  : " projektowanie col-span-1 bg-dark  border-b-0 lg:h-[268px] xl:h-[124px] 2xl:h-[128px] 3xl:h-[174px] 4xl:h-[217px]"
 
             }></div>
             <div className={"absolute top-[0]"}>
@@ -104,12 +104,12 @@ const Desktop = ({ close, open, state }: DesktopLayoutInterface) => {
 
           <Link
             href={"/wykonawstwo"}
-            className={'relative'}
+            className={'relative border-grid border border-l-0'}
           >
             <div className={
                             router == "/wykonawstwo"
-                                ? "active wykonawstwo col-span-1 bg-dark border-grid border border-l-0 lg:h-[268px] xl:h-[124px] 2xl:h-[128px] 3xl:h-[174px] 4xl:h-[217px]"
-                                : "wykonawstwo col-span-1 bg-dark border-grid border border-l-0 lg:h-[268px] xl:h-[124px] 2xl:h-[128px] 3xl:h-[174px] 4xl:h-[217px]"
+                                ? "active wykonawstwo col-span-1 bg-dark  lg:h-[268px] xl:h-[124px] 2xl:h-[128px] 3xl:h-[174px] 4xl:h-[217px]"
+                                : "wykonawstwo col-span-1 bg-dark  lg:h-[268px] xl:h-[124px] 2xl:h-[128px] 3xl:h-[174px] 4xl:h-[217px]"
 
                           }></div>
             <div className={"absolute top-[0]"}>
@@ -126,12 +126,12 @@ const Desktop = ({ close, open, state }: DesktopLayoutInterface) => {
 
           <Link
             href={"/generalny-patronat-projektowo-wykonawczy"}
-            className={'relative'}
+            className={'relative border-grid border border-b-0'}
           >
             <div className={
               router == "/generalny-patronat-projektowo-wykonawczy"
-                  ? "active generalny col-span-1 bg-dark border-grid border border-b-0 lg:h-[268px] xl:h-[124px] 2xl:h-[128px] 3xl:h-[174px] 4xl:h-[217px]"
-                  : "generalny col-span-1 bg-dark border-grid border border-b-0 lg:h-[268px] xl:h-[124px] 2xl:h-[128px] 3xl:h-[174px] 4xl:h-[217px]"
+                  ? "active generalny col-span-1 bg-dark  lg:h-[268px] xl:h-[124px] 2xl:h-[128px] 3xl:h-[174px] 4xl:h-[217px]"
+                  : "generalny col-span-1 bg-dark  lg:h-[268px] xl:h-[124px] 2xl:h-[128px] 3xl:h-[174px] 4xl:h-[217px]"
             }></div>
             <div className={"absolute top-[0]"}>
               <h3
@@ -147,12 +147,12 @@ const Desktop = ({ close, open, state }: DesktopLayoutInterface) => {
 
           <Link
             href={"/obiekty-systemowe"}
-            className={'relative'}
+            className={'relative border-grid border border-l-0 border-b-0'}
           >
             <div className={
               router == "/obiekty-systemowe"
-                  ? "active obiekty col-span-1 bg-dark border-grid border border-l-0 border-b-0 lg:h-[268px] xl:h-[124px] 2xl:h-[128px] 3xl:h-[174px] 4xl:h-[217px]"
-                  : "obiekty col-span-1 bg-dark border-grid border border-l-0 border-b-0 lg:h-[268px] xl:h-[124px] 2xl:h-[128px] 3xl:h-[174px] 4xl:h-[217px]"
+                  ? "active obiekty col-span-1 bg-dark  lg:h-[268px] xl:h-[124px] 2xl:h-[128px] 3xl:h-[174px] 4xl:h-[217px]"
+                  : "obiekty col-span-1 bg-dark lg:h-[268px] xl:h-[124px] 2xl:h-[128px] 3xl:h-[174px] 4xl:h-[217px]"
 
             }></div>
             <div className={"absolute top-[0]"}>
@@ -169,12 +169,12 @@ const Desktop = ({ close, open, state }: DesktopLayoutInterface) => {
 
           <Link
             href={"/konfigurator-obiektow-systemowych"}
-            className={'relative'}
+            className={'relative border-grid border border-l-0  border-t-0'}
           >
            <div className={
              router == "/konfigurator-obiektow-systemowych"
-                 ? "active konfigurator col-span-1 bg-dark border-grid border border-l-0 border-b-0 border-t-0 lg:h-[268px] xl:h-[124px] 2xl:h-[128px] 3xl:h-[174px] 4xl:h-[217px]"
-                 : "konfigurator col-span-1 bg-dark border-grid border border-l-0 border-b-0 border-t-0 lg:h-[268px] xl:h-[124px] 2xl:h-[128px] 3xl:h-[174px] 4xl:h-[217px]"
+                 ? "active konfigurator col-span-1 bg-dark  lg:h-[268px] xl:h-[124px] 2xl:h-[128px] 3xl:h-[174px] 4xl:h-[217px]"
+                 : "konfigurator col-span-1 bg-dark lg:h-[268px] xl:h-[124px] 2xl:h-[128px] 3xl:h-[174px] 4xl:h-[217px]"
            }></div>
             <div className={"absolute top-[0]"}>
               <h3
@@ -188,34 +188,34 @@ const Desktop = ({ close, open, state }: DesktopLayoutInterface) => {
             </div>{" "}
           </Link>
 
-          <Link
-            href={"/aktualnosci"}
-            className={'relative'}
-          >
-            <div className={
-              router == "/aktualnosci"
-                  ? "active aktualnosci col-span-1 bg-dark border-grid border lg:h-[268px] xl:h-[124px] 2xl:h-[128px] 3xl:h-[174px] 4xl:h-[217px]"
-                  : "aktualnosci col-span-1 bg-dark border-grid border lg:h-[268px] xl:h-[124px] 2xl:h-[128px] 3xl:h-[174px] 4xl:h-[217px]"
-            }></div>
-            <div className={"absolute top-[0]"}>
-              <h3
-                className={
-                  "text-light px-[30px] py-[32px] font-light text-[21px]" +
-                  menuItem
-                }
-              >
-                Aktualności
-              </h3>
-            </div>{" "}
-          </Link>
+          {/*<Link*/}
+          {/*  href={"/aktualnosci"}*/}
+          {/*  className={'relative'}*/}
+          {/*>*/}
+          {/*  <div className={*/}
+          {/*    router == "/aktualnosci"*/}
+          {/*        ? "active aktualnosci col-span-1 bg-dark border-grid border lg:h-[268px] xl:h-[124px] 2xl:h-[128px] 3xl:h-[174px] 4xl:h-[217px]"*/}
+          {/*        : "aktualnosci col-span-1 bg-dark border-grid border lg:h-[268px] xl:h-[124px] 2xl:h-[128px] 3xl:h-[174px] 4xl:h-[217px]"*/}
+          {/*  }></div>*/}
+          {/*  <div className={"absolute top-[0]"}>*/}
+          {/*    <h3*/}
+          {/*      className={*/}
+          {/*        "text-light px-[30px] py-[32px] font-light text-[21px]" +*/}
+          {/*        menuItem*/}
+          {/*      }*/}
+          {/*    >*/}
+          {/*      Aktualności*/}
+          {/*    </h3>*/}
+          {/*  </div>{" "}*/}
+          {/*</Link>*/}
 
           <Link
             href={"/zespol"}
-            className={'relative'}
+            className={'relative border-grid border '}
           ><div className={
                                      router == "/zespol"
-                                         ? "active zespol col-span-1 bg-dark border-grid border border-l-0 lg:h-[268px] xl:h-[124px] 2xl:h-[128px] 3xl:h-[174px] 4xl:h-[217px]"
-                                         : "zespol col-span-1 bg-dark border-grid border border-l-0 lg:h-[268px] xl:h-[124px] 2xl:h-[128px] 3xl:h-[174px] 4xl:h-[217px]"
+                                         ? "active zespol col-span-1 bg-dark   lg:h-[268px] xl:h-[124px] 2xl:h-[128px] 3xl:h-[174px] 4xl:h-[217px]"
+                                         : "zespol col-span-1 bg-dark  lg:h-[268px] xl:h-[124px] 2xl:h-[128px] 3xl:h-[174px] 4xl:h-[217px]"
                                    }></div>
             <div className={"absolute top-[0]"}>
               <h3
