@@ -69,7 +69,7 @@ const Desktop = ({ close, open, state }: DesktopLayoutInterface) => {
                   : "homepage hover:z-[50] hover:relative col-span-1 lg:h-[268px] xl:h-[124px] 2xl:h-[128px] 3xl:h-[174px] 4xl:h-[217px]"
 
             }></div>
-            <div className={"absolute top-[0]"}>
+            <div className={"absolute top-[0] pointer-events-none"}>
               <h3
                 className={
                   "text-light px-[30px] py-[32px] font-light text-[21px]" +
@@ -90,7 +90,7 @@ const Desktop = ({ close, open, state }: DesktopLayoutInterface) => {
                   : " projektowanie col-span-1 bg-dark  border-b-0 lg:h-[268px] xl:h-[124px] 2xl:h-[128px] 3xl:h-[174px] 4xl:h-[217px]"
 
             }></div>
-            <div className={"absolute top-[0]"}>
+            <div className={"absolute top-[0] pointer-events-none"}>
               <h3
                 className={
                   "text-light px-[30px] py-[32px] font-light text-[21px]" +
@@ -112,7 +112,7 @@ const Desktop = ({ close, open, state }: DesktopLayoutInterface) => {
                                 : "wykonawstwo col-span-1 bg-dark  lg:h-[268px] xl:h-[124px] 2xl:h-[128px] 3xl:h-[174px] 4xl:h-[217px]"
 
                           }></div>
-            <div className={"absolute top-[0]"}>
+            <div className={"absolute top-[0] pointer-events-none"}>
               <h3
                 className={
                   "text-light px-[30px] py-[32px] font-light text-[21px]" +
@@ -133,7 +133,7 @@ const Desktop = ({ close, open, state }: DesktopLayoutInterface) => {
                   ? "active generalny col-span-1 bg-dark  lg:h-[268px] xl:h-[124px] 2xl:h-[128px] 3xl:h-[174px] 4xl:h-[217px]"
                   : "generalny col-span-1 bg-dark  lg:h-[268px] xl:h-[124px] 2xl:h-[128px] 3xl:h-[174px] 4xl:h-[217px]"
             }></div>
-            <div className={"absolute top-[0]"}>
+            <div className={"absolute top-[0] pointer-events-none"}>
               <h3
                 className={
                   "text-light px-[30px] py-[32px] font-light text-[21px]" +
@@ -155,7 +155,7 @@ const Desktop = ({ close, open, state }: DesktopLayoutInterface) => {
                   : "obiekty col-span-1 bg-dark lg:h-[268px] xl:h-[124px] 2xl:h-[128px] 3xl:h-[174px] 4xl:h-[217px]"
 
             }></div>
-            <div className={"absolute top-[0]"}>
+            <div className={"absolute top-[0] pointer-events-none"}>
               <h3
                 className={
                   "text-light px-[30px] py-[32px] font-light text-[21px]" +
@@ -176,7 +176,7 @@ const Desktop = ({ close, open, state }: DesktopLayoutInterface) => {
                  ? "active konfigurator col-span-1 bg-dark  lg:h-[268px] xl:h-[124px] 2xl:h-[128px] 3xl:h-[174px] 4xl:h-[217px]"
                  : "konfigurator col-span-1 bg-dark lg:h-[268px] xl:h-[124px] 2xl:h-[128px] 3xl:h-[174px] 4xl:h-[217px]"
            }></div>
-            <div className={"absolute top-[0]"}>
+            <div className={"absolute top-[0] pointer-events-none"}>
               <h3
                 className={
                   "text-light px-[30px] py-[32px] font-light text-[21px]" +
@@ -197,7 +197,7 @@ const Desktop = ({ close, open, state }: DesktopLayoutInterface) => {
           {/*        ? "active aktualnosci col-span-1 bg-dark border-grid border lg:h-[268px] xl:h-[124px] 2xl:h-[128px] 3xl:h-[174px] 4xl:h-[217px]"*/}
           {/*        : "aktualnosci col-span-1 bg-dark border-grid border lg:h-[268px] xl:h-[124px] 2xl:h-[128px] 3xl:h-[174px] 4xl:h-[217px]"*/}
           {/*  }></div>*/}
-          {/*  <div className={"absolute top-[0]"}>*/}
+          {/*  <div className={"absolute top-[0] pointer-events-none"}>*/}
           {/*    <h3*/}
           {/*      className={*/}
           {/*        "text-light px-[30px] py-[32px] font-light text-[21px]" +*/}
@@ -217,7 +217,7 @@ const Desktop = ({ close, open, state }: DesktopLayoutInterface) => {
                                          ? "active zespol col-span-1 bg-dark   lg:h-[268px] xl:h-[124px] 2xl:h-[128px] 3xl:h-[174px] 4xl:h-[217px]"
                                          : "zespol col-span-1 bg-dark  lg:h-[268px] xl:h-[124px] 2xl:h-[128px] 3xl:h-[174px] 4xl:h-[217px]"
                                    }></div>
-            <div className={"absolute top-[0]"}>
+            <div className={"absolute top-[0] pointer-events-none"}>
               <h3
                 className={
                   "text-light px-[30px] py-[32px] font-light text-[21px]" +
@@ -238,7 +238,7 @@ const Desktop = ({ close, open, state }: DesktopLayoutInterface) => {
                   ? "active kontakt col-span-1 bg-dark border-grid border border-l-0 lg:h-[268px] xl:h-[124px] 2xl:h-[128px] 3xl:h-[174px] 4xl:h-[217px]"
                   : "kontakt col-span-1 bg-dark border-grid border border-l-0 lg:h-[268px] xl:h-[124px] 2xl:h-[128px] 3xl:h-[174px] 4xl:h-[217px]"
             }></div>
-            <div className={"absolute top-[0]"}>
+            <div className={"absolute top-[0] pointer-events-none"}>
               <h3
                 className={
                   "text-light px-[30px] py-[32px] font-light text-[21px]" +
