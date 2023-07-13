@@ -38,7 +38,7 @@ const HowWeDoIt = () => {
         " 4xl:h-[700px]"
     );
     const videoWrapperClasses = classNames(
-
+        'video-wrapper',
         "border border-grid",
         "xs:mt-[120px] xs:h-[240px]",
         "sm:mt-[120px] sm:h-[260px]",
@@ -67,13 +67,13 @@ const HowWeDoIt = () => {
                 <div className="text-center" >
                     <H2Title>Jak to robimy</H2Title>
                 </div>
-                <div className={videoWrapperClasses}>
+                <div>
                 <motion.div
                     animate={inView ? "visible" : "hidden"}
                     variants={variants}
                     exit="hidden"
                     transition={{ duration: 1 }}
-                    className={'video-wrapper'}
+                    className={videoWrapperClasses}
                     ref={ref}
 
 

@@ -34,7 +34,7 @@ video {
 }
 .video-wrapper {
   z-index:2;
-  mix-blend-mode: screen;
+  position: relative;
 
 }
 html {

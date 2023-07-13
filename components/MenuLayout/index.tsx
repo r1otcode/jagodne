@@ -35,7 +35,7 @@ const dropIn = {
         y: "100vh",
 
         transition: {
-            duration: 2,
+            duration: 1,
             type: "reverse",
         },
 
