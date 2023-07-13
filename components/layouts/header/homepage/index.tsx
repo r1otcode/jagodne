@@ -194,6 +194,19 @@ const HomepageHeader = () => {
       modalOpen && "modal_opened"
 
   );
+
+  const circleContainerClasses = classNames('mx-auto', 'rotate nomix',
+
+      'xs:w-[280px]',
+      'sm:w-[350px]',
+      'md:w-[400px]',
+      'lg:w-[598px]',
+      'xl:w-[568px]',
+      '2xl:w-[758px]',
+      '3xl:w-[840px]',
+      '4xl:w-[1066px]',
+
+  )
   return (
     <>
       <MenuLayout close={close} open={open} state={modalOpen} />
@@ -278,7 +291,7 @@ const HomepageHeader = () => {
                   <div className="circle-bg__inner">
 
 
-                    <img alt="circle homepage_circle" className={'nomix rotate'} src={"/assets/circle_full.svg"} />
+                    <img alt="circle homepage_circle" className={circleContainerClasses} src={"/assets/circle_full.svg"} />
                     {/*<div className={"circle-bg__inner__background"}></div>*/}
                   </div>
                 </motion.div>

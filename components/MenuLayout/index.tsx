@@ -15,7 +15,7 @@ interface MenuLayoutProps {
 const dropIn = {
     hidden: {
         y: "100vh",
-        opacity: 1,
+
         transition: {
             duration: 1,
             type: "reverse",
@@ -24,7 +24,7 @@ const dropIn = {
     },
     visible: {
         y: "0",
-        opacity: 1,
+
         transition: {
             duration: 1,
             type: "spring",
@@ -33,9 +33,9 @@ const dropIn = {
     exit: {
 
         y: "100vh",
-        opacity: 1,
+
         transition: {
-            duration: 1,
+            duration: 2,
             type: "reverse",
         },
 
@@ -49,7 +49,7 @@ function Layout({close, open, state}: MenuLayoutProps)  {
 return (
             <motion.div
                 variants={dropIn}
-                initial="hidden"
+    initial="hidden"
                 animate="visible"
                 exit="exit"
                 className={layoutClasses}
