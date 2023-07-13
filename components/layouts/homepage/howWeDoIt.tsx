@@ -60,6 +60,7 @@ const HowWeDoIt = () => {
         visible: { opacity: 1, scale: 1 },
         hidden: { opacity: 1, scale: 1.2 }
     };
+
     return (
         <div className={howWedoItClasses} id={'section-1'}>
             <Container>
@@ -124,13 +125,15 @@ const HowWeDoIt = () => {
 
                     <BorderedContainer>
                         <ImageAnimation>
-                        <img src={'/images/strona_glowna/photo_0005_1.1.jpg'} alt={'photo'} className={'' +
+                           
+                      
+                             <img src={'/images/strona_glowna/photo_0005_1.1.jpg'} alt={'photo'} className={'' +
                             'image_scroller w-full xs:h-[250px] sm:h-[250px] md:h-[400px] lg:h-[400px] xl:h-[300px] 2xl:h-[400px] 3xl:h-[450px] 4xl:h-[560px]'}/>
                             <img src={'/images/strona_glowna/photo_0004_1.2.jpg'} alt={'photo'} className={'' +
                                 'image_scroller w-full xs:h-[250px] sm:h-[250px] md:h-[400px] lg:h-[400px] xl:h-[300px] 2xl:h-[400px] 3xl:h-[450px] 4xl:h-[560px]'}/>
                             <img src={'/images/strona_glowna/photo_0003_1.3.jpg'} alt={'photo'} className={'' +
-                                'image_scroller w-full xs:h-[250px] sm:h-[250px] md:h-[400px] lg:h-[400px] xl:h-[300px] 2xl:h-[400px] 3xl:h-[450px] 4xl:h-[560px]'}/>
-
+                                'image_scroller w-full xs:h-[250px] sm:h-[250px] md:h-[400px] lg:h-[400px] xl:h-[300px] 2xl:h-[400px] 3xl:h-[450px] 4xl:h-[560px]'}/> 
+                        
                         </ImageAnimation>
                         <TextSpacer>
                             <H3Title>Budownictwo kubaturowe w standardzie
@@ -149,10 +152,11 @@ const HowWeDoIt = () => {
 
                         <BorderedContainer>
                             <ImageAnimation>
+                               
                             <img src={'/images/strona_glowna/photo_0002_2.1.jpg'} alt={'photo'} className={'image_scroller w-full xs:h-[250px] sm:h-[250px] md:h-[400px] lg:h-[400px] xl:h-[300px] 2xl:h-[400px] 3xl:h-[450px] 4xl:h-[560px]'}/>
                                 <img src={'/images/strona_glowna/photo_0001_2.2.jpg'} alt={'photo'} className={'image_scroller w-full xs:h-[250px] sm:h-[250px] md:h-[400px] lg:h-[400px] xl:h-[300px] 2xl:h-[400px] 3xl:h-[450px] 4xl:h-[560px]'}/>
                                 <img src={'/images/strona_glowna/photo_0000_2.3.jpg'} alt={'photo'} className={'image_scroller w-full xs:h-[250px] sm:h-[250px] md:h-[400px] lg:h-[400px] xl:h-[300px] 2xl:h-[400px] 3xl:h-[450px] 4xl:h-[560px]'}/>
-
+                                
                             </ImageAnimation>
                             <TextSpacer>
                                 <H3Title>Zapewniamy innowacyjny <br/>
