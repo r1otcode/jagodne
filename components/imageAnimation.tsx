@@ -48,7 +48,7 @@ const ImageAnimation = ({children}: ImageAnimationProps) => {
             open={open}
             index={lightboxIndex}
             close={() => setOpen(false)}
-            className="slidere"
+            className="slider"
             slides={slides}
               
                
